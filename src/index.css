@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+@theme {
+  /* This defines the 'sans' font family for all Tailwind classes */
+  --font-sans: "Blatent", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Make sure the browser knows where the font file is */
+@font-face {
+  font-family: 'Blatent';
+  src: url('/fonts/blatent.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer utilities {
+  .nav-link-hover {
+    @apply relative 
+           /* Anchor to center */
+           after:absolute after:left-1/2 after:bottom-[-4px] 
+           /* Start at zero width and centered */
+           after:w-0 after:h-[2px] after:bg-[#F9D759] after:-translate-x-1/2
+           /* Animation settings */
+           after:transition-all after:duration-300 after:ease-in-out
+           /* Expand to full width on hover */
+           hover:after:w-full;
+  }
+}
