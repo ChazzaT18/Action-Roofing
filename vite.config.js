@@ -4,6 +4,9 @@ import tailwindcss from '@tailwindcss/vite' // 1. Import it
 import flowbiteReact from "flowbite-react/plugin/vite";
 
 export default defineConfig({
+  server: {
+    allowedHosts: true
+  },
   plugins: [react(), // 2. Add it to the plugins array
   tailwindcss(), flowbiteReact()],
 })
