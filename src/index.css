@@ -19,7 +19,7 @@
   .nav-link-hover {
     @apply relative 
            /* Anchor to center */
-           after:absolute after:left-1/2 after:bottom-[-4px] 
+           after:absolute after:left-1/2 after:bottom-[-6px] 
            /* Start at zero width and centered */
            after:w-0 after:h-[2px] after:bg-[#F9D759] after:-translate-x-1/2
            /* Animation settings */
