@@ -1,5 +1,9 @@
 const HomePage = () => {
-  return <h1 className="text-3xl h-[200vh]">Home</h1>;
+  return (
+  <div className="w-full flex justify-center items-center">
+    <img className="h-[calc(100vh-140px)] w-full object-cover object-center" src="/images/Group 5.png"/>
+  </div>
+  )
 };
 
 export default HomePage;
