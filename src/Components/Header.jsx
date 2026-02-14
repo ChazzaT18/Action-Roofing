@@ -7,7 +7,7 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // New State
-  
+
   const location = useLocation();
 
   // Close menu when route changes
@@ -44,11 +44,11 @@ const Header = () => {
   }, [lastScrollY]);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about-us' },
-    { name: 'Services', path: '/services' },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'Contact', path: '/contact-us' },
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about-us" },
+    { name: "Services", path: "/services" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Contact", path: "/contact-us" },
   ];
 
   return (
@@ -65,7 +65,9 @@ const Header = () => {
               <img
                 src="/images/Action Roofing logo.jpg"
                 className={`hidden sm:block transition-all duration-500 ease-in-out object-contain ${
-                  isScrolled ? "xl:h-14 lg:h-12 md:h-10 sm:h-10" : "xl:h-20 lg:h-16 md:h-14 sm:h-12"
+                  isScrolled
+                    ? "xl:h-14 lg:h-12 md:h-10 sm:h-10"
+                    : "xl:h-20 lg:h-16 md:h-14 sm:h-12"
                 }`}
                 alt="Action Roofing Logo"
               />
@@ -100,13 +102,15 @@ const Header = () => {
             <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
               <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 md:flex-row md:mt-0 md:border-0">
                 {navLinks.map((item) => (
-                  <li key={item.name} className="flex justify-center items-center">
+                  <li
+                    key={item.name}
+                    className="flex justify-center items-center"
+                  >
                     <Link
                       to={item.path}
-                      className="relative block py-2 px-3 text-[#F9D759] hover:text-white transition-colors duration-200 group"
+                      className="nav-link-hover block px-3 text-[#F9D759] hover:text-white transition-colors duration-200"
                     >
                       {item.name}
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#F9D759] transition-all duration-300 group-hover:w-full"></span>
                     </Link>
                   </li>
                 ))}
@@ -117,8 +121,10 @@ const Header = () => {
 
         {/* 2. MOBILE SLIDE-DOWN MENU */}
         <div
-          className={`absolute w-full bg-[#4d4d4d] border-y-2 border-[#F9D759] transition-all duration-500 ease-in-out z-30 md:hidden ${
-            isMenuOpen ? "translate-y-0" : "-translate-y-full pointer-events-none shadow-xl"
+          className={`absolute w-full bg-[#2c3a55] border-y-2 border-[#F9D759] transition-all duration-500 ease-in-out z-30 md:hidden ${
+            isMenuOpen
+              ? "translate-y-0"
+              : "-translate-y-full pointer-events-none shadow-xl"
           }`}
         >
           <ul className="flex flex-col p-6 space-y-4 font-bold text-center">
@@ -142,19 +148,28 @@ const Header = () => {
           } sm:translate-y-0`}
         >
           <div className="w-full max-w-screen-xl flex justify-between items-center px-6">
-            <a href="tel:07768981913" className="flex items-center gap-2 hover:underline">
+            <a
+              href="tel:07768981913"
+              className="flex items-center gap-2 hover:underline"
+            >
               <Phone className="max-sm:hidden" size={14} />
               <span>07768 981913</span>
             </a>
             <div className="opacity-40">|</div>
             <div className="flex items-center gap-2">
-              <img src="/images/Pavillion.png" alt="Brighton" className="h-4 w-auto max-sm:hidden" />
+              <img
+                src="/images/Pavillion.png"
+                alt="Brighton"
+                className="h-4 w-auto max-sm:hidden"
+              />
               <span>Brighton & Hove</span>
             </div>
             <div className="opacity-40">|</div>
             <div className="flex items-center gap-2">
               <Hammer className="max-sm:hidden" size={14} />
-              <span className="hidden xs:inline">Emergency Repairs Available</span>
+              <span className="hidden xs:inline">
+                Emergency Repairs Available
+              </span>
               <span className="xs:hidden">Emergency Repairs</span>
             </div>
           </div>
