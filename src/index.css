@@ -3,14 +3,27 @@
 @source "../.flowbite-react/class-list.json";
 
 @theme {
-  /* This defines the 'sans' font family for all Tailwind classes */
   --font-sans: "Blatent", ui-sans-serif, system-ui, sans-serif;
+
+  @keyframes vibrate-subtle {
+    0%,
+    100% {
+      transform: rotate(0deg) translate(0, 0);
+    }
+    25% {
+      transform: rotate(1.5deg) translate(-0.3px, 0.3px);
+    }
+    75% {
+      transform: rotate(-1.5deg) translate(0.3px, -0.3px);
+    }
+  }
+
+  --animate-vibrate: vibrate-subtle 0.15s linear infinite;
 }
 
-/* Make sure the browser knows where the font file is */
 @font-face {
-  font-family: 'Blatent';
-  src: url('/fonts/blatent.otf') format('otf');
+  font-family: "Blatent";
+  src: url("/fonts/blatent.otf") format("otf");
   font-weight: normal;
   font-style: normal;
 }

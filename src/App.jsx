@@ -64,7 +64,7 @@ function App() {
             }
           />
         </Routes>
-        <GetQuote />
+        <GetQuote currentPage={currentPage}/>
       </Router>
     </CurrentPageContext.Provider>
   );

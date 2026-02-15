@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Hammer, Phone, X, Menu } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
-const Header = ({currentPage, setCurrentPage}) => {
+const Header = ({ currentPage, setCurrentPage }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -81,9 +81,12 @@ const Header = ({currentPage, setCurrentPage}) => {
             <div className="flex md:order-2 space-x-3">
               <a
                 href="tel:07768981913"
-                className="group flex items-center gap-2 text-[#243453] bg-[#F9D759] hover:bg-[#F7CB28] cursor-pointer font-bold rounded-md text-xs lg:text-sm px-5 py-2.5 transition-all active:scale-95 shadow-md"
+                className="group flex hover:animate-vibrate items-center gap-2 text-[#243453] bg-[#F9D759] hover:bg-[#F7CB28] cursor-pointer font-bold rounded-md text-xs lg:text-sm px-5 py-2.5 transition-all active:scale-95 shadow-md"
               >
-                <Phone size={14} />
+                <span className="inline-block transition-transform duration-200">
+                  <Phone size={14} fill="currentColor" />
+                </span>
+
                 <span>Call Now</span>
               </a>
 
@@ -100,7 +103,7 @@ const Header = ({currentPage, setCurrentPage}) => {
 
             {/* Desktop Nav Links */}
             <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
-              <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 md:flex-row md:mt-0 md:border-0">
+              <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-6 md:flex-row md:mt-0 md:border-0">
                 {navLinks.map((item) => (
                   <li
                     key={item.name}
@@ -108,7 +111,7 @@ const Header = ({currentPage, setCurrentPage}) => {
                   >
                     <Link
                       to={item.path}
-                      className={`block px-3 transition-colors duration-200 ${currentPage === item.name.toLowerCase()? "text-yellow" : "text-white nav-link-hover"}`}
+                      className={`block px-3 transition-colors duration-200 ${currentPage === item.name.toLowerCase() ? "text-yellow" : "text-white nav-link-hover"}`}
                     >
                       {item.name}
                     </Link>
@@ -132,7 +135,7 @@ const Header = ({currentPage, setCurrentPage}) => {
               <li key={item.name}>
                 <Link
                   to={item.path}
-                  className={`block text-xl ${currentPage === item.name.toLocaleLowerCase()? "text-[#F9D759]" : "text-white"} py-2`}
+                  className={`block text-xl ${currentPage === item.name.toLocaleLowerCase() ? "text-[#F9D759]" : "text-white"} py-2`}
                 >
                   {item.name}
                 </Link>
