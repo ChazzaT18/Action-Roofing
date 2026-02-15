@@ -180,8 +180,8 @@ const Header = ({currentPage, setCurrentPage}) => {
       <div
         className={`transition-all duration-500 ${
           isScrolled && window.innerWidth >= 640
-            ? "h-[90px] sm:h-[110px] md:h-[120px]"
-            : "h-[104px] sm:h-[136px] md:h-[140px]"
+            ? "h-[90px] sm:h-[100px] md:h-[120px]"
+            : "h-[104px] sm:h-[126px] md:h-[140px]"
         }`}
       ></div>
     </>

@@ -10,11 +10,11 @@ const HomePage = ({ setCurrentPage, currentPage }) => {
   }, [setCurrentPage]);
 
   return (
-    <main className="relative w-full mt-[-30px] md:mt-[-20px]">
+    <main className="relative w-full mt-[-30px] sm:mt-[-40px] lg:mt-[-20px]">
       {/* HERO SECTION CONTAINER 
         - justify-center will now work perfectly because the bottom line is absolute 
       */}
-      <div className="relative w-full flex flex-col min-h-[calc(100vh-126px)] sm:min-h-[calc(100vh-116px)] md:min-h-[calc(100vh-120px)] items-center justify-center overflow-hidden">
+      <div className="relative w-full flex flex-col min-h-[calc(100vh-126px)] sm:min-h-[calc(100vh-106px)] md:min-h-[calc(100vh-120px)] items-center justify-center overflow-hidden">
         <img
           className="absolute inset-0 w-full h-full object-cover object-center"
           src="/images/Frame 2.png"
@@ -61,7 +61,7 @@ const HomePage = ({ setCurrentPage, currentPage }) => {
               {/* CTA Buttons */}
               <div className="flex flex-col items-center pt-2">
                 <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                  <button className="px-8 py-4 bg-[#F9D759] hover:bg-[#D97010] text-[#243453] font-bold rounded-lg shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105">
+                  <button className="px-8 py-4 bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-lg shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105">
                     Get a Free Quote
                     <ArrowRight
                       size={16}
