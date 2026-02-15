@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { Hammer, Phone, X, Menu } from "lucide-react"; // Added X and Menu icons
-import { Link, useLocation } from "react-router-dom"; // Added useLocation to close menu on navigation
+import { Hammer, Phone, X, Menu } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
-const Header = () => {
+const Header = ({currentPage, setCurrentPage}) => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,7 +45,7 @@ const Header = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "About Us", path: "/about-us" },
+    { name: "About", path: "/about-us" },
     { name: "Services", path: "/services" },
     { name: "Gallery", path: "/gallery" },
     { name: "Contact", path: "/contact-us" },
@@ -91,7 +91,7 @@ const Header = () => {
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 type="button"
-                className="inline-flex items-center p-2 w-10 h-10 justify-center text-[#F9D759] rounded-lg md:hidden hover:bg-slate-800 focus:outline-none transition-colors"
+                className="inline-flex items-center p-2 w-10 h-10 justify-center text-white rounded-lg md:hidden hover:bg-slate-800 focus:outline-none transition-colors"
               >
                 <span className="sr-only">Open main menu</span>
                 {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
@@ -108,7 +108,7 @@ const Header = () => {
                   >
                     <Link
                       to={item.path}
-                      className="nav-link-hover block px-3 text-[#F9D759] hover:text-white transition-colors duration-200"
+                      className={`block px-3 transition-colors duration-200 ${currentPage === item.name.toLowerCase()? "text-yellow" : "text-white nav-link-hover"}`}
                     >
                       {item.name}
                     </Link>
@@ -121,7 +121,7 @@ const Header = () => {
 
         {/* 2. MOBILE SLIDE-DOWN MENU */}
         <div
-          className={`absolute w-full bg-[#2c3a55] border-y-2 border-[#F9D759] transition-all duration-500 ease-in-out z-30 md:hidden ${
+          className={`absolute w-full bg-[#565656] border-y-2 border-[#F9D759] transition-all duration-500 ease-in-out z-30 md:hidden ${
             isMenuOpen
               ? "translate-y-0"
               : "-translate-y-full pointer-events-none shadow-xl"
@@ -132,7 +132,7 @@ const Header = () => {
               <li key={item.name}>
                 <Link
                   to={item.path}
-                  className="block text-xl text-white active:text-[#F9D759] py-2"
+                  className={`block text-xl ${currentPage === item.name.toLocaleLowerCase()? "text-[#F9D759]" : "text-white"} py-2`}
                 >
                   {item.name}
                 </Link>

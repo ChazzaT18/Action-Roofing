@@ -1,27 +1,72 @@
-import React from "react";
+import {React, useState} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import GetQuote from "./Components/GetQuote";
 import ContactUsPage from "./Pages/ContactUsPage";
-import GalleryPage from "./Pages/GalleryPage"
-import HomePage from "./Pages/HomePage"
-import AboutUsPage from "./Pages/AboutUsPage"
-import ServicesPage from "./Pages/ServicesPage"
+import GalleryPage from "./Pages/GalleryPage";
+import HomePage from "./Pages/HomePage";
+import AboutUsPage from "./Pages/AboutUsPage";
+import ServicesPage from "./Pages/ServicesPage";
+import { createContext } from "react";
 
+const CurrentPageContext = createContext();
 
 function App() {
+  const [currentPage, setCurrentPage] = useState("");
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/contact-us" element={<ContactUsPage />} />
-        <Route path="/about-us" element={<AboutUsPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-      </Routes>
-      <GetQuote />
-    </Router>
+    <CurrentPageContext.Provider value={{ currentPage, setCurrentPage }}>
+      <Router>
+        <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <HomePage
+                setCurrentPage={setCurrentPage}
+                currentPage={currentPage}
+              />
+            }
+          />
+          <Route
+            path="/contact-us"
+            element={
+              <ContactUsPage
+                setCurrentPage={setCurrentPage}
+                currentPage={currentPage}
+              />
+            }
+          />
+          <Route
+            path="/about-us"
+            element={
+              <AboutUsPage
+                setCurrentPage={setCurrentPage}
+                currentPage={currentPage}
+              />
+            }
+          />
+          <Route
+            path="/services"
+            element={
+              <ServicesPage
+                setCurrentPage={setCurrentPage}
+                currentPage={currentPage}
+              />
+            }
+          />
+          <Route
+            path="/gallery"
+            element={
+              <GalleryPage
+                setCurrentPage={setCurrentPage}
+                currentPage={currentPage}
+              />
+            }
+          />
+        </Routes>
+        <GetQuote />
+      </Router>
+    </CurrentPageContext.Provider>
   );
 }
 
