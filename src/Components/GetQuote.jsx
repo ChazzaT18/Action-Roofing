@@ -21,15 +21,10 @@ const GetQuote = ({ currentPage }) => {
   }, [currentPage]);
 
   return (
-    /* We add 'px-4' and 'pb-4' to pull the button away from the edges.
-       By not touching the bottom edge, Safari stops trying to blend the colors.
-    */
     <div
       className={`fixed bottom-0 left-0 w-full z-50 px-4 pb-6 transition-transform duration-500 ease-in-out sm:hidden ${
         showBar ? "translate-y-0" : "translate-y-full"
       }`}
-      /* This ensure the floating bar stays above the iPhone's home bar */
-      style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 16px)' }}
     >
       <Link
         to="/contact-us"

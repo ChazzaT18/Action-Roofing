@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Hammer, Phone, X, Menu } from "lucide-react";
+import { Hammer, Phone, X, Menu, Send } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = ({ currentPage, setCurrentPage }) => {
@@ -66,7 +66,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                 src="/images/Action Roofing logo.jpg"
                 className={`hidden sm:block transition-all duration-500 ease-in-out object-contain ${
                   isScrolled
-                    ? "xl:h-14 lg:h-12 md:h-10 sm:h-10"
+                    ? "xl:h-14 lg:h-12 sm:h-10"
                     : "xl:h-20 lg:h-16 md:h-14 sm:h-12"
                 }`}
                 alt="Action Roofing Logo"
@@ -81,7 +81,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
             <div className="flex md:order-2 space-x-3">
               <a
                 href="tel:07768981913"
-                className="group flex hover:animate-vibrate items-center gap-2 text-[#243453] bg-[#F9D759] hover:bg-[#F7CB28] cursor-pointer font-bold rounded-md text-xs lg:text-sm px-5 py-2.5 transition-all active:scale-95 shadow-md"
+                className="group sm:hidden flex items-center gap-2 text-[#243453] bg-[#F9D759] hover:bg-[#F7CB28] cursor-pointer font-bold rounded-md text-xs lg:text-sm px-5 py-2.5 transition-all active:scale-95 shadow-md"
               >
                 <span className="inline-block transition-transform duration-200">
                   <Phone size={14} fill="currentColor" />
@@ -89,6 +89,16 @@ const Header = ({ currentPage, setCurrentPage }) => {
 
                 <span>Call Now</span>
               </a>
+              <Link
+                to="/contact-us"
+                className="group flex max-sm:hidden items-center gap-2 text-[#243453] bg-[#F9D759] hover:bg-[#F7CB28] cursor-pointer font-bold rounded-md text-xs lg:text-sm px-5 py-2.5 transition-all active:scale-95 shadow-md"
+              >
+                <span className="inline-block transition-transform duration-200">
+                  <Send size={14} fill="currentColor" />
+                </span>
+
+                <span>Enquire Now</span>
+              </Link>
 
               {/* Hamburger Button */}
               <button

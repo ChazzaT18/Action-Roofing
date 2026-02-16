@@ -1,5 +1,8 @@
 import { useEffect } from "react";
 import LandingHero from "../Components/HomePage/LandingHero";
+import ServicesHomePage from "../Components/HomePage/ServicesHomePage";
+import TrustSection from "../Components/HomePage/TrustSection";
+import WhyChooseUs from "../Components/HomePage/WhyChoseUs";
 
 const HomePage = ({ setCurrentPage, currentPage }) => {
   
@@ -11,13 +14,9 @@ const HomePage = ({ setCurrentPage, currentPage }) => {
   return (
     <>
     <LandingHero></LandingHero>
-      <section className="bg-white py-20 h-[150vh] px-4 md:px-10">
-        <div className="max-w-screen-xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#243453] border-l-4 border-[#F9D759] pl-4">
-            Our Professional Roofing Services
-          </h2>
-        </div>
-      </section>
+    <ServicesHomePage></ServicesHomePage>
+    <TrustSection></TrustSection>
+    <WhyChooseUs></WhyChooseUs>
     </>
   );
 };

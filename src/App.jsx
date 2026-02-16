@@ -7,6 +7,7 @@ import GalleryPage from "./Pages/GalleryPage";
 import HomePage from "./Pages/HomePage";
 import AboutUsPage from "./Pages/AboutUsPage";
 import ServicesPage from "./Pages/ServicesPage";
+import Footer from "./Components/Footer";
 import { createContext } from "react";
 
 const CurrentPageContext = createContext();
@@ -64,6 +65,7 @@ function App() {
             }
           />
         </Routes>
+        <Footer></Footer>
         <GetQuote currentPage={currentPage}/>
       </Router>
     </CurrentPageContext.Provider>

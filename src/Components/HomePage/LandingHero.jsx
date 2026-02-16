@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const LandingHero = () => {
   return (
-    <main className="relative w-full mt-[-30px] sm:mt-[-40px] lg:mt-[-20px]">
+    <main className="relative w-full mt-[-30px] sm:mt-[-40px] lg:mt-[-30px] xl:mt-[-20px]">
       {/* HERO SECTION CONTAINER 
         - justify-center will now work perfectly because the bottom line is absolute 
       */}
