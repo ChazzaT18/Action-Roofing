@@ -3,9 +3,10 @@ import LandingHero from "../Components/HomePage/LandingHero";
 import ServicesHomePage from "../Components/HomePage/ServicesHomePage";
 import TrustSection from "../Components/HomePage/TrustSection";
 import WhyChooseUs from "../Components/HomePage/WhyChoseUs";
+import GalleryHome from "../Components/HomePage/GalleryHome";
+import ContactHome from "../Components/HomePage/ContactHome";
 
 const HomePage = ({ setCurrentPage, currentPage }) => {
-  
   useEffect(() => {
     setCurrentPage("home");
     window.scrollTo(0, 0);
@@ -13,10 +14,12 @@ const HomePage = ({ setCurrentPage, currentPage }) => {
 
   return (
     <>
-    <LandingHero></LandingHero>
-    <ServicesHomePage></ServicesHomePage>
-    <TrustSection></TrustSection>
-    <WhyChooseUs></WhyChooseUs>
+      <LandingHero></LandingHero>
+      <ServicesHomePage></ServicesHomePage>
+      <TrustSection></TrustSection>
+      <WhyChooseUs></WhyChooseUs>
+      <GalleryHome></GalleryHome>
+      <ContactHome></ContactHome>
     </>
   );
 };

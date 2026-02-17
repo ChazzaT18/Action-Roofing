@@ -14,7 +14,7 @@ const WhyChooseUs = () => {
     <section className="bg-white py-20 px-4 md:px-10">
       <div className="max-w-screen-xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-black text-[#243453] uppercase mb-6">Why Choose Us</h2>
+          <h2 className="text-3xl md:text-4xl font-black text-[#243453] uppercase mb-6">Why Choose Us?</h2>
           <p className="text-slate-600 text-lg italic">
             "When it comes to your home, you want a roofer you can trust to turn up on time, give honest 
             advice, and carry out the work correctly."
