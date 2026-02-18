@@ -5,6 +5,7 @@ import TrustSection from "../Components/HomePage/TrustSection";
 import WhyChooseUs from "../Components/HomePage/WhyChoseUs";
 import GalleryHome from "../Components/HomePage/GalleryHome";
 import ContactHome from "../Components/HomePage/ContactHome";
+import Testimonials from "../Components/HomePage/TestimonialsHome";
 
 const HomePage = ({ setCurrentPage, currentPage }) => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const HomePage = ({ setCurrentPage, currentPage }) => {
       <TrustSection></TrustSection>
       <WhyChooseUs></WhyChooseUs>
       <GalleryHome></GalleryHome>
+      <Testimonials></Testimonials>
       <ContactHome></ContactHome>
     </>
   );

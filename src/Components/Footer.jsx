@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     /* Changed pb-8 to pb-28 on mobile (sm:pb-8) to make room for the Get Quote bar */
-    <footer className="bg-[#243453] text-white pt-16 pb-28 sm:pb-8 px-4 md:px-10">
+    <footer className="bg-[#243453] text-white pt-12 pb-12 sm:pb-8 px-4 md:px-10">
       <div className="max-w-screen-xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           

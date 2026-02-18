@@ -35,13 +35,13 @@ const GalleryHome = () => {
 
   return (
     <section className="bg-slate-50 py-24 px-0 overflow-hidden">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-10">
+      <div className="max-w-screen-xl mx-auto px-4 md:px-0">
         
         {/* Header Block */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-black text-[#243453] uppercase border-l-8 border-[#F9D759] pl-6 mb-4">
-              Our Recent Roofing Work
+              Recent Projects
             </h2>
             <p className="text-slate-600">
               Real roofing projects we’ve completed across Brighton & Hove.
