@@ -15,7 +15,7 @@ const LandingHero = () => {
         />
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/15" />
+        <div className="absolute inset-0 bg-black/25" />
 
         {/* Main Content Grid */}
         <div className="relative z-10 w-full max-w-screen-xl px-4 py-10">

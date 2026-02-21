@@ -34,8 +34,8 @@ const GalleryHome = () => {
   };
 
   return (
-    <section className="bg-slate-50 py-24 px-0 overflow-hidden">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-0">
+    <section className="bg-slate-50 py-24 overflow-hidden">
+      <div className="max-w-screen-xl mx-auto px-4 md:px-10">
         
         {/* Header Block */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
