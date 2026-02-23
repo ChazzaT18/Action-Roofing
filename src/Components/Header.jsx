@@ -57,23 +57,33 @@ const Header = ({ currentPage, setCurrentPage }) => {
         {/* 1. Main Navigation Bar (Navy) */}
         <nav
           className={`bg-[#243453] text-[#F9D759] w-full relative z-40 transition-all duration-500 ease-in-out ${
-            isScrolled ? "py-2 shadow-lg" : "py-4"
+            isScrolled ? "py-4 shadow-lg" : "py-6"
           }`}
         >
-          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4">
+          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-2">
             <Link to="/" className="flex items-center space-x-3">
               <img
-                src="/images/Action Roofing logo.jpg"
-                className={`hidden sm:block transition-all duration-500 ease-in-out object-contain ${
+                src="/images/action roofing logo roof.png"
+                className={`hidden lg:block transition-all duration-500 ease-in-out object-contain ${
                   isScrolled
-                    ? "xl:h-14 lg:h-12 sm:h-10"
-                    : "xl:h-20 lg:h-16 md:h-14 sm:h-12"
+                    ? "xl:h-12 lg:h-10"
+                    : "xl:h-14 lg:h-12"
                 }`}
                 alt="Action Roofing Logo"
               />
               <img
+                src="/images/action roofing text.png"
+                className="hidden lg:block transition-all mt-2 duration-500 ease-in-out object-contain lg:h-6 xl:h-7"
+                alt="Action Roofing Logo Text"
+              />
+              <img
                 src="/images/Action Roofing logo mobile.jpg"
                 className="block sm:hidden h-12"
+                alt="Action Roofing Logo"
+              />
+              <img
+                src="/images/Action Roofing logo.jpg"
+                className="block max-sm:hidden lg:hidden h-12"
                 alt="Action Roofing Logo"
               />
             </Link>
@@ -112,8 +122,8 @@ const Header = ({ currentPage, setCurrentPage }) => {
             </div>
 
             {/* Desktop Nav Links */}
-            <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
-              <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-6 md:flex-row md:mt-0 md:border-0">
+            <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center w-auto">
+              <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-3 md:flex-row md:mt-0 md:border-0">
                 {navLinks.map((item) => (
                   <li
                     key={item.name}
@@ -160,7 +170,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
             isVisible ? "translate-y-0" : "-translate-y-full"
           } sm:translate-y-0`}
         >
-          <div className="w-full max-w-screen-xl flex justify-between items-center px-6">
+          <div className="w-full max-w-screen-xl flex justify-around items-center px-6">
             <a
               href="tel:07768981913"
               className="flex items-center gap-2 hover:underline"
