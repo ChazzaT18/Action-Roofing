@@ -49,16 +49,16 @@ const ContactHome = () => {
               <X size={24} />
             </button>
             <div className="flex justify-center mb-4">
-  <div className="bg-green-500 rounded-full p-4 flex items-center justify-center shadow-inner">
-    {/* We use a separate Check icon to guarantee it's perfectly centered */}
-    <CheckCircle 
-        size={60} 
-        strokeWidth={3} 
-        className="text-white" 
-        /* Removing 'fill' here and letting the parent div be the green circle */
-    />
-  </div>
-</div>
+              <div className="bg-green-500 rounded-full p-4 flex items-center justify-center shadow-inner">
+                {/* We use a separate Check icon to guarantee it's perfectly centered */}
+                <CheckCircle
+                  size={60}
+                  strokeWidth={3}
+                  className="text-white"
+                  /* Removing 'fill' here and letting the parent div be the green circle */
+                />
+              </div>
+            </div>
             <h3 className="text-2xl font-black text-[#243453] mb-2 uppercase">
               Message Sent!
             </h3>

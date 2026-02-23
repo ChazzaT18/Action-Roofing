@@ -19,9 +19,9 @@ const LandingHero = () => {
 
         {/* Main Content Grid */}
         <div className="relative z-10 w-full max-w-screen-xl px-4 py-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 max-sm:mt-[30px] gap-8 items-center">
             {/* Center Column: Primary Content */}
-            <div className="lg:col-span-8 lg:col-start-3 text-white flex flex-col justify-center gap-6 items-center text-center">
+            <div className="lg:col-span-8 lg:col-start-3 max-sm:my-10 text-white flex flex-col justify-center gap-6 items-center text-center">
               <div className="space-y-4">
                 <p className="text-[#F9D759] font-bold tracking-widest uppercase text-xs sm:text-sm">
                   Brighton & Hove's Trusted Choice
