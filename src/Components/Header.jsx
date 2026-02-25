@@ -57,7 +57,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
         {/* 1. Main Navigation Bar (Navy) */}
         <nav
           className={`bg-[#243453] text-[#F9D759] w-full relative z-40 transition-all duration-500 ease-in-out ${
-            isScrolled ? "py-4 shadow-lg" : "py-6"
+            isScrolled ? "py-4 shadow-lg" : "py-4.5 sm:py-6"
           }`}
         >
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-2">
