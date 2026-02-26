@@ -3,7 +3,7 @@ import { ShieldCheck, CheckCircle, Award, HardHat } from "lucide-react";
 const TrustSection = () => {
   return (
     <section className="bg-[#243453] py-24 px-4 md:px-10 text-white overflow-hidden">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         
         {/* Left Side: Content (7 columns) */}
         <div className="lg:col-span-7 space-y-8">

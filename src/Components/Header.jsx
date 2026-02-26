@@ -60,7 +60,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
             isScrolled ? "py-4 shadow-lg" : "py-4.5 sm:py-6"
           }`}
         >
-          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-2">
+          <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-2">
             <Link to="/" className="flex items-center space-x-3">
               <img
                 src="/images/action roofing logo roof.png"
@@ -101,7 +101,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
               </a>
               <Link
                 to="/contact-us"
-                className="group flex max-sm:hidden items-center gap-2 text-[#243453] bg-[#F9D759] hover:bg-[#F7CB28] cursor-pointer font-bold rounded-md text-xs lg:text-sm px-5 py-2.5 transition-all active:scale-95 shadow-md"
+                className="group flex max-sm:hidden items-center gap-2 text-[#243453] bg-[#F9D759] hover:bg-[#F7CB28] cursor-pointer font-bold rounded-md text-xs lg:text-sm px-5 py-2.5 transition-all hover:scale-105 shadow-md"
               >
                 <span className="inline-block transition-transform duration-200">
                   <Send size={14} fill="currentColor" />

@@ -18,35 +18,35 @@ const LandingHero = () => {
         <div className="absolute inset-0 bg-black/20" />
 
         {/* Main Content Grid */}
-        <div className="relative z-10 w-full max-w-screen-xl px-4 py-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 max-sm:mt-[30px] gap-8 items-center">
+        <div className="relative z-10 w-full max-w-screen-2xl px-4 py-10">
+          <div className="grid grid-cols-1 xl: lg:grid-cols-12 max-sm:mt-[30px] gap-8 items-center">
             {/* Center Column: Primary Content */}
             <div className="lg:col-span-8 lg:col-start-3 max-sm:my-10 text-white flex flex-col justify-center gap-6 items-center text-center">
               <div className="space-y-4">
-                <p className="text-[#F9D759] font-bold tracking-widest uppercase text-xs sm:text-sm">
+                <p className="text-[#F9D759] font-bold tracking-widest uppercase 2xl:text-lg text-xs sm:text-sm">
                   Brighton & Hove's Trusted Choice
                 </p>
-                <h1 className="text-3xl md:text-3xl lg:text-4xl font-extrabold leading-tight max-w-3xl">
+                <h1 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold leading-tight max-w-3xl">
                   Trusted Roofing Specialists in{" "}
                   <span className="text-[#F9D759]">Brighton & Hove</span> Since
                   2007
                 </h1>
               </div>
 
-              <p className="text-base md:text-lg text-slate-100 max-w-2xl leading-relaxed">
+              <p className="2xl:text-xl lg:text-base md:text-lg text-slate-100 max-w-2xl leading-relaxed">
                 Tile & slate roofing specialists offering repairs, leadwork,
                 maintenance & moss removal across Brighton & Hove.
               </p>
 
               {/* Feature Badges */}
               <div className="flex flex-wrap justify-center gap-3 text-sm font-medium">
-                <span className="bg-white/10 px-4 py-1.5 rounded-full border border-white/20 backdrop-blur-md">
+                <span className="bg-black/20 2xl:px-6 2xl:py-2.5 px-4 py-1.5 rounded-full border border-white/20 backdrop-blur-md">
                   Fully insured
                 </span>
-                <span className="bg-white/10 px-4 py-1.5 rounded-full border border-white/20 backdrop-blur-md">
+                <span className="bg-black/20 2xl:px-6 2xl:py-2.5 px-4 py-1.5 rounded-full border border-white/20 backdrop-blur-md">
                   Family-run
                 </span>
-                <span className="bg-white/10 px-4 py-1.5 rounded-full border border-white/20 backdrop-blur-md">
+                <span className="bg-black/20 2xl:px-6 2xl:py-2.5 px-4 py-1.5 rounded-full border border-white/20 backdrop-blur-md">
                   Local roofers
                 </span>
               </div>
