@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import { React, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import GetQuote from "./Components/GetQuote";
@@ -14,6 +14,7 @@ const CurrentPageContext = createContext();
 
 function App() {
   const [currentPage, setCurrentPage] = useState("");
+
   return (
     <CurrentPageContext.Provider value={{ currentPage, setCurrentPage }}>
       <Router>
@@ -66,7 +67,7 @@ function App() {
           />
         </Routes>
         <Footer></Footer>
-        <GetQuote currentPage={currentPage}/>
+        <GetQuote currentPage={currentPage} />
       </Router>
     </CurrentPageContext.Provider>
   );

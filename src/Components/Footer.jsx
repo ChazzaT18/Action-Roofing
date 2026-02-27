@@ -49,7 +49,7 @@ const Footer = () => {
           
           {/* Column 1: Brand & Bio - No accordion needed here */}
           <div className="flex flex-col h-full lg:items-center">
-            <div className="space-y-6 flex items-center flex-col h-full">
+            <div className="space-y-6 flex items-center justify-center flex-col h-full">
               <Link to="/" className="flex items-center gap-2">
                 <img src="/images/action roofing text.png" className="w-[80%] mx-auto" alt="Text" />
               </Link>

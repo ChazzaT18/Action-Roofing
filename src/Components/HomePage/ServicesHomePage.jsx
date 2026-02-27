@@ -9,12 +9,6 @@ const services = [
     path: "/services/emergency-repairs"
   },
   {
-    title: "Moss Removal & Gutter Cleaning",
-    desc: "Protect your roof longevity and prevent blockages with professional cleaning.",
-    image: "/images/gutter-cleaning.jpg",
-    path: "/services/moss-removal"
-  },
-  {
     title: "Slate & Tile Roofing",
     desc: "Expert installation and repair of traditional slate and modern tiled roofs.",
     image: "/images/slate-roofing.png",
@@ -39,10 +33,10 @@ const services = [
     path: "/services/fascias-soffits"
   },
   {
-    title: "Maintenance & Inspections",
-    desc: "Annual check-ups to catch minor issues before they become expensive leaks.",
-    image: "images/drone-roof-survey.webp",
-    path: "/services/maintenance"
+    title: "Moss Removal & Gutter Cleaning",
+    desc: "Protect your roof longevity and prevent blockages with professional cleaning.",
+    image: "/images/gutter-cleaning.jpg",
+    path: "/services/moss-removal"
   }
 ];
 

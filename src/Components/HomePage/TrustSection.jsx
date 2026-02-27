@@ -2,51 +2,66 @@ import { ShieldCheck, CheckCircle, Award, HardHat } from "lucide-react";
 
 const TrustSection = () => {
   return (
-    <section className="bg-[#243453] py-24 px-4 md:px-10 text-white overflow-hidden">
+    <section id="trust-section" className="bg-[#243453] py-20 px-4 md:px-10 text-white overflow-hidden">
       <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         
         {/* Left Side: Content (7 columns) */}
         <div className="lg:col-span-7 space-y-8">
-          <div className="space-y-4">
-            <h2 className="text-3xl font-black border-l-8 border-[#F9D759] pl-6 uppercase tracking-tight">
-              Fully Insured Roofers <br /> You Can Rely On
+          <div className="mb-4">
+            <h2 className="max-2xl:text-3xl text-2xl mb-4 font-black border-l-8 border-[#F9D759] pl-6 uppercase tracking-tight">
+              Roofing Done Properly <br/> With Accountability
             </h2>
-            <p className="text-xl text-[#F9D759] font-bold">
-              Family-run roofing specialists with over 20 years’ combined experience.
+            <p className="max-2xl:text-lg text-[#F9D759] font-bold">
+              Family-run roofing specialists serving Brighton & Hove since 2007.
             </p>
           </div>
 
-          <div className="space-y-6 text-slate-300 text-lg leading-relaxed">
+          <div className="space-y-6 text-slate-300 2xl:text-lg leading-relaxed">
             <p>
-              Choosing the right roofer matters. We take pride in doing the job properly, using the correct 
-              materials and proven methods on every project, no matter the size.
+              We provide clear, honest advice supported by photographed inspections, explaining what needs to be done and why. All work is documented before, during and after completion so you can see exactly what has been carried out.
             </p>
             <p>
-              Whether it's a minor leak or a full re-roof, all our work is completed to a high standard 
-              and backed by our <span className="text-white font-bold">10-year workmanship guarantee</span>. 
-              We are fully covered for your peace of mind.
+              Written <span class="text-white font-bold">workmanship guarantees</span> are provided on full roof installations, and we are fully insured for your peace of mind.
             </p>
           </div>
           
           {/* Detailed Trust List */}
-          <div className="space-y-4 pt-4">
+          <div className="md:grid md:cols-2 gap-4">
             <div className="flex items-center gap-4 group">
-              <div className="bg-white/10 p-2 rounded-full transition-colors">
-                <CheckCircle className="text-[#F9D759]" size={20} />
+              <div className="bg-white/10 p-2 rounded-full col-1 transition-colors">
+                <CheckCircle className="text-[#F9D759]" size={18} />
               </div>
-              <span className="font-bold text-slate-200">Public Liability & Employer Insurance</span>
+              <span className="font-bold text-slate-200 max-2xl:text-sm max-2xl:text-sm">Family-run and locally accountable</span>
+            </div>
+            <div className="flex items-center gap-4 col-2 group">
+              <div className="bg-white/10 p-2 rounded-full transition-colors">
+                <CheckCircle className="text-[#F9D759]" size={18} />
+              </div>
+              <span className="font-bold text-slate-200 max-2xl:text-sm max-2xl:text-sm">Transparent, itemised quotations</span>
             </div>
             <div className="flex items-center gap-4 group">
               <div className="bg-white/10 p-2 rounded-full transition-colors">
-                <CheckCircle className="text-[#F9D759]" size={20} />
+                <CheckCircle className="text-[#F9D759]" size={18} />
               </div>
-              <span className="font-bold text-slate-200">Health & Safety Compliant</span>
+              <span className="font-bold text-slate-200 max-2xl:text-sm max-2xl:text-sm">Photographed inspections and documented work</span>
+            </div>
+            <div className="flex items-center gap-4 group">
+              <div className="bg-white/10 p-2 rounded-full transition-colors">
+                <CheckCircle className="text-[#F9D759]" size={18} />
+              </div>
+              <span className="font-bold text-slate-200 max-2xl:text-sm max-2xl:text-sm">Written guarantees on full installations</span>
+            </div>
+            <div className="flex items-center gap-4 group">
+              <div className="bg-white/10 p-2 rounded-full transition-colors">
+                <CheckCircle className="text-[#F9D759]" size={18} />
+              </div>
+              <span className="font-bold text-slate-200 max-2xl:text-sm max-2xl:text-sm">Health & Safety Compliant</span>
             </div>
             <div className="flex items-center gap-4 group">
               <div className="bg-white/10 p-2 rounded-full  transition-colors">
-                <CheckCircle className="text-[#F9D759]" size={20} />
+                <CheckCircle className="text-[#F9D759]" size={18} />
               </div>
-              <span className="font-bold text-slate-200">Expert Structural Timber Knowledge</span>
+              <span className="font-bold text-slate-200 max-2xl:text-sm max-2xl:text-sm">Fully insured</span>
             </div>
           </div>
         </div>

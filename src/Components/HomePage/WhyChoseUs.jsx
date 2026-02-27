@@ -3,10 +3,10 @@ import { CheckCircle } from "lucide-react";
 const WhyChooseUs = () => {
   const points = [
     "Rapid emergency response available (24/7, subject to availability)",
-    "Fully insured with a 10-year workmanship guarantee",
+    "Fully insured with a 10-year workmanship guarantee on all new installs",
     "Free, no-obligation roof inspections",
     "No-pressure, honest advice",
-    "Structural timber repairs carried out correctly",
+    "Structural timber repairs carried out in coordination with experienced carpenters where required",
     "20+ years’ combined roofing experience"
   ];
 
