@@ -2,7 +2,7 @@ import { ShieldCheck, CheckCircle, Award, HardHat } from "lucide-react";
 
 const TrustSection = () => {
   return (
-    <section id="trust-section" className="bg-[#243453] py-20 px-4 md:px-10 text-white overflow-hidden">
+    <section id="trust-section" className="bg-[#243453] py-18 px-4 md:px-10 text-white overflow-hidden">
       <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         
         {/* Left Side: Content (7 columns) */}
@@ -27,37 +27,37 @@ const TrustSection = () => {
           
           {/* Detailed Trust List */}
           <div className="md:grid md:cols-2 gap-4">
-            <div className="flex items-center gap-4 group">
+            <div className="flex items-center max-md:py-1 gap-4 group">
               <div className="bg-white/10 p-2 rounded-full col-1 transition-colors">
                 <CheckCircle className="text-[#F9D759]" size={18} />
               </div>
               <span className="font-bold text-slate-200 max-2xl:text-sm max-2xl:text-sm">Family-run and locally accountable</span>
             </div>
-            <div className="flex items-center gap-4 col-2 group">
+            <div className="flex items-center gap-4 max-md:py-1 col-2 group">
               <div className="bg-white/10 p-2 rounded-full transition-colors">
                 <CheckCircle className="text-[#F9D759]" size={18} />
               </div>
               <span className="font-bold text-slate-200 max-2xl:text-sm max-2xl:text-sm">Transparent, itemised quotations</span>
             </div>
-            <div className="flex items-center gap-4 group">
+            <div className="flex items-center gap-4 max-md:py-1 group">
               <div className="bg-white/10 p-2 rounded-full transition-colors">
                 <CheckCircle className="text-[#F9D759]" size={18} />
               </div>
               <span className="font-bold text-slate-200 max-2xl:text-sm max-2xl:text-sm">Photographed inspections and documented work</span>
             </div>
-            <div className="flex items-center gap-4 group">
+            <div className="flex items-center gap-4 max-md:py-1 group">
               <div className="bg-white/10 p-2 rounded-full transition-colors">
                 <CheckCircle className="text-[#F9D759]" size={18} />
               </div>
               <span className="font-bold text-slate-200 max-2xl:text-sm max-2xl:text-sm">Written guarantees on full installations</span>
             </div>
-            <div className="flex items-center gap-4 group">
+            <div className="flex items-center gap-4 max-md:py-1 group">
               <div className="bg-white/10 p-2 rounded-full transition-colors">
                 <CheckCircle className="text-[#F9D759]" size={18} />
               </div>
               <span className="font-bold text-slate-200 max-2xl:text-sm max-2xl:text-sm">Health & Safety Compliant</span>
             </div>
-            <div className="flex items-center gap-4 group">
+            <div className="flex items-center gap-4 max-md:py-1 group">
               <div className="bg-white/10 p-2 rounded-full  transition-colors">
                 <CheckCircle className="text-[#F9D759]" size={18} />
               </div>
@@ -75,7 +75,7 @@ const TrustSection = () => {
 
           <div className="relative z-10">
             {/* The Badge Container */}
-            <div className="bg-white w-72 h-72 md:w-80 md:h-80 rounded-[40px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center text-center p-8 border-t-[12px] border-[#F9D759] transform -rotate-3 hover:rotate-0 transition-transform duration-500 cursor-default">
+            <div className="bg-white w-72 h-72 md:w-80 md:h-80 rounded-[40px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center text-center p-8 border-t-[12px] border-[#F9D759] transform rotate-3 cursor-default">
               
               <div className="bg-[#243453]/5 p-6 rounded-full mb-4">
                 <ShieldCheck size={64} className="text-[#243453]" strokeWidth={2.5} />
@@ -97,7 +97,7 @@ const TrustSection = () => {
             </div>
 
             {/* Sub-badge: Fully Insured Circle */}
-            <div className="absolute -top-6 -left-6 md:-left-12 bg-[#F9D759] text-[#243453] p-6 rounded-full shadow-xl flex flex-col items-center justify-center transform rotate-12 hover:rotate-0 transition-all duration-300 border-4 border-white">
+            <div className="absolute -top-6 -left-6 md:-left-12 bg-[#F9D759] text-[#243453] p-6 rounded-full shadow-xl flex flex-col items-center justify-center rotate-12 border-4 border-white">
                <HardHat size={28} />
                <span className="text-[10px] font-black uppercase leading-none mt-1">Fully</span>
                <span className="text-[10px] font-black uppercase leading-none">Insured</span>

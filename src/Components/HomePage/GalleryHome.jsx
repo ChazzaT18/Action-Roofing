@@ -34,8 +34,8 @@ const GalleryHome = () => {
   };
 
   return (
-    <section className="bg-slate-50 py-24 overflow-hidden">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-10">
+    <section className="bg-slate-50 py-18 px-4 md:px-10 overflow-hidden">
+      <div className="max-w-screen-2xl mx-auto">
         
         {/* Header Block */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -59,15 +59,15 @@ const GalleryHome = () => {
       </div>
 
       {/* Grid vs Carousel Container */}
-      <div className="relative">
+      <div className="relative max-w-screen-2xl mx-auto">
         <div 
           ref={scrollRef}
           onScroll={handleScroll}
           className="
             flex md:grid md:grid-cols-2 lg:grid-cols-3 
-            gap-6 overflow-x-auto md:overflow-visible 
-            pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide 
-            px-[10vw] md:px-10
+            gap-6 overflow-x-auto w-full max-w-screen-2xl md:overflow-visible 
+            pb-2 md:pb-8 md:pb-0 snap-x snap-mandatory scrollbar-hide 
+            md:px-0
           "
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
@@ -75,7 +75,7 @@ const GalleryHome = () => {
             <div 
               key={i} 
               className={`
-                min-w-[80vw] md:min-w-full snap-center 
+                min-w-full md:min-w-full snap-center 
                 bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200 
                 transition-all duration-300
                 ${i === 2 ? "md:col-span-2 lg:col-span-1" : ""} 
@@ -83,7 +83,7 @@ const GalleryHome = () => {
             >
               <div className={`
                 overflow-hidden
-                ${i === 2 ? "md:h-80 lg:h-72 h-60" : "h-60 lg:h-72"}
+                ${i === 2 ? "md:h-80 lg:h-72 h-75" : "h-75 lg:h-72"}
               `}>
                 <img src={job.image} alt={job.title} className="w-full h-full object-cover" />
               </div>
@@ -121,7 +121,7 @@ const GalleryHome = () => {
           ))}
       </div>
 
-      <div className="mt-10 md:hidden text-center">
+      <div className="mt-6 md:hidden text-center">
         <Link to="/gallery" className="inline-flex items-center gap-2 text-[#243453] font-bold border-b-2 border-[#F9D759] pb-1">
           View Full Gallery
         </Link>

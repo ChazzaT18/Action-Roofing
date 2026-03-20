@@ -144,7 +144,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
 
         {/* 2. MOBILE SLIDE-DOWN MENU */}
         <div
-          className={`absolute w-full bg-[#565656] border-y-2 border-[#F9D759] transition-all duration-500 ease-in-out z-30 md:hidden ${
+          className={`absolute w-full bg-[url('/images/tiles_background.jpg')] object-cover border-y-2 border-[#F9D759] transition-all duration-500 ease-in-out z-30 md:hidden ${
             isMenuOpen
               ? "translate-y-0"
               : "-translate-y-full pointer-events-none shadow-xl"

@@ -107,7 +107,7 @@ const ContactHome = () => {
               <MessageSquareMore size={18} /> MESSAGE US
             </a>
           </div>
-          <p className="text-[10px] text-slate-400 italic">
+          <p className="text-[10px] max-sm:w-full max-sm:text-center text-slate-400 italic">
             We aim to respond as quickly as possible.
           </p>
         </div>

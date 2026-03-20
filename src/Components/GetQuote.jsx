@@ -29,7 +29,7 @@ const GetQuote = ({ currentPage }) => {
     >
       <Link
         to="/contact-us"
-        className="w-full h-14 flex items-center justify-center bg-[#F9D759] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.3)] border-2 border-[#243453]"
+        className="w-full h-18 flex items-center justify-center bg-[#F9D759] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.3)] border-2 border-[#243453]"
       >
         <span className="text-base font-black text-[#243453] tracking-wider">
           GET A FREE QUOTE

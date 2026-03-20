@@ -45,7 +45,7 @@ const Footer = () => {
     <footer className="bg-[#243453] text-white pt-12 pb-12 sm:pb-8 px-4 md:px-10">
       <div className="max-w-screen-xl mx-auto">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-10 mb-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-10 lg:mb-8 items-start">
           
           {/* Column 1: Brand & Bio - No accordion needed here */}
           <div className="flex flex-col h-full lg:items-center">

@@ -42,7 +42,7 @@ const services = [
 
 const ServicesHomePage = () => {
   return (
-    <section className="bg-slate-50 py-20 px-4 md:px-10">
+    <section className="bg-slate-50 py-18 px-4 md:px-10">
       <div className="max-w-screen-2xl mx-auto">
         
         {/* Header Section */}
