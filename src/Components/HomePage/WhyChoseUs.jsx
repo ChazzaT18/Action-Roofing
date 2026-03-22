@@ -2,22 +2,21 @@ import { CheckCircle } from "lucide-react";
 
 const WhyChooseUs = () => {
   const points = [
-    "Rapid emergency response available (24/7, subject to availability)",
+    "24/7 emergency call-outs — ready when you need us",
     "Fully insured with a 10-year workmanship guarantee on all new installs",
-    "Free, no-obligation roof inspections",
-    "No-pressure, honest advice",
-    "Structural timber repairs carried out in coordination with experienced carpenters where required",
-    "20+ years’ combined roofing experience"
+    "Free, no-obligation quotes and roof inspections",
+    "No-pressure, honest advicClear, honest advice with no pressure",
+    "Emergency timber repairs handled correctly",
+    "Local Brighton roofers with 20+ years of combined experience"
   ];
 
   return (
-    <section className="bg-white py-18 px-4 md:px-10">
+    <section className="bg-slate-50 py-18 px-4 md:px-10">
       <div className="max-w-screen-lg mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl 2xl:text-4xl md:text-3xl font-black text-[#243453] uppercase mb-6">Why Choose Us?</h2>
           <p className="text-slate-600 2xl:text-xl text-lg italic">
-            "When it comes to your home, you want a roofer you can trust to turn up on time, give honest 
-            advice, and carry out the work correctly."
+            "We focus on doing the job properly — no shortcuts, no pressure, just honest roofing you can trust."
           </p>
         </div>
 

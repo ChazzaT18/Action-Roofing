@@ -34,7 +34,7 @@ const GalleryHome = () => {
   };
 
   return (
-    <section className="bg-slate-50 py-18 px-4 md:px-10 overflow-hidden">
+    <section className="bg-white py-18 px-4 md:px-10 overflow-hidden">
       <div className="max-w-screen-2xl mx-auto">
         
         {/* Header Block */}

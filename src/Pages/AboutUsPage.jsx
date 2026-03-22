@@ -5,6 +5,9 @@ import {
   Construction,
   Home,
   Trello,
+  Sparkles, 
+  Hammer,
+  ClipboardCheck,
   Droplets,
   ArrowRight,
 } from "lucide-react";
@@ -65,10 +68,8 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
               Protecting Brighton Homes with{" "}
               <span className="text-[#F9D759]">Expert Roofing</span>
             </h1>
-            <p className="text-xl text-slate-200 leading-relaxed max-w-2xl font-medium">
-              From Jai's first projects in 2007 to the modern, specialist
-              installations we carry out today, our mission remains the same:
-              honest advice and craftsmanship you can rely on.
+            <p className="text-xl text-slate-150 leading-relaxed max-w-2xl font-medium">
+              Action Roofing was built on a legacy of integrity established by our founder, Jai Tahsin, in 2007. Today, I am proud to carry my father’s mission forward—pairing nearly two decades of family expertise with a commitment to honest advice and superior roofing craftsmanship.
             </p>
           </div>
         </div>
@@ -106,7 +107,7 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
                 completed with the same commitment to craftsmanship, honesty,
                 and customer care that he started nearly two decades ago.
               </p>
-              <p className="text-lg font-semibold text-[#243453] italic border-l-4 border-[#F9D759] pl-6 py-4 bg-slate-50 rounded-r-xl leading-relaxed">
+              <p className="text-lg font-semibold text-[#243453] italic border-l-4 border-[#243453] pl-6 py-4 bg-slate-50 rounded-r-xl leading-relaxed">
                 "We don't just fix roofs; we protect the families beneath them.
                 That’s the standard my father set, and it's the standard we meet
                 every day."
@@ -187,34 +188,89 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
         </div>
       </section>
 
-      {/* 4. OUR SERVICES - Card Styling with Icons */}
-      <section className="py-24 bg-white">
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
-          <div className="max-w-3xl mb-16 text-left">
+      {/* NEW: SECTION 6 & 7 - OUR APPROACH & TIDY WORK */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 text-left">
+          <div className="max-w-3xl mb-16">
             <h2 className="text-2xl md:text-3xl font-black text-[#243453] border-l-8 border-[#F9D759] pl-6 mb-6 uppercase tracking-tight">
-              Our Services
+              Our Professional Approach
             </h2>
             <p className="text-slate-600 text-lg">
-              We provide professional craftsmanship across all disciplines,
-              maintaining the high standards established by our family since
-              2007.
+              We keep the process straightforward and well-communicated from the first inspection through to the final installation.
             </p>
           </div>
 
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="space-y-4">
+              <div className="w-12 h-12 bg-[#243453] text-[#F9D759] rounded-lg flex items-center justify-center">
+                <ClipboardCheck size={28} />
+              </div>
+              <h3 className="text-xl font-extrabold uppercase">Clear Quotations</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                After inspecting your roof, we explain exactly what needs to be done and provide a clear quotation. You'll understand the "why" behind every recommendation.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <div className="w-12 h-12 bg-[#243453] text-[#F9D759] rounded-lg flex items-center justify-center">
+                <Hammer size={28} />
+              </div>
+              <h3 className="text-xl font-extrabold uppercase">Expert Workmanship</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                Work is carried out carefully and methodically. We focus on maintaining a consistent standard throughout the job, rather than rushing to complete it.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <div className="w-12 h-12 bg-[#243453] text-[#F9D759] rounded-lg flex items-center justify-center">
+                <Sparkles size={28} />
+              </div>
+              <h3 className="text-xl font-extrabold uppercase">Clean & Tidy</h3>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                We take pride in our workspace. Old materials are removed, surrounding areas are kept tidy, and we take every care to minimize disruption to your property.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. OUR SERVICES - Center Aligned & Primary Navy Background */}
+      <section className="py-24 bg-[#243453] text-white">
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
+          
+          {/* Header Section - Center Aligned */}
+          <div className="max-w-3xl mb-16 mx-auto text-center flex flex-col items-center">
+            <h2 className="text-2xl md:text-3xl font-black text-white border-b-8 border-[#F9D759] pb-4 mb-6 uppercase tracking-tight inline-block">
+              Our Services
+            </h2>
+            <p className="text-slate-300 text-lg">
+              We provide a full range of roofing services for homeowners across
+              Brighton & Hove, maintaining the high standards established by our
+              family since 2007.
+            </p>
+          </div>
+
+          {/* Services Grid - Center Aligned */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Link
                 key={index}
                 to={service.path}
-                className="group hover:scale-105 p-8 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-start text-left"
+                className="group hover:scale-105 p-8 bg-slate-50 rounded-2xl border border-white/10 shadow-sm hover:shadow-xl hover:border-[#F9D759]/50 transition-all duration-300 flex flex-col items-center text-center"
               >
-                <h3 className="font-extrabold text-lg text-[#243453] mb-3 uppercase tracking-tight transition-colors">
+                {/* Optional: Icon Support - making them yellow to match brand */}
+                <div className="text-[#243453] mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {/* You can map your icons here based on index or title if needed */}
+                </div>
+
+                <h3 className="font-extrabold text-lg text-[#243453] mb-3 uppercase tracking-tight">
                   {service.title}
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
+                <p className="text-slate-700 text-sm leading-relaxed mb-6 flex-grow">
                   {service.desc}
                 </p>
-                <div className="flex group-hover:text-[#d1ad2b] items-center text-[#243453] font-bold text-[10px] uppercase tracking-widest pt-4 border-t border-slate-200 w-full">
+                
+                <div className="flex items-center text-[#d1ad2b] font-bold text-[10px] uppercase tracking-widest pt-4 border-t border-slate-300 w-full justify-center">
                   Learn More
                   <ArrowRight
                     size={14}
@@ -231,16 +287,16 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
       <WhyChoseUs />
 
       {/* 6. FINAL VALUE STATEMENT */}
-      <footer className="py-20 bg-slate-50 border-t border-slate-200">
+      <footer className="py-20 bg-white border-t border-slate-200">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10 text-center">
           <p className="text-lg text-slate-600 italic leading-relaxed">
             "Each job is completed by our in-house team, and every project is
             backed by our guarantee for complete peace of mind."
           </p>
           <div className="mt-10 flex flex-col items-center">
-            <div className="h-1.5 w-16 bg-[#243453] mb-6"></div>
+            <div className="h-1.5 w-16 bg-[#F9D759] mb-6"></div>
             <p className="font-black text-[#243453] uppercase tracking-widest text-sm">
-              Action Roofing Services | Brighton & Hove
+              Action Roofing Services
             </p>
           </div>
         </div>
