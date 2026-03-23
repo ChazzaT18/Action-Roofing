@@ -12,9 +12,9 @@ const WhyChooseUs = () => {
 
   return (
     <section className="bg-slate-50 py-18 px-4 md:px-10">
-      <div className="max-w-screen-lg mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl 2xl:text-4xl md:text-3xl font-black text-[#243453] uppercase mb-6">Why Choose Us?</h2>
+      <div className="max-w-screen-xl mx-auto">
+        <div className="text-center mx-auto mb-10">
+          <h2 className="text-2xl md:text-3xl font-black text-[#243453] uppercase mb-6">Why Choose Us?</h2>
           <p className="text-slate-600 2xl:text-xl text-lg italic">
             "We focus on doing the job properly — no shortcuts, no pressure, just honest roofing you can trust."
           </p>

@@ -36,10 +36,10 @@ const Testimonials = () => {
 
   return (
     <section className="bg-[#243453] py-18 md:px-10 overflow-hidden text-white">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-0">
+      <div className="mx-auto px-4 max-w-screen-2xl md:px-0">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-          <div className="max-w-2xl border-l-8 border-[#F9D759] pl-6">
-            <h2 className="text-3xl font-black uppercase tracking-tight">
+          <div className="max-w-2xl">
+            <h2 className="text-2xl md:text-3xl border-l-8 border-[#F9D759] pl-6 font-black uppercase tracking-tight">
               Customer <br /> Testimonials
             </h2>
             <p className="text-slate-300 mt-4 text-lg">
@@ -54,7 +54,7 @@ const Testimonials = () => {
         <div 
           ref={scrollRef}
           onScroll={handleScroll}
-          className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible pb-12 md:pb-0 snap-x snap-mandatory scrollbar-hide px-[10vw] md:px-0"
+          className="flex md:grid max-w-screen-2xl mx-auto md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible pb-12 md:pb-0 snap-x snap-mandatory scrollbar-hide px-[10vw] md:px-0"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {reviews.map((review, i) => (

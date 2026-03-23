@@ -6,7 +6,7 @@ const GetQuote = ({ currentPage }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (currentPage === "home") {
+      if (currentPage === "home" || currentPage == "about") {
         setShowBar(window.scrollY > 400 && window.scrollY < 7500);
       } else if (currentPage === "contact") {
         setShowBar(false);

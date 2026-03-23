@@ -141,10 +141,10 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
             </div>
 
             <div className="relative">
-              <div className="absolute -top-10 -right-4 md:-right-5 z-15 rotate-12">
-                <div className="bg-[#F9D759] text-[#243453] p-5 rounded-2xl shadow-2xl border-4 border-[#243453] text-center">
-                  <p className="text-4xl font-black leading-none">23+</p>
-                  <p className="text-[10px] uppercase font-black tracking-tighter mt-1">
+              <div className="absolute -top-8 md:-top-10 -right-2 md:-right-4 md:-right-5 z-15 rotate-12">
+                <div className="bg-[#F9D759] text-[#243453] p-4 md:p-5 rounded-2xl shadow-2xl border-4 border-[#243453] text-center">
+                  <p className="text-2xl md:text-4xl font-black leading-none">23+</p>
+                  <p className="text-[8px] md:text-[10px] uppercase font-black tracking-tighter mt-1">
                     Years Combined
                     <br />
                     Experience

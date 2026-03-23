@@ -8,7 +8,7 @@ const TrustSection = () => {
         {/* Left Side: Content (7 columns) */}
         <div className="lg:col-span-7 space-y-8">
           <div className="mb-4">
-            <h2 className="max-2xl:text-3xl text-2xl mb-4 font-black border-l-8 border-[#F9D759] pl-6 uppercase tracking-tight">
+            <h2 className="text-2xl md:text-3xl mb-4 font-black border-l-8 border-[#F9D759] pl-6 uppercase tracking-tight">
               Roofing Done Properly <br/> With Accountability
             </h2>
             <p className="max-2xl:text-lg text-[#F9D759] font-bold">
