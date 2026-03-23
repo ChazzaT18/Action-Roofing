@@ -35,14 +35,16 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="bg-[#243453] py-18 md:px-10 overflow-hidden text-white">
+    <section className="bg-[#243453] py-18 2xl:py-24 md:px-10 overflow-hidden text-white">
       <div className="mx-auto px-4 max-w-screen-2xl md:px-0">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-          <div className="max-w-2xl">
-            <h2 className="text-2xl md:text-3xl border-l-8 border-[#F9D759] pl-6 font-black uppercase tracking-tight">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 2xl:mb-20">
+          <div className="max-w-2xl 2xl:max-w-4xl">
+            {/* Bumped to 2xl:text-4xl */}
+            <h2 className="text-2xl md:text-3xl 2xl:text-4xl border-l-8 border-[#F9D759] pl-6 font-black uppercase tracking-tight">
               Customer <br /> Testimonials
             </h2>
-            <p className="text-slate-300 mt-4 text-lg">
+            {/* Bumped to 2xl:text-xl */}
+            <p className="text-slate-300 mt-4 text-lg 2xl:text-xl">
               Don't just take our word for it. Here is what homeowners across Brighton & Hove say about our work.
             </p>
           </div>
@@ -54,7 +56,7 @@ const Testimonials = () => {
         <div 
           ref={scrollRef}
           onScroll={handleScroll}
-          className="flex md:grid max-w-screen-2xl mx-auto md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible pb-12 md:pb-0 snap-x snap-mandatory scrollbar-hide px-[10vw] md:px-0"
+          className="flex md:grid max-w-screen-2xl mx-auto md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10 overflow-x-auto md:overflow-visible pb-12 md:pb-0 snap-x snap-mandatory scrollbar-hide px-[10vw] md:px-0"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {reviews.map((review, i) => (
@@ -62,12 +64,13 @@ const Testimonials = () => {
               key={i} 
               className={`
                 min-w-[85vw] md:min-w-full snap-center 
-                bg-white p-8 md:p-10 rounded-[2rem] shadow-2xl 
+                bg-white p-6 md:p-10 2xl:p-14 rounded-[2rem] shadow-2xl 
                 relative transition-all duration-300
                 ${i === 2 ? "md:col-span-2 lg:col-span-1" : ""} 
               `}
             >
-              <Quote className="absolute top-6 right-8 text-slate-100" size={60} strokeWidth={3} />
+              {/* Scaled Quote Icon for 2xl */}
+              <Quote className="absolute top-6 right-8 2xl:top-10 2xl:right-12 text-slate-100" size={60} strokeWidth={3} />
               
               <div className="relative z-10">
                 <div className="flex gap-1 mb-6">
@@ -76,18 +79,22 @@ const Testimonials = () => {
                   ))}
                 </div>
 
-                <p className="text-[#243453] text-lg font-medium leading-relaxed italic mb-8">
+                {/* Bumped to 2xl:text-2xl */}
+                <p className="text-[#243453] text-base 2xl:text-2xl font-medium leading-relaxed italic mb-8">
                   "{review.text}"
                 </p>
 
                 <div className="flex items-center gap-4 border-t border-slate-100 pt-6">
-                  <div className="w-12 h-12 bg-[#243453] rounded-full flex items-center justify-center text-[#F9D759] font-black text-xl">
+                  {/* Scaled Initial Avatar */}
+                  <div className="w-12 h-12 2xl:w-16 2xl:h-16 bg-[#243453] rounded-full flex items-center justify-center text-[#F9D759] font-black text-xl 2xl:text-2xl">
                     {review.name.charAt(0)}
                   </div>
                   <div>
-                    <h4 className="text-[#243453] font-black uppercase text-sm tracking-widest">{review.name}</h4>
-                    <div className="flex items-center gap-1 text-slate-400 text-xs font-bold mt-1">
-                      <MapPin size={12} className="text-[#F9D759]" /> {review.location}
+                    {/* Bumped to 2xl:text-lg */}
+                    <h4 className="text-[#243453] font-black uppercase text-sm 2xl:text-lg tracking-widest">{review.name}</h4>
+                    {/* Bumped to 2xl:text-base */}
+                    <div className="flex items-center gap-1 text-slate-400 text-xs 2xl:text-base font-bold mt-1">
+                      <MapPin size={14} className="text-[#F9D759]" /> {review.location}
                     </div>
                   </div>
                 </div>
