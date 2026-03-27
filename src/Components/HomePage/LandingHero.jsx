@@ -48,7 +48,7 @@ const LandingHero = () => {
               </div>
 
               {/* Bumped to 2xl:text-2xl */}
-              <p className="2xl:text-2xl lg:text-base md:text-lg text-slate-100 max-w-3xl leading-relaxed">
+              <p className="2xl:text-2xl md:text-lg text-slate-100 max-w-3xl leading-relaxed">
                 Founded in 2007 and built on decades of hands-on experience,
                 Action Roofing is committed to doing the job properly, providing
                 tile and slate roofing, repairs, leadwork and maintenance across

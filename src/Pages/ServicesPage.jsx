@@ -67,23 +67,67 @@ const ServicesPage = ({ setCurrentPage }) => {
   return (
     <div className="bg-white mt-[-30px] w-full sm:mt-[-40px] lg:mt-[-30px] xl:mt-[-20px] overflow-x-hidden text-[#243453]">
       {/* 1. HERO SECTION */}
-      <section className="relative w-full py-28 2xl:py-36 bg-[#243453] text-white">
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 relative z-10">
-          <div className="max-w-4xl">
+      <section className="relative flex justify-center items-center w-full min-h-[calc(100vh-126px)] sm:min-h-[calc(100vh-106px)] md:min-h-[calc(100vh-120px)] bg-[url('/images/services-bg.png')] bg-center bg-cover text-white overflow-hidden">
+        {/* The Grid Dots Graphic - Only visible on md screens and above */}
+        <div
+          className="absolute inset-0 z-0 opacity-20 block"
+          style={{
+            backgroundImage:
+              "radial-gradient(#F9D759 2px, transparent 2px)",
+            backgroundSize: "40px 40px",
+          }}
+        />
+
+        {/* Black Overlay - Renders over the dots */}
+        <div className="absolute inset-0 bg-black/10 sm:bg-black/20 z-1" />
+
+        {/* Main Content */}
+        <div className="max-w-screen-2xl mx-auto mt-[30px] sm:mt-[40px] lg:mt-[30px] xl:mt-[20px] px-4 md:px-10 relative z-10 w-full">
+          <div className="md:w-3/4 mx-auto text-center">
             <span className="text-[#F9D759] font-black uppercase tracking-[0.2em] text-sm">
               The Action Roofing Standard
             </span>
-            <h1 className="text-3xl md:text-4xl 2xl:text-5xl font-black mt-6 mb-8 leading-tight uppercase tracking-tight">
-              Our <span className="text-[#F9D759]">Roofing Services</span>
+
+            <h1 className="text-3xl lg:text-4xl 2xl:text-5xl font-black mt-6 mb-8 leading-tight uppercase tracking-tight">
+              Our Roofing <span className="text-[#F9D759]">Services</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed font-medium max-w-3xl">
-              Since 2007, Action Roofing has set the standard for professional roofing services throughout the South Coast. We combine nearly two decades of operational experience with a dedicated focus on structural integrity, honest expertise, and reliable results.
+
+            <p className="md:text-lg 2xl:text-xl text-slate-200 leading-relaxed font-medium max-w-3xl mx-auto mb-10">
+              Since 2007, Action Roofing has set the standard for professional
+              roofing services throughout the South Coast. We combine nearly two
+              decades of operational experience with a dedicated focus on
+              structural integrity and reliable results.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                to="/contact-us"
+                className="px-12 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-lg shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105 sm:w-auto"
+              >
+                Get a Free Quote
+                <ArrowRight
+                  size={20}
+                  className="group-hover:translate-x-1 transition-transform"
+                />
+              </Link>
+
+              <a
+                href="tel:07768981913"
+                className="px-12 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453]/80 backdrop-blur-sm hover:bg-[#243453] text-white border border-slate-500 font-bold rounded-lg shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105 sm:w-auto"
+              >
+                <Phone size={20} className="text-[#F9D759]" fill="none" />
+                Call Now
+              </a>
+            </div>
+
+            <p className="mt-6 text-xs sm:text-sm 2xl:text-base text-slate-300 italic font-medium">
+              Free inspections · No obligation · Expert Advice
             </p>
           </div>
         </div>
       </section>
-
-    <ServicesHomePage />
+      <ServicesHomePage />
 
       {/* 3. OUR APPROACH (Process Restored) */}
       <section className="py-24 bg-[#243453] text-white">
@@ -148,16 +192,17 @@ const ServicesPage = ({ setCurrentPage }) => {
       <section className="py-24 bg-white">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
+            {/* Text Column */}
             <div className="lg:w-1/2 text-left space-y-8">
-              <h2 className="text-3xl md:text-4xl font-black uppercase text-[#243453] tracking-tight">
+              <h2 className="text-2xl md:text-3xl border-l-8 pl-6 border-[#F9D759] 2xl:text-4xl font-black uppercase text-[#243453] tracking-tight">
                 Beyond the Surface
               </h2>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Most roofing failures aren't just about the tiles; they are
-                about the **timbers, underlays, and leadwork** beneath them. Our
-                structural expertise means we look deeper to prevent future
-                issues.
+              <p className="2xl:text-lg text-slate-600 leading-relaxed font-medium">
+                A quality roof is defined by the precision of its hidden layers.
+                We look deeper into the **timbers, underlays, and leadwork** to
+                ensure structural longevity and prevent future ingress issues.
               </p>
+
               <div className="grid gap-4">
                 {[
                   {
@@ -175,22 +220,30 @@ const ServicesPage = ({ setCurrentPage }) => {
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="flex gap-4 p-5 bg-slate-50 rounded-2xl border border-slate-100"
+                    className="flex gap-4 p-5 bg-slate-50 rounded-2xl border border-slate-100 transition-all hover:border-[#F9D759]/50"
                   >
                     <Search className="text-[#F9D759] shrink-0" size={24} />
                     <div>
-                      <h5 className="font-black uppercase text-sm">
+                      <h5 className="font-black uppercase text-sm text-[#243453]">
                         {item.title}
                       </h5>
-                      <p className="text-xs text-slate-500 mt-1">{item.desc}</p>
+                      <p className="text-xs text-slate-500 mt-1 font-medium">
+                        {item.desc}
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="lg:w-1/2">
-              <div className="bg-slate-100 rounded-[2.5rem] aspect-video flex items-center justify-center italic text-slate-400 border border-slate-200 shadow-inner">
-                Technical Detail Photo Placeholder
+
+            {/* Image Column */}
+            <div className="lg:w-1/2 w-full">
+              <div className="relative group overflow-hidden rounded-xl border border-slate-200 shadow-2xl">
+                <img
+                  src="/images/diagram.jpg"
+                  alt="Technical Roof Structure Diagram showing slates, battens, underlay and insulation"
+                  className="w-full h-auto object-contain"
+                />
               </div>
             </div>
           </div>

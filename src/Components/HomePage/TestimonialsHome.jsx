@@ -64,7 +64,7 @@ const Testimonials = () => {
               key={i} 
               className={`
                 min-w-[85vw] md:min-w-full snap-center 
-                bg-white p-6 md:p-10 2xl:p-14 rounded-[2rem] shadow-2xl 
+                bg-white p-6 md:p-10 2xl:p-14 rounded-lg shadow-2xl 
                 relative transition-all duration-300
                 ${i === 2 ? "md:col-span-2 lg:col-span-1" : ""} 
               `}

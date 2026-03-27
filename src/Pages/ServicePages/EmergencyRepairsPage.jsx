@@ -190,9 +190,6 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* 5. WHY CHOOSE US */}
-      <WhyChoseUs />
-
       {/* 6. CALL TO ACTION */}
       <section className="py-24 bg-[#243453] text-white text-center">
         <div className="max-w-4xl mx-auto px-4 md:px-10">

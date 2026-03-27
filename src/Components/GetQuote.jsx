@@ -6,22 +6,31 @@ const GetQuote = ({ currentPage }) => {
 
 useEffect(() => {
     const handleScroll = () => {
-      // Show bar on every page once the user scrolls down 400px
-      // This ensures it doesn't overlap your Hero text immediately
-      const isScrolled = window.scrollY > 400;
+      // 1. Calculate how far we've scrolled from the top
+      const scrollY = window.scrollY;
       
-      // If you want it to hide at the very bottom of long pages (like the footer), 
-      // you can keep a high limit, or just remove it for simplicity.
-      setShowBar(isScrolled);
+      // 2. Calculate the total height of the page minus the visible window height
+      const totalPageHeight = document.documentElement.scrollHeight;
+      const scrollableHeight = totalPageHeight - window.innerHeight;
+      
+      // 3. Logic for showing/hiding
+      const isPastHero = scrollY > 400;
+      
+      // We hide the bar if we are within 300px of the absolute bottom
+      const isNearBottom = (scrollableHeight - scrollY) < 300;
+
+      if (isPastHero && !isNearBottom) {
+        setShowBar(true);
+      } else {
+        setShowBar(false);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
-    
-    // Call immediately to check position on mount (e.g., if user refreshes mid-page)
-    handleScroll(); 
+    handleScroll(); // Initial check
     
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [currentPage]); // Re-run when page changes to reset scroll detection
+  }, [currentPage]);
 
   return (
     <div

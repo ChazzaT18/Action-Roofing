@@ -56,20 +56,20 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
   return (
     <div className="bg-white mt-[-30px] sm:mt-[-40px] lg:mt-[-30px] xl:mt-[-20px] overflow-x-hidden">
       {/* 1. HERO SECTION */}
-      <section className="relative w-full h-[90vh] bg-[url('/images/roof-repairs-hero.png')] bg-center bg-cover text-white">
-        <div className="absolute inset-0 bg-black/15 z-0" />
-        <div className="max-w-screen-2xl h-full mx-auto px-4 md:px-10 flex justify-center items-center relative z-10 text-left">
-          <div className="max-w-3xl lg:w-3/4 2xl:max-w-5xl mt-[30px] sm:mt-[40px] lg:mt-[30px] xl:mt-[20px]">
-            <span className="text-[#F9D759] font-bold uppercase tracking-widest 2xl:text-xl">
+      <section className="relative flex justify-center items-center w-full min-h-[calc(100vh-126px)] sm:min-h-[calc(100vh-106px)] md:min-h-[calc(100vh-120px)] bg-[url('/images/brighton-job.jpg')] bg-center bg-cover text-white">
+        <div className="absolute inset-0 bg-black/55 z-0" />
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 flex justify-center items-center relative z-10 text-left">
+          <div className="max-w-3xl lg:w-3/4 2xl:max-w-5xl sm:mt-[40px] lg:mt-[30px] xl:mt-[20px]">
+            <span className="text-[#F9D759] font-bold uppercase tracking-widest xl:lg 2xl:text-xl">
               Family-Run Since 2007
             </span>
             {/* Bumped to 2xl:text-6xl */}
-            <h1 className="text-4xl md:text-4xl 2xl:text-6xl font-black mt-4 mb-6 leading-tight uppercase tracking-tight">
+            <h1 className="text-4xl 2xl:text-6xl font-black mt-4 mb-6 leading-tight uppercase tracking-tight">
               Protecting Brighton Homes with{" "}
               <span className="text-[#F9D759]">Expert Roofing</span>
             </h1>
             {/* Bumped to 2xl:text-2xl */}
-            <p className="text-xl 2xl:text-2xl text-slate-150 leading-relaxed max-w-2xl 2xl:max-w-4xl font-medium">
+            <p className="2xl:text-2xl lg:text-base md:text-lg text-slate-100 max-w-3xl leading-relaxed">
               Action Roofing was built on a legacy of integrity established by our founder, Jai Tahsin, in 2007. Today, I am proud to carry my father’s mission forward—pairing nearly two decades of family expertise with a commitment to honest advice and superior roofing craftsmanship.
             </p>
           </div>
@@ -81,12 +81,12 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="grid lg:grid-cols-2 gap-16 2xl:gap-24 items-center">
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-slate-100 aspect-[3/4] rounded-2xl shadow-inner flex items-center justify-center border border-slate-200">
+              <div className="bg-slate-100 aspect-[3/4] rounded-lg shadow-inner flex items-center justify-center border border-slate-200">
                 <p className="text-slate-400 text-xs 2xl:text-sm p-4 text-center italic">
                   Photo: Dad (Founder)
                 </p>
               </div>
-              <div className="bg-slate-200 aspect-[3/4] rounded-2xl shadow-inner mt-8 flex items-center justify-center border border-slate-200">
+              <div className="bg-slate-200 aspect-[3/4] rounded-lg shadow-inner mt-8 flex items-center justify-center border border-slate-200">
                 <p className="text-slate-400 text-xs 2xl:text-sm p-4 text-center italic">
                   Photo: Current Team on Site
                 </p>
@@ -148,7 +148,7 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
 
             <div className="relative">
               <div className="absolute -top-8 md:-top-10 -right-2 md:-right-4 2xl:-right-10 z-15 rotate-12">
-                <div className="bg-[#F9D759] text-[#243453] p-4 md:p-5 2xl:p-8 rounded-2xl shadow-2xl border-4 border-[#243453] text-center">
+                <div className="bg-[#F9D759] text-[#243453] p-4 md:p-5 2xl:p-8 rounded-3xl shadow-2xl border-4 border-[#243453] text-center">
                   <p className="text-2xl md:text-4xl 2xl:text-5xl font-black leading-none">23+</p>
                   <p className="text-[8px] md:text-[10px] 2xl:text-xs uppercase font-black tracking-tighter mt-1">
                     Years Combined
@@ -160,7 +160,7 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
 
               <div className="space-y-6 relative z-10">
                 <div className="bg-white p-6 md:p-8 2xl:p-12 rounded-3xl border-b-8 border-[#F9D759] shadow-2xl flex items-center gap-6 md:gap-8">
-                  <div className="w-20 h-20 md:w-24 md:h-24 2xl:w-32 2xl:h-32 bg-[#243453]/10 rounded-2xl shrink-0 flex items-center justify-center border-2 border-dashed border-[#243453]/20 text-[#243453]/40 text-xs 2xl:text-sm font-bold italic">
+                  <div className="w-20 h-20 md:w-24 md:h-24 2xl:w-32 2xl:h-32 bg-[#243453]/10 rounded-lg shrink-0 flex items-center justify-center border-2 border-dashed border-[#243453]/20 text-[#243453]/40 text-xs 2xl:text-sm font-bold italic">
                     Photo
                   </div>
                   <div>
@@ -176,7 +176,7 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
                 </div>
 
                 <div className="bg-white p-6 md:p-8 2xl:p-12 rounded-3xl border-b-8 border-[#F9D759] shadow-2xl flex items-center gap-6 md:gap-8">
-                  <div className="w-20 h-20 md:w-24 md:h-24 2xl:w-32 2xl:h-32 bg-[#243453]/10 rounded-2xl shrink-0 flex items-center justify-center border-2 border-dashed border-[#243453]/20 text-[#243453]/40 text-xs 2xl:text-sm font-bold italic">
+                  <div className="w-20 h-20 md:w-24 md:h-24 2xl:w-32 2xl:h-32 bg-[#243453]/10 rounded-lg shrink-0 flex items-center justify-center border-2 border-dashed border-[#243453]/20 text-[#243453]/40 text-xs 2xl:text-sm font-bold italic">
                     Photo
                   </div>
                   <div>
@@ -247,7 +247,7 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
               <Link
                 key={index}
                 to={service.path}
-                className="group hover:scale-105 p-8 2xl:p-12 bg-slate-50 rounded-2xl border border-white/10 shadow-sm hover:shadow-xl hover:border-[#F9D759]/50 transition-all duration-300 flex flex-col items-center text-center"
+                className="group hover:scale-105 p-8 2xl:p-12 bg-slate-50 rounded-lg border border-white/10 shadow-sm hover:shadow-xl hover:border-[#F9D759]/50 transition-all duration-300 flex flex-col items-center text-center"
               >
                 <h3 className="font-extrabold text-lg 2xl:text-2xl text-[#243453] mb-3 uppercase tracking-tight">
                   {service.title}

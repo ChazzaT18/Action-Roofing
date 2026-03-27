@@ -66,7 +66,7 @@ const ServicesHomePage = ({currentPage}) => {
             <Link
               key={index}
               to={service.path}
-              className="group relative flex flex-col bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-slate-100"
+              className="group relative flex flex-col bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 border border-slate-100"
             >
               {/* Image Section */}
               <div className="relative h-64 md:h-44 2xl:h-56 overflow-hidden bg-black">

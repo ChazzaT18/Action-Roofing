@@ -79,7 +79,7 @@ const GalleryHome = () => {
               key={i} 
               className={`
                 min-w-full md:min-w-full snap-center 
-                bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200 
+                bg-white rounded-lg shadow-md overflow-hidden border border-slate-200 
                 transition-all duration-300
                 ${i === 2 ? "md:col-span-2 lg:col-span-1" : ""} 
               `}
