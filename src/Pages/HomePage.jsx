@@ -16,7 +16,7 @@ const HomePage = ({ setCurrentPage, currentPage }) => {
   return (
     <>
       <LandingHero></LandingHero>
-      <ServicesHomePage></ServicesHomePage>
+      <ServicesHomePage currentPage={currentPage}></ServicesHomePage>
       <TrustSection></TrustSection>
       <WhyChooseUs></WhyChooseUs>
       <GalleryHome></GalleryHome>

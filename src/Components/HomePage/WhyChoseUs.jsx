@@ -27,7 +27,7 @@ const WhyChooseUs = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
           {points.map((point, i) => (
-            <div key={i} className="flex items-center gap-4 p-4 2xl:p-10 bg-white rounded-xl border-b-4 border-[#F9D759] shadow-sm">
+            <div key={i} className="flex items-center gap-4 px-4 py-4 2xl:px-10 bg-white rounded-xl border-b-4 border-[#F9D759] shadow-sm">
               <div className="bg-[#243453] p-1 2xl:p-1.5 rounded-full mt-1 flex-shrink-0">
                 <CheckCircle className="text-[#F9D759]" size={16} />
               </div>

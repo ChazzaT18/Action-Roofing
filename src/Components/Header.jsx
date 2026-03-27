@@ -6,11 +6,10 @@ const Header = ({ currentPage, setCurrentPage }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // New State
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const location = useLocation();
 
-  // Close menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location]);
@@ -29,7 +28,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
       if (isMobile) {
         if (currentScrollY > lastScrollY && currentScrollY > 50) {
           setIsVisible(false);
-          setIsMenuOpen(false); // Auto-close menu if user scrolls down
+          setIsMenuOpen(false);
         } else {
           setIsVisible(true);
         }
@@ -65,15 +64,13 @@ const Header = ({ currentPage, setCurrentPage }) => {
               <img
                 src="/images/action roofing logo roof.png"
                 className={`hidden lg:block transition-all duration-500 ease-in-out object-contain ${
-                  isScrolled
-                    ? "xl:h-12 lg:h-10"
-                    : "xl:h-14 lg:h-12"
+                  isScrolled ? "xl:h-12 lg:h-10" : "xl:h-14 lg:h-12"
                 }`}
                 alt="Action Roofing Logo"
               />
               <img
                 src="/images/action roofing text.png"
-                className="hidden lg:block transition-all mt-2 duration-500 ease-in-out object-contain lg:h-6 xl:h-7"
+                className="hidden lg:block transition-all mt-2 duration-500 ease-in-out object-contain lg:h-6 xl:h-7 2xl:h-9"
                 alt="Action Roofing Logo Text"
               />
               <img
@@ -93,45 +90,36 @@ const Header = ({ currentPage, setCurrentPage }) => {
                 href="tel:07768981913"
                 className="group sm:hidden flex items-center gap-2 text-[#243453] bg-[#F9D759] hover:bg-[#F7CB28] cursor-pointer font-bold rounded-md text-xs lg:text-sm px-5 py-2.5 transition-all active:scale-95 shadow-md"
               >
-                <span className="inline-block transition-transform duration-200">
-                  <Phone size={14} fill="currentColor" />
-                </span>
-
+                <Phone size={14} fill="currentColor" />
                 <span>Call Now</span>
               </a>
               <Link
                 to="/contact-us"
                 className="group flex max-sm:hidden items-center gap-2 text-[#243453] bg-[#F9D759] hover:bg-[#F7CB28] cursor-pointer font-bold rounded-md text-xs lg:text-sm px-5 py-2.5 transition-all hover:scale-105 shadow-md"
               >
-                <span className="inline-block transition-transform duration-200">
-                  <Send size={14} fill="currentColor" />
-                </span>
-
+                <Send size={14} fill="currentColor" />
                 <span>Enquire Now</span>
               </Link>
 
-              {/* Hamburger Button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                type="button"
                 className="inline-flex items-center p-2 w-10 h-10 justify-center text-white rounded-lg md:hidden hover:bg-slate-800 focus:outline-none transition-colors"
               >
-                <span className="sr-only">Open main menu</span>
                 {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
               </button>
             </div>
 
-            {/* Desktop Nav Links */}
             <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center w-auto">
               <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-3 md:flex-row md:mt-0 md:border-0">
                 {navLinks.map((item) => (
-                  <li
-                    key={item.name}
-                    className="flex justify-center items-center"
-                  >
+                  <li key={item.name} className="flex justify-center 2xl:text-xl items-center">
                     <Link
                       to={item.path}
-                      className={`block px-3 transition-colors duration-200 ${currentPage === item.name.toLowerCase() ? "text-yellow" : "text-white nav-link-hover"}`}
+                      className={`block px-3 transition-colors duration-200 ${
+                        currentPage === item.name.toLowerCase()
+                          ? "text-yellow"
+                          : "text-white nav-link-hover"
+                      }`}
                     >
                       {item.name}
                     </Link>
@@ -142,12 +130,10 @@ const Header = ({ currentPage, setCurrentPage }) => {
           </div>
         </nav>
 
-        {/* 2. MOBILE SLIDE-DOWN MENU */}
+        {/* 2. MOBILE MENU */}
         <div
-          className={`absolute w-full bg-[url('/images/tiles_background.jpg')] object-cover border-y-2 border-[#F9D759] transition-all duration-500 ease-in-out z-30 md:hidden ${
-            isMenuOpen
-              ? "translate-y-0"
-              : "-translate-y-full pointer-events-none shadow-xl"
+          className={`absolute w-full bg-[url('/images/tiles_background.jpg')] border-y-2 border-[#F9D759] transition-all duration-500 ease-in-out z-30 md:hidden ${
+            isMenuOpen ? "translate-y-0" : "-translate-y-full pointer-events-none shadow-xl"
           }`}
         >
           <ul className="flex flex-col p-6 space-y-4 font-bold text-center">
@@ -155,7 +141,9 @@ const Header = ({ currentPage, setCurrentPage }) => {
               <li key={item.name}>
                 <Link
                   to={item.path}
-                  className={`block text-xl ${currentPage === item.name.toLocaleLowerCase() ? "text-[#F9D759]" : "text-white"} py-2`}
+                  className={`block text-xl ${
+                    currentPage === item.name.toLowerCase() ? "text-[#F9D759]" : "text-white"
+                  } py-2`}
                 >
                   {item.name}
                 </Link>
@@ -170,36 +158,34 @@ const Header = ({ currentPage, setCurrentPage }) => {
             isVisible ? "translate-y-0" : "-translate-y-full"
           } sm:translate-y-0`}
         >
-          <div className="w-full max-w-screen-xl flex justify-around items-center px-6">
-            <a
-              href="tel:07768981913"
-              className="flex items-center gap-2 hover:underline"
-            >
-              <Phone className="max-sm:hidden" size={14} />
+          <div className="w-full max-w-screen-2xl flex justify-around 2xl:text-lg items-center px-6">
+            <a href="tel:07768981913" className="flex items-center gap-2 hover:underline">
+              <Phone className="max-sm:hidden w-3.5 h-3.5 2xl:w-5 2xl:h-5" size={20} />
               <span>07768 981913</span>
             </a>
+
             <div className="opacity-40">|</div>
+
             <div className="flex items-center gap-2">
               <img
                 src="/images/Pavillion.png"
                 alt="Brighton"
-                className="h-4 w-auto max-sm:hidden"
+                className="h-4 w-auto mb-1 max-sm:hidden 2xl:h-6"
               />
               <span>Brighton & Hove</span>
             </div>
+
             <div className="opacity-40">|</div>
+
             <div className="flex items-center gap-2">
-              <Hammer className="max-sm:hidden" size={14} />
-              <span className="hidden xs:inline">
-                Emergency Repairs Available
-              </span>
+              <Hammer className="max-sm:hidden w-3.5 h-3.5 2xl:w-5 2xl:h-5" size={20} />
+              <span className="hidden xs:inline">Emergency Repairs Available</span>
               <span className="xs:hidden">Emergency Repairs</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Spacer */}
       <div
         className={`transition-all duration-500 ${
           isScrolled && window.innerWidth >= 640

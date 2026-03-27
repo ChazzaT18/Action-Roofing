@@ -4,22 +4,24 @@ import { Link } from "react-router-dom";
 const GetQuote = ({ currentPage }) => {
   const [showBar, setShowBar] = useState(false);
 
-  useEffect(() => {
+useEffect(() => {
     const handleScroll = () => {
-      if (currentPage === "home" || currentPage == "about") {
-        setShowBar(window.scrollY > 400 && window.scrollY < 7500);
-      } else if (currentPage === "contact") {
-        setShowBar(false);
-      }
-       else {
-        setShowBar(true);
-      }
+      // Show bar on every page once the user scrolls down 400px
+      // This ensures it doesn't overlap your Hero text immediately
+      const isScrolled = window.scrollY > 400;
+      
+      // If you want it to hide at the very bottom of long pages (like the footer), 
+      // you can keep a high limit, or just remove it for simplicity.
+      setShowBar(isScrolled);
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll();
+    
+    // Call immediately to check position on mount (e.g., if user refreshes mid-page)
+    handleScroll(); 
+    
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [currentPage]);
+  }, [currentPage]); // Re-run when page changes to reset scroll detection
 
   return (
     <div

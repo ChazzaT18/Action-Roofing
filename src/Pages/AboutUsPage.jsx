@@ -54,12 +54,12 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
   ];
 
   return (
-    <div className="bg-white mt-[-30px] w-full sm:mt-[-40px] lg:mt-[-30px] xl:mt-[-20px] overflow-x-hidden">
+    <div className="bg-white mt-[-30px] sm:mt-[-40px] lg:mt-[-30px] xl:mt-[-20px] overflow-x-hidden">
       {/* 1. HERO SECTION */}
       <section className="relative w-full h-[90vh] bg-[url('/images/roof-repairs-hero.png')] bg-center bg-cover text-white">
         <div className="absolute inset-0 bg-black/15 z-0" />
         <div className="max-w-screen-2xl h-full mx-auto px-4 md:px-10 flex justify-center items-center relative z-10 text-left">
-          <div className="max-w-3xl lg:w-3/4 2xl:max-w-5xl">
+          <div className="max-w-3xl lg:w-3/4 2xl:max-w-5xl mt-[30px] sm:mt-[40px] lg:mt-[30px] xl:mt-[20px]">
             <span className="text-[#F9D759] font-bold uppercase tracking-widest 2xl:text-xl">
               Family-Run Since 2007
             </span>
