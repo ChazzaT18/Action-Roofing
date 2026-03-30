@@ -177,11 +177,10 @@ const Header = ({ currentPage, setCurrentPage }) => {
 
             <div className="opacity-40">|</div>
 
-            <div className="flex items-center gap-2">
+            <Link to="/services/emergency-repairs" className="flex hover:underline items-center gap-2">
               <Hammer className="max-sm:hidden w-3.5 h-3.5 2xl:w-5 2xl:h-5" size={20} />
-              <span className="hidden xs:inline">Emergency Repairs Available</span>
               <span className="xs:hidden">Emergency Repairs</span>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

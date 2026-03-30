@@ -44,7 +44,7 @@ const ContactHome = () => {
           <div className="bg-white rounded-3xl p-8 2xl:p-12 max-w-sm 2xl:max-w-md w-full text-center shadow-2xl relative">
             <button
               onClick={() => setShowSuccess(false)}
-              className="absolute top-4 right-4 text-slate-400 hover:text-[#243453]"
+              className="absolute top-4 right-4 text-slate-400 cursor-pointer hover:text-[#243453]"
             >
               <X size={24} />
             </button>
@@ -65,7 +65,7 @@ const ContactHome = () => {
             </p>
             <button
               onClick={() => setShowSuccess(false)}
-              className="w-full bg-[#F9D759] text-[#243453] 2xl:text-xl font-black py-3 2xl:py-5 rounded-xl hover:bg-[#F7CB28] transition-all"
+              className="w-full bg-[#F9D759] text-[#243453] cursor-pointer 2xl:text-xl font-black py-3 2xl:py-5 rounded-xl hover:bg-[#F7CB28] transition-all"
             >
               Close
             </button>
@@ -103,7 +103,7 @@ const ContactHome = () => {
             </a>
 
             <a
-              href="mailto:info@actionroofingbrighton.co.uk"
+              href="mailto:actionroofingservices@outlook.com"
               className="flex items-center justify-center gap-3 w-full sm:w-64 2xl:w-80 2xl:text-xl 2xl:py-5 bg-slate-100 text-[#243453] font-black py-3.5 rounded-xl shadow-md hover:bg-slate-200 transition-all transform hover:-translate-y-1"
             >
               <MessageSquareMore size={20} /> MESSAGE US
@@ -164,7 +164,7 @@ const ContactHome = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-[#F9D759] text-[#243453] font-black py-4 2xl:py-6 2xl:text-xl rounded-xl hover:bg-[#F7CB28] transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full bg-[#F9D759] text-[#243453] font-black py-4 2xl:py-6 2xl:text-xl rounded-xl hover:bg-[#F7CB28] transition-all cursor-pointer flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <>

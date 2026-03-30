@@ -82,10 +82,10 @@ const LandingHero = () => {
                       className="group-hover:translate-x-1 transition-transform"
                     />
                   </Link>
-                  <button className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105">
+                  <Link to="/services/emergency-repairs" className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105">
                     <Hammer size={20} className="text-[#F9D759]" />
                     Emergency Repairs
-                  </button>
+                  </Link>
                 </div>
                 {/* Bumped to 2xl:text-base */}
                 <p className="mt-4 text-xs sm:text-sm 2xl:text-base text-slate-300 italic">

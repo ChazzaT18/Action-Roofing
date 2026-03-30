@@ -114,13 +114,13 @@ const Footer = () => {
                       <p className="text-sm 2xl:text-base font-bold">07768 981913</p>
                     </div>
                   </a>
-                  <a href="mailto:info@actionroofingbrighton.co.uk" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors group">
+                  <a href="mailto:actionroofingservices@outlook.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors group">
                     <div className="bg-white/10 p-2 2xl:p-3 rounded group-hover:bg-[#F9D759] group-hover:text-[#243453] transition-all shrink-0">
                       <Mail size={20} />
                     </div>
-                    <div>
+                    <div >
                       <p className="text-[10px] 2xl:text-xs uppercase font-bold text-slate-400">Email us</p>
-                      <p className="text-sm 2xl:text-base font-bold truncate max-w-[200px] xl:max-w-none">info@actionroofingbrighton.co.uk</p>
+                      <p className="text-sm 2xl:text-base font-bold truncate max-w-[200px] xl:max-w-none">actionroofingservices@outlook.com</p>
                     </div>
                   </a>
                   <div className="flex items-center gap-3 text-slate-300">
