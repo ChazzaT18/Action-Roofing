@@ -34,7 +34,7 @@ useEffect(() => {
 
   return (
     <div
-      className={`fixed bottom-0 left-0 w-full z-50 px-4 pb-6 transition-transform duration-500 ease-in-out sm:hidden ${
+      className={`fixed bottom-0 left-0 w-full z-50 px-4 pb-3 transition-transform duration-500 ease-in-out sm:hidden ${
         showBar ? "translate-y-0" : "translate-y-full"
       }`}
     >

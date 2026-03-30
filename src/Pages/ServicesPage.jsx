@@ -103,7 +103,7 @@ const ServicesPage = ({ setCurrentPage }) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact-us"
-                className="px-12 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-lg shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105 sm:w-auto"
+                className="px-12 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105 sm:w-auto"
               >
                 Get a Free Quote
                 <ArrowRight
@@ -114,7 +114,7 @@ const ServicesPage = ({ setCurrentPage }) => {
 
               <a
                 href="tel:07768981913"
-                className="px-12 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453]/80 backdrop-blur-sm hover:bg-[#243453] text-white border border-slate-500 font-bold rounded-lg shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105 sm:w-auto"
+                className="px-12 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453]/80 backdrop-blur-sm hover:bg-[#243453] text-white border border-slate-500 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105 sm:w-auto"
               >
                 <Phone size={20} className="text-[#F9D759]" fill="none" />
                 Call Now
@@ -144,7 +144,7 @@ const ServicesPage = ({ setCurrentPage }) => {
 
           <div className="grid md:grid-cols-3 gap-12 text-left">
             <div className="space-y-4">
-              <div className="w-12 h-12 bg-[#F9D759] text-[#243453] rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#F9D759] text-[#243453] rounded-xl flex items-center justify-center">
                 <ClipboardCheck size={28} />
               </div>
               <h3 className="text-xl font-extrabold uppercase tracking-tight">
@@ -158,7 +158,7 @@ const ServicesPage = ({ setCurrentPage }) => {
             </div>
 
             <div className="space-y-4">
-              <div className="w-12 h-12 bg-[#F9D759] text-[#243453] rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#F9D759] text-[#243453] rounded-xl flex items-center justify-center">
                 <Hammer size={28} />
               </div>
               <h3 className="text-xl font-extrabold uppercase tracking-tight">
@@ -172,7 +172,7 @@ const ServicesPage = ({ setCurrentPage }) => {
             </div>
 
             <div className="space-y-4">
-              <div className="w-12 h-12 bg-[#F9D759] text-[#243453] rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-[#F9D759] text-[#243453] rounded-xl flex items-center justify-center">
                 <Sparkles size={28} />
               </div>
               <h3 className="text-xl font-extrabold uppercase tracking-tight">

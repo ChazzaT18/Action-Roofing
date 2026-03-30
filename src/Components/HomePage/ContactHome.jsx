@@ -97,14 +97,14 @@ const ContactHome = () => {
             {/* Bumped button text to 2xl:text-xl and sizing to 2xl:w-80 */}
             <a
               href="tel:07768981913"
-              className="flex items-center justify-center gap-3 w-full sm:w-64 2xl:w-80 2xl:text-xl 2xl:py-5 bg-[#F9D759] text-[#243453] font-black py-3.5 rounded-lg shadow-lg hover:bg-[#243453] hover:text-white transition-all transform hover:-translate-y-1"
+              className="flex items-center justify-center gap-3 w-full sm:w-64 2xl:w-80 2xl:text-xl 2xl:py-5 bg-[#F9D759] text-[#243453] font-black py-3.5 rounded-xl shadow-lg hover:bg-[#243453] hover:text-white transition-all transform hover:-translate-y-1"
             >
               <Phone size={20} /> CALL NOW
             </a>
 
             <a
               href="mailto:info@actionroofingbrighton.co.uk"
-              className="flex items-center justify-center gap-3 w-full sm:w-64 2xl:w-80 2xl:text-xl 2xl:py-5 bg-slate-100 text-[#243453] font-black py-3.5 rounded-lg shadow-md hover:bg-slate-200 transition-all transform hover:-translate-y-1"
+              className="flex items-center justify-center gap-3 w-full sm:w-64 2xl:w-80 2xl:text-xl 2xl:py-5 bg-slate-100 text-[#243453] font-black py-3.5 rounded-xl shadow-md hover:bg-slate-200 transition-all transform hover:-translate-y-1"
             >
               <MessageSquareMore size={20} /> MESSAGE US
             </a>

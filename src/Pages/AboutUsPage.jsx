@@ -81,12 +81,12 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="grid lg:grid-cols-2 gap-16 2xl:gap-24 items-center">
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-slate-100 aspect-[3/4] rounded-lg shadow-inner flex items-center justify-center border border-slate-200">
+              <div className="bg-slate-100 aspect-[3/4] rounded-xl shadow-inner flex items-center justify-center border border-slate-200">
                 <p className="text-slate-400 text-xs 2xl:text-sm p-4 text-center italic">
                   Photo: Dad (Founder)
                 </p>
               </div>
-              <div className="bg-slate-200 aspect-[3/4] rounded-lg shadow-inner mt-8 flex items-center justify-center border border-slate-200">
+              <div className="bg-slate-200 aspect-[3/4] rounded-xl shadow-inner mt-8 flex items-center justify-center border border-slate-200">
                 <p className="text-slate-400 text-xs 2xl:text-sm p-4 text-center italic">
                   Photo: Current Team on Site
                 </p>
@@ -160,7 +160,7 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
 
               <div className="space-y-6 relative z-10">
                 <div className="bg-white p-6 md:p-8 2xl:p-12 rounded-3xl border-b-8 border-[#F9D759] shadow-2xl flex items-center gap-6 md:gap-8">
-                  <div className="w-20 h-20 md:w-24 md:h-24 2xl:w-32 2xl:h-32 bg-[#243453]/10 rounded-lg shrink-0 flex items-center justify-center border-2 border-dashed border-[#243453]/20 text-[#243453]/40 text-xs 2xl:text-sm font-bold italic">
+                  <div className="w-20 h-20 md:w-24 md:h-24 2xl:w-32 2xl:h-32 bg-[#243453]/10 rounded-xl shrink-0 flex items-center justify-center border-2 border-dashed border-[#243453]/20 text-[#243453]/40 text-xs 2xl:text-sm font-bold italic">
                     Photo
                   </div>
                   <div>
@@ -176,7 +176,7 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
                 </div>
 
                 <div className="bg-white p-6 md:p-8 2xl:p-12 rounded-3xl border-b-8 border-[#F9D759] shadow-2xl flex items-center gap-6 md:gap-8">
-                  <div className="w-20 h-20 md:w-24 md:h-24 2xl:w-32 2xl:h-32 bg-[#243453]/10 rounded-lg shrink-0 flex items-center justify-center border-2 border-dashed border-[#243453]/20 text-[#243453]/40 text-xs 2xl:text-sm font-bold italic">
+                  <div className="w-20 h-20 md:w-24 md:h-24 2xl:w-32 2xl:h-32 bg-[#243453]/10 rounded-xl shrink-0 flex items-center justify-center border-2 border-dashed border-[#243453]/20 text-[#243453]/40 text-xs 2xl:text-sm font-bold italic">
                     Photo
                   </div>
                   <div>
@@ -215,7 +215,7 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
               { icon: <Sparkles size={32} />, title: "Clean & Tidy", desc: "We take pride in our workspace. Old materials are removed, surrounding areas are kept tidy, and we take every care to minimize disruption to your property." }
             ].map((step, i) => (
               <div key={i} className="space-y-4">
-                <div className="w-14 h-14 2xl:w-16 2xl:h-16 bg-[#243453] text-[#F9D759] rounded-lg flex items-center justify-center">
+                <div className="w-14 h-14 2xl:w-16 2xl:h-16 bg-[#243453] text-[#F9D759] rounded-xl flex items-center justify-center">
                   {step.icon}
                 </div>
                 <h3 className="text-xl 2xl:text-2xl font-extrabold uppercase">{step.title}</h3>
@@ -247,7 +247,7 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
               <Link
                 key={index}
                 to={service.path}
-                className="group hover:scale-105 p-8 2xl:p-12 bg-slate-50 rounded-lg border border-white/10 shadow-sm hover:shadow-xl hover:border-[#F9D759]/50 transition-all duration-300 flex flex-col items-center text-center"
+                className="group hover:scale-105 p-8 2xl:p-12 bg-slate-50 rounded-xl border border-white/10 shadow-sm hover:shadow-xl hover:border-[#F9D759]/50 transition-all duration-300 flex flex-col items-center text-center"
               >
                 <h3 className="font-extrabold text-lg 2xl:text-2xl text-[#243453] mb-3 uppercase tracking-tight">
                   {service.title}
