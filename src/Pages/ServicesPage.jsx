@@ -194,7 +194,7 @@ const ServicesPage = ({ setCurrentPage }) => {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             {/* Text Column */}
             <div className="lg:w-1/2 text-left space-y-8">
-              <h2 className="text-2xl md:text-3xl border-l-8 pl-6 border-[#F9D759] 2xl:text-4xl font-black uppercase text-[#243453] tracking-tight">
+              <h2 className="text-2xl md:text-3xl 2xl:text-4xl border-l-8 pl-6 border-[#F9D759] 2xl:text-4xl font-black uppercase text-[#243453] tracking-tight">
                 Beyond the Surface
               </h2>
               <p className="2xl:text-lg text-slate-600 leading-relaxed font-medium">
