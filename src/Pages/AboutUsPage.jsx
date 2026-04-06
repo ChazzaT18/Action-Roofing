@@ -1,14 +1,11 @@
 import React, { useEffect } from "react";
 import {
-  ShieldAlert,
-  Layers,
-  Construction,
-  Home,
-  Trello,
-  Sparkles, 
+  Clock, 
+  Phone,
+  Sparkles,
   Hammer,
   ClipboardCheck,
-  Droplets,
+  ShieldCheck,
   ArrowRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -56,22 +53,59 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
   return (
     <div className="bg-white mt-[-30px] sm:mt-[-40px] lg:mt-[-30px] xl:mt-[-20px] overflow-x-hidden">
       {/* 1. HERO SECTION */}
-      <section className="relative flex justify-center items-center w-full min-h-[calc(100vh-126px)] sm:min-h-[calc(100vh-106px)] md:min-h-[calc(100vh-120px)] bg-[url('/images/brighton-job.jpg')] bg-center bg-cover text-white">
-        <div className="absolute inset-0 bg-black/55 z-0" />
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 flex justify-center items-center relative z-10 text-left">
-          <div className="max-w-3xl lg:w-3/4 2xl:max-w-5xl sm:mt-[40px] lg:mt-[30px] xl:mt-[20px]">
-            <span className="text-[#F9D759] font-bold uppercase tracking-widest xl:lg 2xl:text-xl">
+      <section className="relative flex justify-center items-center w-full min-h-[calc(100vh-126px)] sm:min-h-[calc(100vh-106px)] md:min-h-[calc(100vh-120px)] bg-[url('/images/brighton-job.jpg')] bg-center bg-cover text-white overflow-hidden">
+        {/* Black Overlay */}
+        <div className="absolute inset-0 bg-black/50 z-0" />
+
+        {/* Main Content */}
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 relative z-10 w-full text-center">
+          <div className="mt-[30px] w-full sm:mt-[40px] lg:mt-[30px] xl:mt-[20px]">
+            {/* Top Badge */}
+            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
+              <ShieldCheck size={18} />
               Family-Run Since 2007
-            </span>
-            {/* Bumped to 2xl:text-6xl */}
-            <h1 className="text-4xl 2xl:text-6xl font-black mt-4 mb-6 leading-tight uppercase tracking-tight">
-              Protecting Brighton Homes with{" "}
-              <span className="text-[#F9D759]">Expert Roofing</span>
+            </div>
+
+            {/* Main Heading */}
+            <h1 className="text-3xl md:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
+              Protecting Brighton Homes <br />
+              <span className="text-[#F9D759]">With Expert Roofing</span>
             </h1>
-            {/* Bumped to 2xl:text-2xl */}
-            <p className="2xl:text-2xl lg:text-base md:text-lg text-slate-100 max-w-3xl leading-relaxed">
-              Action Roofing was built on a legacy of integrity established by our founder, Jai Tahsin, in 2007. Today, I am proud to carry my father’s mission forward—pairing nearly two decades of family expertise with a commitment to honest advice and superior roofing craftsmanship.
+
+            {/* Subtext - Legacy & Storytelling */}
+            <p className="text-lg text-slate-100 leading-relaxed mb-10 font-medium max-w-4xl mx-auto">
+              Action Roofing was built on a legacy of integrity established by
+              our founder, Jai Tahsin, in 2007. Today, we carry that mission
+              forward—pairing nearly two decades of family expertise with a
+              commitment to honest advice and superior roofing craftsmanship.
             </p>
+
+            {/* Buttons & Sub-info */}
+            <div className="flex flex-col items-center pt-2">
+              <div className="flex flex-col sm:flex-row gap-4 w-3/4 sm:w-auto">
+                <Link
+                  to="/contact-us"
+                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105"
+                >
+                  Get a Free Quote
+                  <ArrowRight
+                    size={20}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
+                </Link>
+                <a
+                  href="tel:07768981913"
+                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453]/80 backdrop-blur-sm hover:bg-[#243453] text-white border border-slate-500 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105"
+                >
+                  <Phone size={20} className="text-[#F9D759]" />
+                  Call Now<span className="max-sm:hidden">: 07768 981913</span>
+                </a>
+              </div>
+
+              <p className="mt-6 text-xs sm:text-sm 2xl:text-base text-slate-300 italic font-medium">
+                Free inspections · No obligation · Proudly Local
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -149,7 +183,9 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
             <div className="relative">
               <div className="absolute -top-8 md:-top-10 -right-2 md:-right-4 2xl:-right-10 z-15 rotate-12">
                 <div className="bg-[#F9D759] text-[#243453] p-4 md:p-5 2xl:p-8 rounded-3xl shadow-2xl border-4 border-[#243453] text-center">
-                  <p className="text-2xl md:text-4xl 2xl:text-5xl font-black leading-none">23+</p>
+                  <p className="text-2xl md:text-4xl 2xl:text-5xl font-black leading-none">
+                    23+
+                  </p>
                   <p className="text-[8px] md:text-[10px] 2xl:text-xs uppercase font-black tracking-tighter mt-1">
                     Years Combined
                     <br />
@@ -204,21 +240,36 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
               Our Professional Approach
             </h2>
             <p className="text-slate-600 text-lg 2xl:text-xl">
-              We keep the process straightforward and well-communicated from the first inspection through to the final installation.
+              We keep the process straightforward and well-communicated from the
+              first inspection through to the final installation.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-12 2xl:gap-20">
             {[
-              { icon: <ClipboardCheck size={32} />, title: "Clear Quotations", desc: "After inspecting your roof, we explain exactly what needs to be done and provide a clear quotation. You'll understand the 'why' behind every recommendation." },
-              { icon: <Hammer size={32} />, title: "Expert Workmanship", desc: "Work is carried out carefully and methodically. We focus on maintaining a consistent standard throughout the job, rather than rushing to complete it." },
-              { icon: <Sparkles size={32} />, title: "Clean & Tidy", desc: "We take pride in our workspace. Old materials are removed, surrounding areas are kept tidy, and we take every care to minimize disruption to your property." }
+              {
+                icon: <ClipboardCheck size={32} />,
+                title: "Clear Quotations",
+                desc: "After inspecting your roof, we explain exactly what needs to be done and provide a clear quotation. You'll understand the 'why' behind every recommendation.",
+              },
+              {
+                icon: <Hammer size={32} />,
+                title: "Expert Workmanship",
+                desc: "Work is carried out carefully and methodically. We focus on maintaining a consistent standard throughout the job, rather than rushing to complete it.",
+              },
+              {
+                icon: <Sparkles size={32} />,
+                title: "Clean & Tidy",
+                desc: "We take pride in our workspace. Old materials are removed, surrounding areas are kept tidy, and we take every care to minimize disruption to your property.",
+              },
             ].map((step, i) => (
               <div key={i} className="space-y-4">
                 <div className="w-14 h-14 2xl:w-16 2xl:h-16 bg-[#243453] text-[#F9D759] rounded-xl flex items-center justify-center">
                   {step.icon}
                 </div>
-                <h3 className="text-xl 2xl:text-2xl font-extrabold uppercase">{step.title}</h3>
+                <h3 className="text-xl 2xl:text-2xl font-extrabold uppercase">
+                  {step.title}
+                </h3>
                 <p className="text-slate-600 leading-relaxed text-sm 2xl:text-base">
                   {step.desc}
                 </p>
@@ -257,7 +308,10 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
                 </p>
                 <div className="flex items-center text-[#d1ad2b] font-bold text-[10px] 2xl:text-xs uppercase tracking-widest pt-4 border-t border-slate-300 w-full justify-center">
                   Learn More
-                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight
+                    size={16}
+                    className="ml-2 group-hover:translate-x-1 transition-transform"
+                  />
                 </div>
               </Link>
             ))}

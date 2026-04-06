@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import ServicesCTA from "./ServicesCTA";
 import {
   ShieldCheck,
   Info,
@@ -12,13 +13,15 @@ import {
   HardHat,
   Ruler,
   Award,
+  Clock, 
+  Phone,
   CornerDownRight,
   Sun,
   CheckCircle2,
   Droplets,
   ArrowRight,
   History,
-  Truck
+  Truck,
 } from "lucide-react";
 
 const SlateTilePage = ({ setCurrentPage }) => {
@@ -32,39 +35,122 @@ const SlateTilePage = ({ setCurrentPage }) => {
       {/* 1. HERO SECTION (Kept as is per instructions) */}
       <section className="relative w-full h-[85vh] bg-[url('/images/slate-roofing.png')] bg-center bg-cover text-white">
         <div className="absolute inset-0 bg-black/50 z-0" />
-        <div className="max-w-screen-2xl h-full mx-auto px-4 md:px-10 flex flex-col justify-center relative z-10">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-3 py-1.5 rounded-full font-bold uppercase tracking-wider text-[10px] mb-4 shadow-md">
-              <ShieldCheck size={14} />
+        <div className="max-w-screen-2xl h-full mx-auto px-4 md:px-10 flex flex-col justify-center items-center relative z-10 text-center">
+          <div className="mt-[30px] w-full sm:mt-[40px] lg:mt-[30px] xl:mt-[20px]">
+            {/* Top Badge */}
+            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
+              <ShieldCheck size={18} />
               10-Year Workmanship Guarantee
             </div>
-            <h1 className="text-3xl md:text-5xl font-black mb-4 leading-tight uppercase tracking-tight">
+
+            {/* Main Heading */}
+            <h1 className="text-3xl md:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
               New Slate & Tile <br />
               <span className="text-[#F9D759]">Roof Installations</span>
             </h1>
-            <p className="text-lg text-slate-100 leading-relaxed mb-8 font-medium">
+
+            {/* Subtext */}
+            <p className="text-lg md:textxl 2xl:text-2xl text-slate-100 leading-relaxed mb-10 font-medium max-w-2xl mx-auto">
               Expert replacements in Brighton & Hove. Built for durability and
               aesthetics using 23+ years of combined experience.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Link
-                to="/contact-us"
-                className="px-6 py-3.5 bg-[#F9D759] text-[#243453] font-black rounded-lg shadow-xl transition-all flex items-center justify-center gap-2 hover:bg-[#f7cf40] hover:scale-105 duration-300 uppercase tracking-wider text-sm"
-              >
-                Request an Inspection
-                <ArrowRight size={18} />
-              </Link>
-              <div className="flex items-center gap-3 px-5 py-3 bg-[#243453]/90 rounded-lg ">
-                <span className="text-xs font-bold uppercase tracking-widest">
-                  Fully Insured • Local Experts
-                </span>
+
+            {/* Buttons & Sub-info */}
+            <div className="flex flex-col items-center pt-2">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/contact-us"
+                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105"
+                >
+                  Get a Free Quote
+                  <ArrowRight
+                    size={20}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
+                </Link>
+                <a
+                  href="tel:07768981913"
+                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105"
+                >
+                  <Phone size={20} className="text-[#F9D759]" />
+                  Call Now<span className="max-sm:hidden">: 07768 981913</span>
+                </a>
               </div>
+
+              <p className="mt-4 text-xs sm:text-sm 2xl:text-base text-slate-300 italic">
+                Free inspections · No obligation · Fully Insured
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. THE "WHY REPLACE?" SECTION */}
+      {/* 2. ANATOMY OF A QUALITY ROOF - Text size increased */}
+      <section className="py-24 bg-white">
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 text-center mb-16">
+          <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black uppercase text-[#243453] mb-4">
+            What’s Included in a{" "}
+            <span className="text-[#F9D759]">Complete Build?</span>
+          </h2>
+          <p className="max-w-2xl mx-auto text-slate-600 text-base 2xl:text-lg font-medium">
+            We follow a strict structural checklist to ensure your home is
+            watertight for decades.
+          </p>
+        </div>
+
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            {
+              icon: Hammer,
+              title: "Strip & Prep",
+              text: "Careful removal of old materials and structural timber inspection.",
+            },
+            {
+              icon: Wind,
+              title: "Modern Protection",
+              text: "High-performance breathable membranes to prevent damp.",
+            },
+            {
+              icon: Ruler,
+              title: "Precision Battening",
+              text: "Treated timber laths installed with laser-straight alignment.",
+            },
+            {
+              icon: Layers,
+              title: "Premium Materials",
+              text: "Your choice of Welsh Slate, Clay, or Concrete tiles.",
+            },
+            {
+              icon: CornerDownRight,
+              title: "Expert Leadwork",
+              text: "Custom-fitted flashing around chimneys and valleys.",
+            },
+            {
+              icon: Truck,
+              title: "The Clean-up",
+              text: "We treat your property like our own. Full waste removal included.",
+            },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="p-8 bg-slate-100 rounded-3xl shadow-lg hover:shadow-xl duration-300 transition-all group"
+            >
+              <item.icon
+                className="text-[#243453] bg-[#F9D759] rounded-xl p-3 mb-6 group-hover:scale-110 transition-transform"
+                size={44}
+              />
+              <h3 className="text-lg font-black uppercase mb-3 text-[#243453]">
+                {item.title}
+              </h3>
+              <p className="text-slate-600 text-base leading-relaxed">
+                {item.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 3. THE "WHY REPLACE?" SECTION */}
       <section className="py-24 bg-[#243453] text-white">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -126,72 +212,6 @@ const SlateTilePage = ({ setCurrentPage }) => {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* 3. ANATOMY OF A QUALITY ROOF - Text size increased */}
-      <section className="py-24 bg-white">
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 text-center mb-16">
-          <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black uppercase text-[#243453] mb-4">
-            What’s Included in a{" "}
-            <span className="text-[#F9D759]">Complete Build?</span>
-          </h2>
-          <div className="h-1.5 w-24 bg-[#F9D759] mx-auto mb-6"></div>
-          <p className="max-w-2xl mx-auto text-slate-600 text-base 2xl:text-lg font-medium">
-            We follow a strict structural checklist to ensure your home is
-            watertight for decades.
-          </p>
-        </div>
-
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              icon: Hammer,
-              title: "Strip & Prep",
-              text: "Careful removal of old materials and structural timber inspection.",
-            },
-            {
-              icon: Wind,
-              title: "Modern Protection",
-              text: "High-performance breathable membranes to prevent damp.",
-            },
-            {
-              icon: Ruler,
-              title: "Precision Battening",
-              text: "Treated timber laths installed with laser-straight alignment.",
-            },
-            {
-              icon: Layers,
-              title: "Premium Materials",
-              text: "Your choice of Welsh Slate, Clay, or Concrete tiles.",
-            },
-            {
-              icon: CornerDownRight,
-              title: "Expert Leadwork",
-              text: "Custom-fitted flashing around chimneys and valleys.",
-            },
-            {
-              icon: Truck,
-              title: "The Clean-up",
-              text: "We treat your property like our own. Full waste removal included.",
-            },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="p-8 bg-slate-100 rounded-3xl shadow-lg hover:shadow-xl duration-300 transition-all group"
-            >
-              <item.icon
-                className="text-[#243453] bg-[#F9D759] rounded-xl p-3 mb-6 group-hover:scale-110 transition-transform"
-                size={44}
-              />
-              <h3 className="text-lg font-black uppercase mb-3 text-[#243453]">
-                {item.title}
-              </h3>
-              <p className="text-slate-600 text-base leading-relaxed">
-                {item.text}
-              </p>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -383,31 +403,16 @@ const SlateTilePage = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* FINAL CTA - Text size increased */}
-      <section className="py-24 bg-[#F9D759] text-center">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black text-[#243453] uppercase mb-6 leading-tight">
-            Ready to Protect Your Home?
-          </h2>
-          <p className="text-sm md:text-base text-[#243453] font-bold uppercase tracking-widest mb-10">
-            Schedule your free roof replacement inspection today.
+      <ServicesCTA />
+
+      <footer className="py-12 bg-white text-center border-t border-slate-100">
+        <div className="flex flex-col items-center">
+          <div className="h-1.5 w-16 bg-[#F9D759] mb-6"></div>
+          <p className="font-black text-[#243453] uppercase tracking-widest text-xs">
+            Action Roofing Services | Tile & Slate Roofing
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <Link
-              to="/contact-us"
-              className="bg-[#243453] text-white px-10 py-5 rounded-2xl font-black uppercase tracking-wider duration-300 hover:scale-105 transition-all shadow-2xl text-base"
-            >
-              Get My Free Quote
-            </Link>
-            <a
-              href="tel:07768981913"
-              className="border-4 border-[#243453] text-[#243453] px-10 py-4.5 rounded-2xl font-black uppercase tracking-wider duration-300 hover:scale-105 shadow-2xl transition-all text-base"
-            >
-              Call Now: 07768 981913
-            </a>
-          </div>
         </div>
-      </section>
+      </footer>
     </div>
   );
 };

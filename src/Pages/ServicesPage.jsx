@@ -68,65 +68,70 @@ const ServicesPage = ({ setCurrentPage }) => {
     <div className="bg-white mt-[-30px] w-full sm:mt-[-40px] lg:mt-[-30px] xl:mt-[-20px] overflow-x-hidden text-[#243453]">
       {/* 1. HERO SECTION */}
       <section className="relative flex justify-center items-center w-full min-h-[calc(100vh-126px)] sm:min-h-[calc(100vh-106px)] md:min-h-[calc(100vh-120px)] bg-[url('/images/services-bg.png')] bg-center bg-cover text-white overflow-hidden">
-        {/* The Grid Dots Graphic - Only visible on md screens and above */}
+        {/* 1. Grid Dots Graphic */}
         <div
           className="absolute inset-0 z-0 opacity-20 block"
           style={{
-            backgroundImage:
-              "radial-gradient(#F9D759 2px, transparent 2px)",
+            backgroundImage: "radial-gradient(#F9D759 2px, transparent 2px)",
             backgroundSize: "40px 40px",
           }}
         />
 
-        {/* Black Overlay - Renders over the dots */}
-        <div className="absolute inset-0 bg-black/10 sm:bg-black/20 z-1" />
+        {/* 2. Black Overlay */}
+        <div className="absolute inset-0 bg-black/10 z-1" />
 
-        {/* Main Content */}
-        <div className="max-w-screen-2xl mx-auto mt-[30px] sm:mt-[40px] lg:mt-[30px] xl:mt-[20px] px-4 md:px-10 relative z-10 w-full">
-          <div className="md:w-3/4 mx-auto text-center">
-            <span className="text-[#F9D759] font-black uppercase tracking-[0.2em] text-sm">
+        {/* 3. Main Content */}
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 relative z-10 w-full text-center">
+          <div className="mt-[30px] w-full sm:mt-[40px] lg:mt-[30px] xl:mt-[20px]">
+            {/* Top Badge */}
+            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
+              <ShieldCheck size={18} />
               The Action Roofing Standard
-            </span>
-
-            <h1 className="text-3xl lg:text-4xl 2xl:text-5xl font-black mt-6 mb-8 leading-tight uppercase tracking-tight">
-              Our Roofing <span className="text-[#F9D759]">Services</span>
-            </h1>
-
-            <p className="md:text-lg 2xl:text-xl text-slate-200 leading-relaxed font-medium max-w-3xl mx-auto mb-10">
-              Since 2007, Action Roofing has set the standard for professional
-              roofing services throughout the South Coast. We combine nearly two
-              decades of operational experience with a dedicated focus on
-              structural integrity and reliable results.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                to="/contact-us"
-                className="px-12 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105 sm:w-auto"
-              >
-                Get a Free Quote
-                <ArrowRight
-                  size={20}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
-              </Link>
-
-              <a
-                href="tel:07768981913"
-                className="px-12 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453]/80 backdrop-blur-sm hover:bg-[#243453] text-white border border-slate-500 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105 sm:w-auto"
-              >
-                <Phone size={20} className="text-[#F9D759]" fill="none" />
-                Call Now
-              </a>
             </div>
 
-            <p className="mt-6 text-xs sm:text-sm 2xl:text-base text-slate-300 italic font-medium">
-              Free inspections · No obligation · Expert Advice
+            {/* Main Heading */}
+            <h1 className="text-3xl md:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
+              Our Roofing <br />
+              <span className="text-[#F9D759]">Services</span>
+            </h1>
+
+            {/* Subtext */}
+            <p className="text-lg md:textxl 2xl:text-2xl text-slate-100 leading-relaxed mb-10 font-medium max-w-3xl mx-auto">
+              Since 2007, Action Roofing has set the standard for professional
+              services across Brighton & Hove. We combine two decades of
+              experience with a dedicated focus on structural integrity.
             </p>
+
+            {/* Buttons & Sub-info */}
+            <div className="flex flex-col items-center pt-2">
+              <div className="flex flex-col sm:flex-row gap-4 w-3/4 sm:w-auto">
+                <Link
+                  to="/contact-us"
+                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105"
+                >
+                  Get a Free Quote
+                  <ArrowRight
+                    size={20}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
+                </Link>
+                <a
+                  href="tel:07768981913"
+                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453]/80 backdrop-blur-sm hover:bg-[#243453] text-white border border-slate-500 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105"
+                >
+                  <Phone size={20} className="text-[#F9D759]" />
+                  Call Now<span className="max-sm:hidden">: 07768 981913</span>
+                </a>
+              </div>
+
+              <p className="mt-6 text-xs sm:text-sm 2xl:text-base text-slate-300 italic font-medium">
+                Free inspections · No obligation · Expert Advice
+              </p>
+            </div>
           </div>
         </div>
       </section>
+
       <ServicesHomePage />
 
       {/* 3. OUR APPROACH (Process Restored) */}

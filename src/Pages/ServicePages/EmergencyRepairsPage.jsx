@@ -5,8 +5,6 @@ import {
   Clock,
   ShieldAlert,
   ArrowRight,
-  Mail,
-  FileText,
   CheckCircle2,
   AlertTriangle,
   HardHat,
@@ -16,6 +14,7 @@ import {
   Banknote,
   Info,
 } from "lucide-react";
+import ServicesCTA from "./ServicesCTA";
 
 const EmergencyRepairsPage = ({ setCurrentPage }) => {
   useEffect(() => {
@@ -27,27 +26,34 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
     <div className="bg-white mt-[-30px] w-full sm:mt-[-40px] lg:mt-[-30px] xl:mt-[-20px] overflow-x-hidden text-[#243453]">
       {/* 1. HERO SECTION */}
       <section className="relative w-full h-[85vh] bg-[url('/images/roof-repairs-hero.png')] bg-center bg-cover text-white">
-        <div className="absolute inset-0 bg-black/25 z-0" />
+        <div className="absolute inset-0 bg-black/30 z-0" />
         <div className="max-w-screen-2xl h-full mx-auto px-4 md:px-10 flex flex-col justify-center items-center relative z-10 text-center">
           <div className="mt-[30px] w-full sm:mt-[40px] lg:mt-[30px] xl:mt-[20px]">
-            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6">
+            {/* Top Badge - Specific to Emergency */}
+            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
               <Clock size={18} />
               24/7 Brighton & Hove Response
             </div>
-            <h1 className="text-4xl md:text-5xl 2xl:text-7xl font-black mb-6 leading-tight uppercase tracking-tight">
+
+            {/* Main Heading */}
+            <h1 className="text-3xl md:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
               Emergency <br />
               <span className="text-[#F9D759]">Roof Repairs</span>
             </h1>
-            <p className="text-xl text-slate-100 leading-relaxed mb-10 font-medium max-w-2xl mx-auto">
+
+            {/* Subtext */}
+            <p className="text-lg md:textxl 2xl:text-2xl text-slate-100 leading-relaxed mb-10 font-medium max-w-2xl mx-auto">
               Direct access to qualified roofers when you need us most. We
               provide rapid structural stabilizing and leak prevention across
               Brighton & Hove.
             </p>
+
+            {/* Buttons & Sub-info */}
             <div className="flex flex-col items-center pt-2">
-              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+              <div className="flex flex-col sm:flex-row gap-4 sm:w-auto">
                 <Link
-                  to="contact-us"
-                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105"
+                  to="/contact-us"
+                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105"
                 >
                   Get a Free Quote
                   <ArrowRight
@@ -57,14 +63,15 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
                 </Link>
                 <a
                   href="tel:07768981913"
-                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105"
+                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105"
                 >
                   <Phone size={20} className="text-[#F9D759]" />
-                  Call Now: 07768 981913
+                  Call Now<span className="max-sm:hidden">: 07768 981913</span>
                 </a>
               </div>
+
               <p className="mt-4 text-xs sm:text-sm 2xl:text-base text-slate-300 italic">
-                Free inspections · No obligation
+                Free inspections · No obligation · Rapid Local Response
               </p>
             </div>
           </div>
@@ -389,51 +396,7 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* 8. FINAL CALL TO ACTION */}
-      <section className="py-24 bg-[#243453] text-white text-center">
-        <div className="max-w-6xl mx-auto px-4 md:px-10">
-          <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black uppercase mb-12 tracking-tight">
-            Need an Honest <span className="text-[#F9D759]">Assessment?</span>
-          </h2>
-
-          <div className="grid grid-cols-1 sm:flex text-sm sm:flex-row justify-center gap-4 md:gap-6">
-            {/* 1. CALL BUTTON */}
-            <a
-              href="tel:07768981913"
-              className="bg-[#F9D759] text-[#243453] px-8 py-5 rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-all flex items-center justify-center gap-3 shadow-xl"
-            >
-              <Phone size={20} />
-              <span>
-                Call Now<span className="hidden sm:inline">: 07768 981913</span>
-              </span>
-            </a>
-
-            {/* 2. GET A QUOTE BUTTON */}
-            <Link
-              to="/contact-us"
-              className="bg-white text-[#243453] px-8 py-5 rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-all flex items-center justify-center gap-3 shadow-xl"
-            >
-              <FileText size={20} />
-              <span>Get A Quote</span>
-            </Link>
-
-            {/* 3. EMAIL BUTTON */}
-            <a
-              href="mailto:actionroofingservices@outlook.com"
-              className="border-2 border-white text-white px-8 py-5 rounded-2xl hover:bg-white/10 hover:scale-105 transition-all font-black uppercase tracking-widest flex items-center justify-center gap-3"
-            >
-              <Mail size={20} />
-              <span>
-                Email Us<span className="hidden sm:inline"> Today</span>
-              </span>
-            </a>
-          </div>
-
-          <p className="mt-8 text-slate-400 text-xs 2xl:text-sm md:text-base font-bold uppercase tracking-[0.2em]">
-            Rapid Response across Brighton & Hove
-          </p>
-        </div>
-      </section>
+      <ServicesCTA />
 
       <footer className="py-12 bg-white text-center border-t border-slate-100">
         <div className="flex flex-col items-center">
