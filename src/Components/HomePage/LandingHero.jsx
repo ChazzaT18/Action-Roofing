@@ -31,7 +31,7 @@ const LandingHero = () => {
 
         {/* Main Content Grid */}
         <div className="relative z-10 w-full max-w-screen-2xl px-4 py-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 max-sm:mt-[30px] gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 max-sm:mt-[30px] py-2 gap-8 items-center">
             {/* Center Column: Primary Content */}
             <div className="lg:col-span-8 lg:col-start-3 max-sm:my-10 text-white flex flex-col justify-center gap-6 items-center text-center">
               <div className="space-y-4">
@@ -40,7 +40,7 @@ const LandingHero = () => {
                   Brighton & Hove's Trusted Choice
                 </p>
                 {/* Bumped to 2xl:text-6xl */}
-                <h1 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-6xl font-extrabold leading-tight max-w-4xl">
+                <h1 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold leading-tight max-w-4xl">
                   Family-Run Roofing Specialists in{" "}
                   <span className="text-[#F9D759]">Brighton & Hove</span> Since
                   2007

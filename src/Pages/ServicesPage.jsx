@@ -90,7 +90,7 @@ const ServicesPage = ({ setCurrentPage }) => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-3xl md:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
+            <h1 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
               Our Roofing <br />
               <span className="text-[#F9D759]">Services</span>
             </h1>

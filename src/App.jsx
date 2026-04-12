@@ -10,6 +10,7 @@ import ServicesPage from "./Pages/ServicesPage";
 import EmergencyRepairsPage from "./Pages/ServicePages/EmergencyRepairsPage";
 import Footer from "./Components/Footer";
 import SlateTilePage from "./Pages/ServicePages/SlateTilePage";
+import FasciaSoffitPage from "./Pages/ServicePages/FasciaSoffitPage";
 
 const CurrentPageContext = createContext();
 
@@ -70,6 +71,15 @@ function App() {
             path="/services/slate-tile-roofing"
             element={
               <SlateTilePage
+                setCurrentPage={setCurrentPage}
+                currentPage={currentPage}
+              />
+            }
+          />
+          <Route
+            path="/services/fascias-soffits-guttering"
+            element={
+              <FasciaSoffitPage
                 setCurrentPage={setCurrentPage}
                 currentPage={currentPage}
               />

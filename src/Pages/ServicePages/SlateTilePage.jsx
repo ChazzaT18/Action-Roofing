@@ -13,7 +13,7 @@ import {
   HardHat,
   Ruler,
   Award,
-  Clock, 
+  Banknote,
   Phone,
   CornerDownRight,
   Sun,
@@ -44,7 +44,7 @@ const SlateTilePage = ({ setCurrentPage }) => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-3xl md:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
+            <h1 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
               New Slate & Tile <br />
               <span className="text-[#F9D759]">Roof Installations</span>
             </h1>
@@ -359,49 +359,68 @@ const SlateTilePage = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* 6. THE ACTION ROOFING PROMISE - Text size increased */}
-      <section className="py-24 bg-white">
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
-          <div className="bg-slate-900 rounded-[3rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
-            <div className="lg:w-1/2 p-12 md:p-20 text-white">
-              <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black uppercase mb-10 leading-tight">
-                No Surprises. <br />
-                <span className="text-[#F9D759]">Straight Talk.</span>
-              </h2>
-              <div className="space-y-10">
-                <div>
-                  <h4 className="text-[#F9D759] font-black uppercase tracking-widest text-sm mb-2">
-                    Fixed Quotes
-                  </h4>
-                  <p className="text-slate-300 text-base leading-relaxed">
-                    Once agreed, the price is fixed. No hidden mid-project
-                    "extras".
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-[#F9D759] font-black uppercase tracking-widest text-sm mb-2">
-                    Active Communication
-                  </h4>
-                  <p className="text-slate-300 text-base leading-relaxed">
-                    If we find hidden issues, we provide photo evidence and
-                    discuss fixes immediately.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-[#F9D759] font-black uppercase tracking-widest text-sm mb-2">
-                    Zero Pressure
-                  </h4>
-                  <p className="text-slate-300 text-base leading-relaxed">
-                    We provide the facts and a fair price. You make the final
-                    decision.
-                  </p>
-                </div>
+{/* 6. THE ACTION ROOFING PROMISE - Framed Photo Yellow Edition */}
+<section className="py-16 bg-white px-4 md:px-10">
+  <div className="max-w-screen-2xl mx-auto">
+    <div className="bg-[#F9D759] shadow-xl border-6 border-[#243453] rounded-xl overflow-hidden flex flex-col lg:flex-row shadow-2xl items-center">
+      
+      {/* Content Side (Left) */}
+      <div className="lg:w-3/5 p-8 md:p-12 text-[#243453]">
+        
+        {/* Header - Scaled down slightly */}
+        <h2 className="text-2xl md:text-4xl font-black uppercase mb-8 leading-tight tracking-tight">
+          No Surprises. <br />
+          <span className="opacity-70 italic">Straight Talk.</span>
+        </h2>
+
+        {/* Promise List - Tightened spacing */}
+        <div className="space-y-8">
+          {[
+            {
+              icon: Banknote,
+              title: "Fixed Quotes",
+              desc: "The price we agree is the price you pay. No hidden mid-project 'extras'.",
+            },
+            {
+              icon: Camera,
+              title: "Active Communication",
+              desc: "We provide high-res photo evidence of all hidden issues immediately.",
+            },
+            {
+              icon: ShieldCheck,
+              title: "Zero Pressure",
+              desc: "We provide the facts and a fair price. You make the final decision.",
+            },
+          ].map((promise, idx) => (
+            <div key={idx} className="flex items-center gap-5 group">
+              <div className="bg-[#243453] p-2.5 rounded-xl shrink-0 shadow-md">
+                <promise.icon className="text-[#F9D759]" size={24} />
+              </div>
+              <div>
+                <h4 className="text-lg font-black uppercase mb-1 tracking-wider">
+                  {promise.title}
+                </h4>
+                <p className="text-[#243453]/80 text-sm md:text-base leading-relaxed font-bold">
+                  {promise.desc}
+                </p>
               </div>
             </div>
-            <div className="lg:w-1/2 bg-[url('/images/installation-detail.jpg')] bg-cover bg-center min-h-[400px]" />
-          </div>
+          ))}
         </div>
-      </section>
+      </div>
+
+      {/* Image Side (Right) - Now Framed with Yellow Padding */}
+      <div className="lg:w-2/5 p-8 lg:p-12 lg:pl-0 flex items-center justify-center shrink-0 w-full">
+        <img 
+          src="/images/tile-slate-lead.png" 
+          alt="Action Roofing Brighton Installation" 
+          className="rounded-xl w-full h-[300px] lg:h-[350px] object-cover shadow-2xl border-6 border-[#243453]/10"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
 
       <ServicesCTA />
 
