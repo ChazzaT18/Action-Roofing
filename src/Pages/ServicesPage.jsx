@@ -138,7 +138,7 @@ const ServicesPage = ({ setCurrentPage }) => {
       <section className="py-24 bg-[#243453] text-white">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="max-w-3xl mb-16 text-left">
-            <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black text-white border-l-8 border-[#F9D759] pl-6 mb-6 uppercase tracking-tight">
+            <h2 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl font-black text-white border-l-8 border-[#F9D759] pl-6 mb-6 uppercase tracking-tight">
               Our Professional Approach
             </h2>
             <p className="text-slate-300 text-lg">
@@ -199,7 +199,7 @@ const ServicesPage = ({ setCurrentPage }) => {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             {/* Text Column */}
             <div className="lg:w-1/2 text-left space-y-8">
-              <h2 className="text-2xl md:text-3xl 2xl:text-4xl border-l-8 pl-6 border-[#F9D759] 2xl:text-4xl font-black uppercase text-[#243453] tracking-tight">
+              <h2 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl border-l-8 pl-6 border-[#F9D759] 2xl:text-4xl font-black uppercase text-[#243453] tracking-tight">
                 Beyond the Surface
               </h2>
               <p className="2xl:text-lg text-slate-600 leading-relaxed font-medium">

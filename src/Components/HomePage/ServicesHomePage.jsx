@@ -33,7 +33,7 @@ const services = [
   {
     title: "Fascias, Soffits & Gutters",
     desc: "Full roofline protection. We replace rotting timbers with high-quality uPVC systems that provide essential ventilation to your roof void.",
-    image: "/images/fascias-soffits-gutters.png",
+    image: "/images/fascia-soffits-guttering.jpg",
     path: "/services/fascias-soffits-guttering",
     features: ["Gutter Replacement", "Soffit Vents", "uPVC Fascias"],
   },

@@ -44,7 +44,7 @@ const SlateTilePage = ({ setCurrentPage }) => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
+            <h1 className="text-3xl lg:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
               New Slate & Tile <br />
               <span className="text-[#F9D759]">Roof Installations</span>
             </h1>
