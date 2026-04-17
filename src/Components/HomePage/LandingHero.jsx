@@ -32,14 +32,11 @@ const LandingHero = () => {
         {/* Main Content Grid */}
         <div className="relative z-10 w-full max-w-screen-2xl px-4 py-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 max-sm:mt-[30px] py-2 gap-8 items-center">
-            {/* Center Column: Primary Content */}
             <div className="lg:col-span-8 lg:col-start-3 max-sm:my-10 text-white flex flex-col justify-center gap-6 items-center text-center">
               <div className="space-y-4">
-                {/* Bumped to 2xl:text-xl */}
                 <p className="text-[#F9D759] font-bold tracking-widest uppercase 2xl:text-xl text-xs sm:text-base">
                   Brighton & Hove's Trusted Choice
                 </p>
-                {/* Bumped to 2xl:text-6xl */}
                 <h1 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold leading-tight max-w-4xl">
                   Family-Run Roofing Specialists in{" "}
                   <span className="text-[#F9D759]">Brighton & Hove</span> Since
@@ -47,7 +44,6 @@ const LandingHero = () => {
                 </h1>
               </div>
 
-              {/* Bumped to 2xl:text-2xl */}
               <p className="2xl:text-2xl md:text-lg text-slate-100 max-w-3xl leading-relaxed">
                 Founded in 2007 and built on decades of hands-on experience,
                 Action Roofing is committed to doing the job properly, providing
@@ -55,7 +51,6 @@ const LandingHero = () => {
                 Brighton & Hove.
               </p>
 
-              {/* Feature Badges - Bumped text to 2xl:text-base */}
               <div className="flex flex-wrap justify-center gap-3 text-sm 2xl:text-base font-medium">
                 <span className="bg-black/20 2xl:px-8 2xl:py-3 px-4 py-1.5 rounded-full border border-white/20 backdrop-blur-md">
                   Fully insured
@@ -71,7 +66,6 @@ const LandingHero = () => {
               {/* CTA Buttons */}
               <div className="flex flex-col items-center pt-2">
                 <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                  {/* Bumped to 2xl:text-xl */}
                   <Link
                     to="contact-us"
                     className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105"
@@ -82,7 +76,10 @@ const LandingHero = () => {
                       className="group-hover:translate-x-1 transition-transform"
                     />
                   </Link>
-                  <Link to="/services/emergency-repairs" className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105">
+                  <Link
+                    to="/services/emergency-repairs"
+                    className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105"
+                  >
                     <Hammer size={20} className="text-[#F9D759]" />
                     Emergency Repairs
                   </Link>
@@ -119,7 +116,6 @@ const LandingHero = () => {
           </div>
         </div>
 
-        {/* SERVICE AREA LINE - Bumped to 2xl:text-sm */}
         <div className="absolute bottom-6 z-10 w-full text-center hidden sm:block">
           <p className="text-white/60 text-[10px] sm:text-xs 2xl:text-sm font-medium tracking-wide">
             Serving Brighton, Hove, Portslade, Patcham, Rottingdean &

@@ -13,6 +13,7 @@ import SlateTilePage from "./Pages/ServicePages/SlateTilePage";
 import FasciaSoffitPage from "./Pages/ServicePages/FasciaSoffitPage";
 import LoadingOverlay from "./Components/LoadingOverlay";
 import PageLoader from "./Components/PageLoader";
+import ChimneyRepairsPage from "./Pages/ServicePages/ChimneyRepairsPage";
 
 const CurrentPageContext = createContext();
 
@@ -45,6 +46,7 @@ function AppContent({ currentPage, setCurrentPage, loading }) {
           <Route path="/about-us" element={<AboutUsPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/services" element={<ServicesPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/services/emergency-repairs" element={<EmergencyRepairsPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
+          <Route path="/services/chimney-repairs" element={<ChimneyRepairsPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/services/slate-tile-roofing" element={<SlateTilePage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/services/fascias-soffits-guttering" element={<FasciaSoffitPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/gallery" element={<GalleryPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />

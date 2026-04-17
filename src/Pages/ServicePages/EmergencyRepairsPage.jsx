@@ -23,12 +23,16 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
   }, [setCurrentPage]);
 
   return (
-    <div className="bg-white mt-[-30px] w-full sm:mt-[-40px] lg:mt-[-30px] xl:mt-[-20px] overflow-x-hidden text-[#243453]">
+    <div className="bg-white w-full overflow-x-hidden text-[#243453]">
       {/* 1. HERO SECTION */}
-      <section className="relative w-full h-[85vh] bg-[url('/images/roof-repairs-hero.png')] bg-center bg-cover text-white">
-        <div className="absolute inset-0 bg-black/30 z-0" />
-        <div className="max-w-screen-2xl h-full mx-auto px-4 md:px-10 flex flex-col justify-center items-center relative z-10 text-center">
-          <div className="mt-[30px] w-full sm:mt-[40px] lg:mt-[30px] xl:mt-[20px]">
+      <section className="relative w-full min-h-[85vh] flex items-center bg-[url('/images/roof-repairs-hero.png')] bg-center bg-cover text-white">
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/20 z-0" />
+
+        <div className="max-w-screen-2xl w-full mx-auto px-4 md:px-10 relative z-10 text-center">
+          {/* Main Content Wrapper - Safe zone for fixed header on mobile */}
+          <div className="py-12 sm:pt-20 lg:pt-10 flex flex-col justify-center items-center">
+            
             {/* Top Badge - Specific to Emergency */}
             <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
               <Clock size={18} />
@@ -42,18 +46,18 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
             </h1>
 
             {/* Subtext */}
-            <p className="text-lg md:textxl 2xl:text-2xl text-slate-100 leading-relaxed mb-10 font-medium max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl 2xl:text-2xl text-slate-100 leading-relaxed mb-10 font-medium max-w-2xl mx-auto">
               Direct access to qualified roofers when you need us most. We
               provide rapid structural stabilizing and leak prevention across
               Brighton & Hove.
             </p>
 
-            {/* Buttons & Sub-info */}
+            {/* CTA Buttons */}
             <div className="flex flex-col items-center pt-2">
-              <div className="flex flex-col sm:flex-row gap-4 sm:w-auto">
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <Link
                   to="/contact-us"
-                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105"
+                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
                 >
                   Get a Free Quote
                   <ArrowRight
@@ -63,14 +67,14 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
                 </Link>
                 <a
                   href="tel:07768981913"
-                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105"
+                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
                 >
                   <Phone size={20} className="text-[#F9D759]" />
                   Call Now<span className="max-sm:hidden">: 07768 981913</span>
                 </a>
               </div>
 
-              <p className="mt-4 text-xs sm:text-sm 2xl:text-base text-slate-300 italic">
+              <p className="mt-6 text-xs sm:text-sm 2xl:text-base text-slate-300 italic">
                 Free inspections · No obligation · Rapid Local Response
               </p>
             </div>
@@ -78,25 +82,21 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* 2. BROTHER'S ADVICE */}
-      <section className="py-6 bg-[#F9D759] shadow-lg border-[#243453]">
+      {/* 2. BROTHER'S ADVICE (Standardized Layout) */}
+      <section className="py-8 bg-[#F9D759] shadow-lg border-b-4 border-[#243453]">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
-          <div className="flex flex-row items-center gap-6">
-            <div className="shrink-0 bg-[#243453] p-4 rounded-2xl text-[#F9D759]">
-              <AlertTriangle size={48} />
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center md:text-left">
+            <div className="shrink-0 bg-[#243453] p-4 rounded-2xl text-[#F9D759] shadow-md">
+              <AlertTriangle size={40} className="sm:w-12 sm:h-12" />
             </div>
             <div>
-              <h3 className="text-xl font-black max-md:hidden uppercase mb-2">
+              <h3 className="text-lg sm:text-xl font-black uppercase mb-1 text-[#243453]">
                 Immediate Steps to Take:
               </h3>
-              <p className="text-[#243453] font-bold">
-                If you have an active leak: Clear the area, use buckets to catch
-                water, and{" "}
-                <span className="underline italic">
-                  do not attempt to go onto the roof yourself
-                </span>
-                . We are on the way to handle the height and structural risks
-                safely.
+              <p className="text-[#243453] font-bold text-sm sm:text-base leading-relaxed">
+                If you have an active leak: Clear the area and use buckets to catch
+                water. <span className="underline italic decoration-2">Do not attempt to go onto the roof yourself</span>. 
+                We are on the way to handle the height and structural risks safely.
               </p>
             </div>
           </div>

@@ -51,15 +51,17 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
   ];
 
   return (
-    <div className="bg-white mt-[-30px] sm:mt-[-40px] lg:mt-[-30px] xl:mt-[-20px] overflow-x-hidden">
+    <div className="bg-white overflow-x-hidden">
       {/* 1. HERO SECTION */}
-      <section className="relative flex justify-center items-center w-full min-h-[calc(100vh-126px)] sm:min-h-[calc(100vh-106px)] md:min-h-[calc(100vh-120px)] bg-[url('/images/brighton-job.jpg')] bg-center bg-cover text-white overflow-hidden">
-        {/* Black Overlay */}
+      <section className="relative w-full min-h-[85vh] flex items-center bg-[url('/images/brighton-job.jpg')] bg-center bg-cover text-white overflow-hidden">
+        {/* Dark Overlay - Consistent with other pages */}
         <div className="absolute inset-0 bg-black/50 z-0" />
 
         {/* Main Content */}
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10 relative z-10 w-full text-center">
-          <div className="mt-[30px] w-full sm:mt-[40px] lg:mt-[30px] xl:mt-[20px]">
+          {/* Main Content Wrapper - Safe zone for fixed header on mobile */}
+          <div className="py-12 flex flex-col justify-center items-center">
+            
             {/* Top Badge */}
             <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
               <ShieldCheck size={18} />
@@ -73,7 +75,7 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
             </h1>
 
             {/* Subtext - Legacy & Storytelling */}
-            <p className="text-lg text-slate-100 leading-relaxed mb-10 font-medium max-w-4xl mx-auto">
+            <p className="text-lg sm:text-xl text-slate-100 leading-relaxed mb-8 font-medium max-w-4xl mx-auto">
               Action Roofing was built on a legacy of integrity established by
               our founder, Jai Tahsin, in 2007. Today, we carry that mission
               forward—pairing nearly two decades of family expertise with a
@@ -82,10 +84,10 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
 
             {/* Buttons & Sub-info */}
             <div className="flex flex-col items-center pt-2">
-              <div className="flex flex-col sm:flex-row gap-4 w-3/4 sm:w-auto">
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <Link
                   to="/contact-us"
-                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105"
+                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
                 >
                   Get a Free Quote
                   <ArrowRight
@@ -95,7 +97,7 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
                 </Link>
                 <a
                   href="tel:07768981913"
-                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453]/80 backdrop-blur-sm hover:bg-[#243453] text-white border border-slate-500 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105"
+                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453]/80 backdrop-blur-sm hover:bg-[#243453] text-white border border-slate-500 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
                 >
                   <Phone size={20} className="text-[#F9D759]" />
                   Call Now<span className="max-sm:hidden">: 07768 981913</span>

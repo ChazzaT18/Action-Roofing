@@ -9,7 +9,7 @@ const ServicesCTA = () => {
           Need an Honest <span className="text-[#F9D759]">Assessment?</span>
         </h2>
 
-        <div className="grid grid-cols-1 sm:flex text-sm sm:flex-row justify-center gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:flex text-sm md:flex-row justify-center gap-4 md:gap-6">
           {/* 1. CALL BUTTON */}
           <a
             href="tel:07768981913"

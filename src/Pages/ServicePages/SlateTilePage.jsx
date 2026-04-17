@@ -33,47 +33,58 @@ const SlateTilePage = ({ setCurrentPage }) => {
   }, [setCurrentPage]);
 
   return (
-    <div className="bg-white mt-[-30px] w-full sm:mt-[-40px] lg:mt-[-30px] xl:mt-[-20px] overflow-x-hidden text-[#243453]">
+    <div className="">
       
       {/* 1. HERO SECTION */}
-      <section className="relative w-full h-[85vh] bg-[url('/images/slate-roofing.png')] bg-center bg-cover text-white">
+      <section className="relative w-full min-h-[85vh] flex items-center bg-[url('/images/slate-roofing.png')] bg-center bg-cover text-white">
+        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50 z-0" />
-        <div className="max-w-screen-2xl h-full mx-auto px-4 md:px-10 flex flex-col justify-center items-center relative z-10 text-center">
-          <div className="mt-[30px] w-full sm:mt-[40px] lg:mt-[30px] xl:mt-[20px]">
+
+        <div className="max-w-screen-2xl w-full mx-auto px-4 md:px-10 relative z-10 text-center">
+          {/* Main Content Wrapper - Safe zone for fixed header on mobile */}
+          <div className="py-12 sm:pt-20 lg:pt-10 flex flex-col justify-center items-center">
+            
+            {/* Top Badge */}
             <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
               <ShieldCheck size={18} />
               10-Year Workmanship Guarantee
             </div>
 
+            {/* Main Heading */}
             <h1 className="text-3xl lg:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
               New Slate & Tile <br />
               <span className="text-[#F9D759]">Roof Installations</span>
             </h1>
 
-            <p className="text-lg md:text-xl 2xl:text-2xl text-slate-100 leading-relaxed mb-10 font-medium max-w-2xl mx-auto">
+            {/* Subtext */}
+            <p className="text-lg md:text-xl 2xl:text-2xl text-slate-100 leading-relaxed mb-8 font-medium max-w-2xl mx-auto">
               Expert replacements in Brighton & Hove. Built for durability and
               aesthetics with a focus on doing the job properly.
             </p>
 
+            {/* CTA Buttons */}
             <div className="flex flex-col items-center pt-2">
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <Link
                   to="/contact-us"
-                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105"
+                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
                 >
                   Book a Free Inspection
-                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight
+                    size={20}
+                    className="group-hover:translate-x-1 transition-transform"
+                  />
                 </Link>
                 <a
                   href="tel:07768981913"
-                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105"
+                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
                 >
                   <Phone size={20} className="text-[#F9D759]" />
                   Call Now<span className="max-sm:hidden">: 07768 981913</span>
                 </a>
               </div>
 
-              <p className="mt-4 text-xs sm:text-sm 2xl:text-base text-slate-300 italic">
+              <p className="mt-6 text-xs sm:text-sm 2xl:text-base text-slate-300 italic">
                 No pressure · Clear advice · Professional workmanship
               </p>
             </div>
@@ -104,8 +115,7 @@ const SlateTilePage = ({ setCurrentPage }) => {
 
             <div className="lg:w-2/5 w-full">
               <div className="bg-slate-50 border-2 border-slate-100 p-8 rounded-[2.5rem] relative overflow-hidden">
-                <ShieldCheck className="absolute -right-4 -bottom-4 text-slate-200/50" size={120} />
-                <h4 className="text-[#243453] font-black uppercase tracking-widest text-sm mb-8 border-b border-slate-200 pb-4">
+                <h4 className="text-[#243453] font-black uppercase tracking-widest text-center mb-8 border-b border-slate-200 pb-4">
                   Installation Standard
                 </h4>
                 <ul className="space-y-6 relative z-10">
@@ -115,13 +125,13 @@ const SlateTilePage = ({ setCurrentPage }) => {
                     { title: "Breathable Protection", desc: "Premium membranes to eliminate condensation and rot.", icon: Wind },
                     { title: "Laser Alignment", desc: "Precision battening for perfectly consistent roof lines.", icon: Ruler }
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-4">
+                    <li key={i} className="flex items-center gap-4">
                       <div className="bg-white p-2 rounded-lg shadow-sm border border-slate-100">
                         {item.icon && <item.icon className="text-[#F9D759]" size={20} />}
                       </div>
                       <div>
-                        <p className="text-[#243453] font-black uppercase text-xs tracking-wide mb-1">{item.title}</p>
-                        <p className="text-slate-500 text-xs font-bold leading-relaxed">{item.desc}</p>
+                        <p className="text-[#243453] font-black uppercase tracking-wide mb-1">{item.title}</p>
+                        <p className="text-slate-500 font-bold leading-relaxed">{item.desc}</p>
                       </div>
                     </li>
                   ))}

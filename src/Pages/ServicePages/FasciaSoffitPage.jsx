@@ -23,33 +23,30 @@ const FasciaSoffitPage = ({ setCurrentPage }) => {
   }, [setCurrentPage]);
 
   return (
-    <div className="bg-white mt-[-30px] w-full sm:mt-[-40px] lg:mt-[-30px] xl:mt-[-20px] overflow-x-hidden text-[#243453]">
+    <div className="bg-white mt-[-30px] py-6 w-full sm:mt-[-40px] lg:mt-[-30px] xl:mt-[-20px] overflow-x-hidden text-[#243453]">
       {/* 1. HERO SECTION */}
-      <section className="relative w-full h-[85vh] bg-[url('/images/fascia-soffits-guttering.jpg')] bg-center bg-cover text-white">
-        <div className="absolute inset-0 bg-black/40 z-0" />
-        <div className="max-w-screen-2xl h-full mx-auto px-4 md:px-10 flex flex-col justify-center items-center relative z-10 text-center">
-          <div className="mt-[30px] w-full sm:mt-[40px] lg:mt-[30px] xl:mt-[20px]">
+      <section className="relative w-full min-h-[85vh] flex items-center bg-[url('/images/fascia-soffits-guttering.jpg')] bg-center bg-cover text-white">
+        <div className="absolute inset-0 bg-black/50 z-0" />
+        <div className="max-w-screen-2xl w-full mx-auto px-4 md:px-10 relative z-10 text-center">
+          <div className="py-12 sm:pt-20 lg:pt-10 flex flex-col justify-center items-center">
             <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
               <ShieldCheck size={18} />
               Maintenance-Free uPVC • 10-Year Guarantee
             </div>
-
             <h1 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
               Fascia, Soffit & <br />
               <span className="text-[#F9D759]">Guttering Specialists</span>
             </h1>
-
-            <p className="text-xl text-slate-100 leading-relaxed mb-10 font-medium max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-slate-100 leading-relaxed mb-8 font-medium max-w-3xl mx-auto">
               Protect your roofline and improve your home’s appearance with
               professionally installed fascias, soffits, and guttering in
               Brighton & Hove.
             </p>
-
             <div className="flex flex-col items-center pt-2">
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <Link
                   to="/contact-us"
-                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105"
+                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
                 >
                   Request a Quote
                   <ArrowRight
@@ -59,13 +56,14 @@ const FasciaSoffitPage = ({ setCurrentPage }) => {
                 </Link>
                 <a
                   href="tel:07768981913"
-                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453]/80 backdrop-blur-sm hover:bg-[#243453] text-white border border-slate-500 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105"
+                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] backdrop-blur-sm hover:bg-[#243453] text-white border border-slate-500 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
                 >
                   <Phone size={20} className="text-[#F9D759]" />
                   Call Now<span className="max-sm:hidden">: 07768 981913</span>
                 </a>
               </div>
-              <p className="mt-4 text-xs sm:text-sm 2xl:text-base text-slate-300 italic font-medium">
+
+              <p className="mt-6 text-xs sm:text-sm 2xl:text-base text-slate-300 italic font-medium">
                 Fully insured • Clear advice • Clean, tidy workmanship
               </p>
             </div>
@@ -107,13 +105,7 @@ const FasciaSoffitPage = ({ setCurrentPage }) => {
             {/* Right Column: Visual Highlights (Punchy & Icon-driven) */}
             <div className="lg:w-2/5 w-full">
               <div className="bg-slate-50 border-2 border-slate-100 p-8 rounded-[2.5rem] relative overflow-hidden">
-                {/* Subtle Background Icon Decoration */}
-                <ShieldCheck
-                  className="absolute -right-4 -bottom-4 text-slate-200/50"
-                  size={120}
-                />
-
-                <h4 className="text-[#243453] font-black uppercase tracking-widest text-sm mb-8 border-b border-slate-200 pb-4">
+                <h4 className="text-[#243453] font-black uppercase tracking-widest text-center mb-8 border-b border-slate-200 pb-4">
                   System Integrity Checklist
                 </h4>
 
@@ -140,15 +132,15 @@ const FasciaSoffitPage = ({ setCurrentPage }) => {
                       icon: CheckCircle2,
                     },
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-4">
+                    <li key={i} className="flex items-center gap-4">
                       <div className="bg-white p-2 rounded-lg shadow-sm border border-slate-100">
                         <item.icon className="text-[#F9D759]" size={20} />
                       </div>
                       <div>
-                        <p className="text-[#243453] font-black uppercase text-xs tracking-wide mb-1">
+                        <p className="text-[#243453] font-black uppercase text-xs text-sm tracking-wide mb-1">
                           {item.title}
                         </p>
-                        <p className="text-slate-500 text-xs font-bold leading-relaxed">
+                        <p className="text-slate-500 text-sm font-bold leading-relaxed">
                           {item.desc}
                         </p>
                       </div>
@@ -166,7 +158,7 @@ const FasciaSoffitPage = ({ setCurrentPage }) => {
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl font-black uppercase mb-8 leading-tight">
+              <h2 className="text-3xl md:text-3xl lg:text-4xl font-black uppercase mb-8 leading-tight">
                 Signs Your Roofline <br />
                 <span className="text-[#F9D759]">Needs Attention</span>
               </h2>
@@ -270,7 +262,7 @@ const FasciaSoffitPage = ({ setCurrentPage }) => {
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="bg-[#243453] rounded-[3rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl border-b-8 border-[#F9D759]">
             <div className="lg:w-1/2 py-10 px-8 md:p-12 text-white">
-              <h2 className="text-3xl lg:text-4xl 2xl:text-5xl max-lg:text-center font-black uppercase mb-8 leading-tight">
+              <h2 className="text-3xl lg:text-4xl max-lg:text-center font-black uppercase mb-8 leading-tight">
                 Doing the Job <br />
                 <span className="text-[#F9D759]">Properly</span>
               </h2>
@@ -311,7 +303,7 @@ const FasciaSoffitPage = ({ setCurrentPage }) => {
                       size={24}
                     />
                     <div>
-                      <div className="flex flex-col max-lg:items-center justify-center md:text-sm gap-4">
+                      <div className="flex flex-col max-lg:items-center justify-center gap-4">
                         <item.icon
                           className="text-[#F9D759] lg:hidden shrink-0"
                           size={20}
@@ -320,7 +312,7 @@ const FasciaSoffitPage = ({ setCurrentPage }) => {
                           {item.title}
                         </h4>
                       </div>
-                      <p className="text-slate-400 max-lg:text-center text-sm">
+                      <p className="text-slate-400 max-lg:text-center">
                         {item.text}
                       </p>
                     </div>

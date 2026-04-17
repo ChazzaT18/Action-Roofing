@@ -65,9 +65,9 @@ const ServicesPage = ({ setCurrentPage }) => {
   ];
 
   return (
-    <div className="bg-white mt-[-30px] w-full sm:mt-[-40px] lg:mt-[-30px] xl:mt-[-20px] overflow-x-hidden text-[#243453]">
+    <div className="bg-white overflow-x-hidden text-[#243453]">
       {/* 1. HERO SECTION */}
-      <section className="relative flex justify-center items-center w-full min-h-[calc(100vh-126px)] sm:min-h-[calc(100vh-106px)] md:min-h-[calc(100vh-120px)] bg-[url('/images/services-bg.png')] bg-center bg-cover text-white overflow-hidden">
+      <section className="relative w-full min-h-[85vh] flex items-center bg-[url('/images/services-bg.png')] bg-center bg-cover text-white overflow-hidden">
         {/* 1. Grid Dots Graphic */}
         <div
           className="absolute inset-0 z-0 opacity-20 block"
@@ -77,12 +77,13 @@ const ServicesPage = ({ setCurrentPage }) => {
           }}
         />
 
-        {/* 2. Black Overlay */}
+        {/* 2. Black Overlay - Standardized with other pages */}
         <div className="absolute inset-0 bg-black/10 z-1" />
 
-        {/* 3. Main Content */}
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 relative z-10 w-full text-center">
-          <div className="mt-[30px] w-full sm:mt-[40px] lg:mt-[30px] xl:mt-[20px]">
+        <div className="max-w-screen-2xl w-full mx-auto px-4 md:px-10 relative z-10 text-center">
+          {/* Main Content Wrapper - Safe zone for fixed header on mobile */}
+          <div className="py-12 flex flex-col justify-center items-center">
+            
             {/* Top Badge */}
             <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
               <ShieldCheck size={18} />
@@ -96,7 +97,7 @@ const ServicesPage = ({ setCurrentPage }) => {
             </h1>
 
             {/* Subtext */}
-            <p className="text-lg md:textxl 2xl:text-2xl text-slate-100 leading-relaxed mb-10 font-medium max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-slate-100 leading-relaxed mb-10 font-medium max-w-3xl mx-auto">
               Since 2007, Action Roofing has set the standard for professional
               services across Brighton & Hove. We combine two decades of
               experience with a dedicated focus on structural integrity.
@@ -104,10 +105,10 @@ const ServicesPage = ({ setCurrentPage }) => {
 
             {/* Buttons & Sub-info */}
             <div className="flex flex-col items-center pt-2">
-              <div className="flex flex-col sm:flex-row gap-4 w-3/4 sm:w-auto">
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <Link
                   to="/contact-us"
-                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105"
+                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
                 >
                   Get a Free Quote
                   <ArrowRight
@@ -117,7 +118,7 @@ const ServicesPage = ({ setCurrentPage }) => {
                 </Link>
                 <a
                   href="tel:07768981913"
-                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453]/80 backdrop-blur-sm hover:bg-[#243453] text-white border border-slate-500 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105"
+                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453]/80 backdrop-blur-sm hover:bg-[#243453] text-white border border-slate-500 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
                 >
                   <Phone size={20} className="text-[#F9D759]" />
                   Call Now<span className="max-sm:hidden">: 07768 981913</span>
