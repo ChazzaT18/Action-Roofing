@@ -242,7 +242,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                     <div
                       className={`overflow-hidden transition-all duration-300 bg-black/40 rounded-lg ${
                         isServicesOpen
-                          ? "max-h-[500px] mb-4 opacity-100 py-2"
+                          ? "max-h-[500px] opacity-100 py-2"
                           : "max-h-0 opacity-0"
                       }`}
                     >

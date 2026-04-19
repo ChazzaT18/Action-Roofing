@@ -303,43 +303,43 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
             <div className="lg:w-1/2 w-full grid gap-4">
               <div className="bg-white rounded-2xl p-8 flex justify-between items-center group">
                 <div>
-                  <h3 className="text-[#243453] font-black uppercase text-lg">
+                  <h3 className="text-[#243453] font-black uppercase 2xl:text-2xl md:text-xl text-[4vw]">
                     Daytime Call-Out
                   </h3>
-                  <p className="text-slate-500 font-bold">
+                  <p className="text-slate-500 2xl:text-xl text-[3vw] md:text-lg font-bold">
                     Includes first hour on site
                   </p>
                 </div>
-                <div className="2xl:text-3xl md:text-2xl text-xl font-black text-[#243453]">
+                <div className="2xl:text-3xl md:text-2xl text-[4.5vw] font-black text-[#243453]">
                   From £150
                 </div>
               </div>
 
               <div className="bg-white rounded-2xl p-8 flex justify-between items-center">
                 <div>
-                  <h3 className="text-[#243453] font-black uppercase text-lg">
+                  <h3 className="text-[#243453] font-black uppercase 2xl:text-2xl md:text-xl text-[4vw]">
                     Out-of-Hours
                   </h3>
-                  <p className="text-slate-500 group-hover:text-[#243453]/70 font-bold">
+                  <p className="text-slate-500 2xl:text-xl text-[3vw] md:text-lg font-bold">
                     Evenings & Weekends
                   </p>
                 </div>
-                <div className="2xl:text-3xl md:text-2xl text-xl font-black text-[#243453]">
+                <div className="2xl:text-3xl md:text-2xl text-[4.5vw] font-black text-[#243453]">
                   From £250
                 </div>
               </div>
 
               <div className="bg-white/10 border border-white/20 rounded-2xl p-8 flex justify-between items-center">
                 <div>
-                  <h3 className="text-white font-black uppercase text-lg">
+                  <h3 className="text-white font-black uppercase 2xl:text-2xl md:text-xl text-[4vw]">
                     Additional Time
                   </h3>
-                  <p className="text-slate-400 font-bold italic text-sm">
+                  <p className="text-slate-400 font-bold italic 2xl:text-xl text-[3vw] md:text-lg">
                     Charged per hour thereafter
                   </p>
                 </div>
-                <div className="2xl:text-3xl md:text-2xl text-xl font-black text-[#F9D759]">
-                  £80–£110/hr
+                <div className="2xl:text-3xl md:text-2xl text-[4.5vw] font-black text-[#F9D759]">
+                  £80 – £110/hr
                 </div>
               </div>
               <p className="text-[10px] text-slate-400 text-center uppercase tracking-widest font-bold">
