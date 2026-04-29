@@ -172,7 +172,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                             : "opacity-0 translate-y-2 invisible"
                         }`}
                       >
-                        <ul className="border-t-4 border-[#243453]">
+                        <ul>
                           {item.dropdown.map((sub) => (
                             <li
                               key={sub.name}

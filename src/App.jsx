@@ -14,6 +14,8 @@ import FasciaSoffitPage from "./Pages/ServicePages/FasciaSoffitPage";
 import LoadingOverlay from "./Components/LoadingOverlay";
 import PageLoader from "./Components/PageLoader";
 import ChimneyRepairsPage from "./Pages/ServicePages/ChimneyRepairsPage";
+import LeadworkPage from "./Pages/ServicePages/LeadworkPage";
+import MossGutteringPage from "./Pages/ServicePages/MossGutteringPage";
 
 const CurrentPageContext = createContext();
 
@@ -48,7 +50,9 @@ function AppContent({ currentPage, setCurrentPage, loading }) {
           <Route path="/services/emergency-repairs" element={<EmergencyRepairsPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/services/chimney-repairs" element={<ChimneyRepairsPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/services/slate-tile-roofing" element={<SlateTilePage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
+          <Route path="/services/leadwork" element={<LeadworkPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/services/fascias-soffits-guttering" element={<FasciaSoffitPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
+          <Route path="/services/moss-guttering-cleaning" element={<MossGutteringPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/gallery" element={<GalleryPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
         </Routes>
       </div>
