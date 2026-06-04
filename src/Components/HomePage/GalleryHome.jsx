@@ -51,13 +51,13 @@ const GalleryHome = () => {
           </div>
           
           {/* Bumped to 2xl:text-xl */}
-          <Link 
+         {/* <Link 
             to="/gallery" 
             className="hidden md:flex items-center gap-2 text-[#243453] 2xl:text-xl font-bold hover:text-[#d1ad2b] transition-colors group"
           >
             View Full Gallery 
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-          </Link>
+          </Link> */}
         </div>
       </div>
 

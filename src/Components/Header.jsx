@@ -63,12 +63,16 @@ const Header = ({ currentPage, setCurrentPage }) => {
           path: "/services/fascias-soffits-guttering",
         },
         {
-          name: "Moss Removal & Gutter Cleaning",
-          path: "/services/moss-removal",
+          name: "Moss Removal & Roof Cleaning",
+          path: "/services/moss-removal-roof-cleaning",
+        },
+        {
+          name: "Guttering Clearing & Cleaning",
+          path: "/services/guttering",
         },
       ],
     },
-    { name: "Gallery", path: "/gallery" },
+    /*{ name: "Gallery", path: "/gallery" }, */
     { name: "Contact", path: "/contact-us" },
   ];
 

@@ -35,8 +35,8 @@ const TrustSection = () => {
               "Transparent, itemised quotations",
               "Photographed inspections and documented work",
               "Written guarantees on full installations",
-              "Health & Safety Compliant",
-              "Fully insured"
+              "No shortcuts, proper workmanship",
+              "Direct service from trusted, local tradesmen"
             ].map((item, idx) => (
               <div key={idx} className="flex items-center gap-4 group">
                 <div className="bg-white/10 p-2 2xl:p-3 rounded-full transition-colors">

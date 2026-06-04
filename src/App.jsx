@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Header from "./Components/Header";
 import GetQuote from "./Components/GetQuote";
 import ContactUsPage from "./Pages/ContactUsPage";
@@ -15,7 +15,8 @@ import LoadingOverlay from "./Components/LoadingOverlay";
 import PageLoader from "./Components/PageLoader";
 import ChimneyRepairsPage from "./Pages/ServicePages/ChimneyRepairsPage";
 import LeadworkPage from "./Pages/ServicePages/LeadworkPage";
-import MossGutteringPage from "./Pages/ServicePages/MossGutteringPage";
+import GutteringPage from "./Pages/ServicePages/GutteringPage";
+import MossRemovalRoofCleaningPage from "./Pages/ServicePages/MossRemovalRoofCleaningPage";
 
 const CurrentPageContext = createContext();
 
@@ -29,7 +30,7 @@ function AppContent({ currentPage, setCurrentPage, loading }) {
       const timer = setTimeout(() => setPageTransitioning(false), 600);
       return () => clearTimeout(timer);
     }
-  }, [location.pathname]);
+  }, [location.pathname, loading]);
 
   return (
     <div
@@ -52,8 +53,11 @@ function AppContent({ currentPage, setCurrentPage, loading }) {
           <Route path="/services/slate-tile-roofing" element={<SlateTilePage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/services/leadwork" element={<LeadworkPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/services/fascias-soffits-guttering" element={<FasciaSoffitPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
-          <Route path="/services/moss-guttering-cleaning" element={<MossGutteringPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
-          <Route path="/gallery" element={<GalleryPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
+          <Route path="/services/moss-removal-roof-cleaning" element={<MossRemovalRoofCleaningPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
+          <Route path="/services/guttering" element={<GutteringPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
+          
+          {/* Catch-all route to safely redirect broken links back to home instead of a blank screen */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
 

@@ -115,50 +115,15 @@ const ChimneyRepairsPage = ({ setCurrentPage }) => {
               </div>
             </div>
 
-            {/* Right Column: Visual Checklist */}
-            <div className="lg:w-2/5 w-full">
-              <div className="bg-slate-50 border-2 border-slate-100 p-8 rounded-[2.5rem] relative overflow-hidden">
-                <h4 className="text-[#243453] font-black uppercase tracking-widest text-sm mb-8 border-b border-slate-200 pb-4 text-center">
-                  Diagnostic Focus
-                </h4>
-                <ul className="space-y-6 relative z-10">
-                  {[
-                    {
-                      title: "Root Cause ID",
-                      desc: "Finding the actual source of ingress, not applying short-term fixes.",
-                      icon: Search,
-                    },
-                    {
-                      title: "Lead Flashing",
-                      desc: "Checking Code 4/5 lead seals for cracks, fatigue, or lift.",
-                      icon: Droplets,
-                    },
-                    {
-                      title: "Structural Health",
-                      desc: "Assessing stack stability and masonry erosion over time.",
-                      icon: Hammer,
-                    },
-                    {
-                      title: "Weatherproofing",
-                      desc: "Ensuring a consistent and watertight finish to the entire stack.",
-                      icon: ShieldCheck,
-                    },
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-4">
-                      <div className="bg-white p-2 rounded-lg shadow-sm border border-slate-100">
-                        <item.icon className="text-[#F9D759]" size={20} />
-                      </div>
-                      <div>
-                        <p className="text-[#243453] font-black uppercase text-xs tracking-wide mb-1">
-                          {item.title}
-                        </p>
-                        <p className="text-slate-500 text-xs font-bold leading-relaxed">
-                          {item.desc}
-                        </p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
+            {/* Right Static Presentation Block */}
+            <div className="lg:w-2/5 w-full self-stretch min-h-[350px] lg:min-h-0 relative">
+              <div className="relative h-full min-h-[350px] shadow-2xl w-full rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 bg-slate-900">
+                <img
+                  src="/images/chimney-repairs-3.jpg"
+                  alt="chimney-repair"
+                  className="absolute inset-0 w-full h-full object-cover opacity-90"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
               </div>
             </div>
           </div>
@@ -285,7 +250,7 @@ const ChimneyRepairsPage = ({ setCurrentPage }) => {
         <div className="max-w-screen-2xl mx-auto">
           <div className="bg-[#F9D759] border-6 border-[#243453] rounded-[2rem] lg:rounded-[3rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl items-stretch">
             
-            <div className="lg:w-1/2 p-8 md:p-12 text-[#243453]">
+            <div className="lg:w-3/5 p-8 md:p-12 text-[#243453]">
               <h2 className="text-2xl md:text-4xl font-black uppercase mb-8 leading-tight tracking-tight text-[#243453]">
                 Transparency <br />
                 <span className="opacity-70 italic font-medium">From the Rooftop.</span>
@@ -326,7 +291,7 @@ const ChimneyRepairsPage = ({ setCurrentPage }) => {
               </div>
             </div>
 
-            <div className="lg:w-1/2 w-full self-stretch overflow-hidden">
+            <div className="lg:w-2/5 w-full self-stretch overflow-hidden">
               <div 
                 className="h-full min-h-[400px] bg-[url('/images/chimney-repairs-2.jpg')] bg-cover bg-center border-t-6 lg:border-t-0 lg:border-l-6 border-[#243453]"
                 aria-label="Action Roofing Chimney Repair Proof"

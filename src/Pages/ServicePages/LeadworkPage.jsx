@@ -25,13 +25,13 @@ const LeadworkPage = ({ setCurrentPage }) => {
   }, [setCurrentPage]);
 
   return (
-    <div className="bg-white mt-[-30px] w-full sm:mt-[-40px] lg:mt-[-30px] xl:mt-[-20px] overflow-x-hidden text-[#243453]">
+    <div className="bg-white w-full overflow-x-hidden text-[#243453]">
       
       {/* 1. HERO SECTION */}
       <section className="relative w-full min-h-[85vh] flex items-center bg-[url('/images/leadwork.jpg')] bg-center bg-cover text-white">
         <div className="absolute inset-0 bg-black/50 z-0" />
         <div className="max-w-screen-2xl w-full mx-auto px-4 md:px-10 relative z-10 text-center">
-          <div className="py-12 sm:pt-20 lg:pt-22 flex flex-col justify-center items-center">
+          <div className="py-12 flex flex-col justify-center items-center">
             <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
               <ShieldCheck size={18} />
               Precision Lead Installations
@@ -96,30 +96,12 @@ const LeadworkPage = ({ setCurrentPage }) => {
               </div>
             </div>
 
-            <div className="lg:w-2/5 w-full">
-              <div className="bg-slate-50 border-2 flex items-center justify-center flex-col border-slate-100 p-8 rounded-[2.5rem] relative overflow-hidden shadow-sm">
-                <h4 className="text-[#243453] font-black uppercase tracking-widest mb-8 border-b border-slate-200 pb-4">
-                  Leadwork Integrity
-                </h4>
-                <ul className="space-y-6 z-10">
-                  {[
-                    { title: "Precision Fitting", desc: "Expert bossing and dressing for a perfect, secure fit.", icon: Hammer },
-                    { title: "Watertight Joints", desc: "Correct expansion laps to prevent thermal cracking.", icon: Droplets },
-                    { title: "Traditional Mortar", desc: "Pointed correctly into brickwork to ensure no lifting.", icon: Construction },
-                    { title: "Protective Finish", desc: "Patination oil applied to prevent staining and corrosion.", icon: ShieldCheck }
-                  ].map((item, i) => (
-                    <li key={i} className="flex flex-col lg:mr-[3.75vw] items-center justify-start lg:flex-row gap-4">
-                      <div className="bg-[#243453] p-2 rounded-lg shadow-sm border border-slate-100">
-                        <item.icon className="text-[#F9D759]" size={20} />
-                      </div>
-                      <div>
-                        <p className="text-[#243453] text-center font-black uppercase text-sm tracking-wide mb-1">{item.title}</p>
-                        <p className="text-slate-500 text-center text-xs font-bold leading-relaxed">{item.desc}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div className="lg:w-2/5 flex max-h-[350px] items-center justify-center shadow-2xl rounded-4xl justify-center w-full">
+              <img
+                src="/images/chimney-leadwork.jpg"
+                alt="Action Roofing Slate and Tile Installation Detail"
+                className="w-full aspect-square rounded-3xl max-h-[350px] object-cover opacity-90"
+              />
             </div>
           </div>
         </div>
@@ -194,7 +176,7 @@ const LeadworkPage = ({ setCurrentPage }) => {
           <div className="bg-[#F9D759] border-6 border-[#243453] rounded-[2rem] lg:rounded-[3rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl items-stretch">
             
             <div className="lg:w-3/5 p-8 md:p-12 text-[#243453]">
-              <h2 className="text-2xl md:text-4xl font-black uppercase mb-8 leading-tight tracking-tight text-[#243453]">
+              <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black uppercase mb-8 leading-tight tracking-tight text-[#243453]">
                 Straight Talk. <br />
                 <span className="opacity-70 italic font-medium">Careful Workmanship.</span>
               </h2>
@@ -232,7 +214,7 @@ const LeadworkPage = ({ setCurrentPage }) => {
 
             <div className="lg:w-2/5 w-full self-stretch overflow-hidden">
               <div 
-                className="h-full min-h-[400px] bg-[url('/images/leadwork-detail.jpg')] bg-cover bg-center border-t-6 lg:border-t-0 lg:border-l-6 border-[#243453]"
+                className="h-full min-h-[400px] bg-[url('/images/slate-leadwork.jpeg')] bg-cover bg-center border-t-6 lg:border-t-0 lg:border-l-6 border-[#243453]"
                 aria-label="Action Roofing Leadwork Detail"
               />
             </div>
