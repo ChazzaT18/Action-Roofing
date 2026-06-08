@@ -145,7 +145,7 @@ const Footer = () => {
           <p>© {currentYear} Action Roofing Ltd. All Rights Reserved.</p>
           <div className="flex gap-6">
             <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
+            <Link to="/terms-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link>
           </div>
           <button onClick={scrollToTop} className="flex items-center gap-2 hover:text-white transition-colors group">
             Back to Top <ArrowUp size={16} className="group-hover:-translate-y-1 transition-transform" />
