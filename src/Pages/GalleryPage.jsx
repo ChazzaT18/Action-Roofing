@@ -252,10 +252,11 @@ const GalleryPage = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* 4. LIGHTBOX MODAL */}
+      {/* 4. LIGHTBOX MODAL - FIXED THE THE HORIZONTAL HOVER LINE FROM image_873b10.png */}
       {lightboxProject && (
         <div 
-          className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-3 sm:p-4 overflow-y-auto backdrop-blur-sm select-none top-[104px] sm:top-[126px] md:top-[140px]"
+          // FIXED: Set backdrop boundaries to inset-0 to fully canvas the screen, using padding to push inner elements safely down
+          className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-3 sm:p-4 overflow-y-auto backdrop-blur-sm select-none pt-[104px] sm:pt-[126px] md:pt-[140px]"
           onClick={() => setLightboxProject(null)}
         >
           {/* Modal Content Container Card */}
@@ -264,9 +265,7 @@ const GalleryPage = ({ setCurrentPage }) => {
             onClick={(e) => e.stopPropagation()}
           >
             
-            {/* FIXED: The close exit button is now anchored inside the top right corner of the actual content box card.
-                It uses a highly visible solid background to ensure legibility even when overlapping bright image spots.
-            */}
+            {/* High Visibility Close Trigger Button */}
             <button 
               onClick={() => setLightboxProject(null)}
               className="absolute top-4 right-4 p-2.5 bg-[#243453] text-white hover:bg-slate-800 rounded-full transition-colors z-50 cursor-pointer shadow-xl border border-white/10"
