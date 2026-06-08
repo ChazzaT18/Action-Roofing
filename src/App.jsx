@@ -29,7 +29,8 @@ function AppContent({ currentPage, setCurrentPage, loading }) {
   useEffect(() => {
     if (!loading) {
       setPageTransitioning(true);
-      const timer = setTimeout(() => setPageTransitioning(false), 600);
+      // Synchronized to complete just as the loading mask settles
+      const timer = setTimeout(() => setPageTransitioning(false), 500);
       return () => clearTimeout(timer);
     }
   }, [location.pathname, loading]);
@@ -42,9 +43,15 @@ function AppContent({ currentPage, setCurrentPage, loading }) {
     >
       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
       
+      {/* The Loader overlays over the masked block flawlessly */}
       <PageLoader isVisible={pageTransitioning} />
 
-      <div className={`bg-white transition-opacity duration-300 ${pageTransitioning ? "opacity-0" : "opacity-100"}`}>
+      {/* FIXED: Applies route-mask instantly to obscure raw component mount flashes */}
+      <div 
+        className={`bg-white transition-opacity duration-300 ${
+          pageTransitioning ? "route-mask" : "opacity-100"
+        }`}
+      >
         <Routes>
           <Route path="/" element={<HomePage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/contact-us" element={<ContactUsPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />

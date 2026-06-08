@@ -6,8 +6,7 @@
   --font-sans: "Blatent", ui-sans-serif, system-ui, sans-serif;
 
   @keyframes vibrate-subtle {
-    0%,
-    100% {
+    0%, 100% {
       transform: rotate(0deg) translate(0, 0);
     }
     25% {
@@ -28,16 +27,18 @@
   font-style: normal;
 }
 
-@layer utilities {
-  .nav-link-hover {
-    @apply relative
-           /* Anchor to center */
-           after:absolute after:left-1/2 after:bottom-[-6px] 
-           /* Start at zero width and centered */
-           after:w-0 after:h-[2px] after:bg-[#F9D759] after:-translate-x-1/2
-           /* Animation settings */
-           after:transition-all after:duration-300 after:ease-in-out
-           /* Expand to full width on hover */
-           hover:after:w-3/4;
-  }
+/* Tailwind v4 Modern Utility Syntax */
+@utility nav-link-hover {
+  @apply relative
+         after:absolute after:left-1/2 after:bottom-[-6px] 
+         after:w-0 after:h-[2px] after:bg-[#F9D759] after:-translate-x-1/2
+         after:transition-all after:duration-300 after:ease-in-out
+         hover:after:w-3/4;
+}
+
+/* Instantly changes background to solid navy to hide the router flash */
+@utility route-mask {
+  background-color: #243453 !important;
+  opacity: 0;
+  pointer-events: none;
 }

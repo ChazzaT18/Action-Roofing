@@ -23,22 +23,15 @@ const Header = ({ currentPage, setCurrentPage }) => {
       const currentScrollY = window.scrollY;
       const isMobile = window.innerWidth < 640;
 
+      // Adjust main scroll state thresholds
       if (!isMobile && currentScrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
 
-      if (isMobile) {
-        if (currentScrollY > lastScrollY && currentScrollY > 50) {
-          setIsVisible(false);
-          setIsMenuOpen(false);
-        } else {
-          setIsVisible(true);
-        }
-      } else {
-        setIsVisible(true);
-      }
+      // Fixed: Mobile scroll down logic removed so the yellow header stays visible at all times
+      setIsVisible(true);
       setLastScrollY(currentScrollY);
     };
 
@@ -78,7 +71,8 @@ const Header = ({ currentPage, setCurrentPage }) => {
 
   return (
     <>
-      <div className="fixed w-full z-20 top-0 start-0">
+      {/* High z-index configuration to coordinate with fullscreen layout mask layers */}
+      <div className="fixed w-full z-[1000] top-0 start-0">
         {/* 1. Main Navigation Bar (Navy) */}
         <nav
           className={`bg-[#243453] text-[#F9D759] w-full relative z-40 transition-all duration-500 ease-in-out ${
@@ -232,10 +226,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                           : "text-white"
                       }`}
                     >
-                      {/* Standard span without width force or margins */}
                       <span>{item.name}</span>
-
-                      {/* Chevron is now naturally spaced by 'gap-2' */}
                       <ChevronDown
                         size={24}
                         className={`transition-transform text-white duration-300 ${isServicesOpen ? "rotate-180" : ""}`}
@@ -267,11 +258,9 @@ const Header = ({ currentPage, setCurrentPage }) => {
           </ul>
         </div>
 
-        {/* 3. Sub-Header Utility Bar (Yellow) */}
+        {/* 3. Sub-Header Utility Bar (Yellow) - Always visible on scroll */}
         <div
-          className={`w-full flex justify-center items-center text-[12px] sm:text-xs py-1.5 font-bold bg-[#F9D759] text-[#243453] shadow-md transition-transform duration-500 ease-in-out relative z-10 ${
-            isVisible ? "translate-y-0" : "-translate-y-full"
-          } sm:translate-y-0`}
+          className="w-full flex justify-center items-center text-[12px] sm:text-xs py-1.5 font-bold bg-[#F9D759] text-[#243453] shadow-md relative z-10 translate-y-0"
         >
           <div className="w-full max-w-screen-2xl flex justify-around 2xl:text-lg items-center px-6">
             <a
@@ -308,6 +297,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
         </div>
       </div>
 
+      {/* Spacing Offset Block */}
       <div
         className={`transition-all duration-500 ${
           isScrolled && window.innerWidth >= 640

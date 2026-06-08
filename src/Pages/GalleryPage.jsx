@@ -25,7 +25,6 @@ const GalleryPage = ({ setCurrentPage }) => {
   const projects = [
     {
       id: 1,
-      // The primary thumbnail image for the card
       src: "/images/tile-slate-lead.png",
       images: ["/images/tile-slate-lead.png"],
       title: "Plain Clay Tiling & Skylights",
@@ -36,7 +35,6 @@ const GalleryPage = ({ setCurrentPage }) => {
     {
       id: 2,
       src: "/images/grey-tiled-roof-1.jpg",
-      // Houses all 8 sequence images for the interactive slideshow viewer
       images: [
         "/images/grey-tiled-roof-1.jpg",
         "/images/grey-tiled-roof-2.jpg",
@@ -254,67 +252,70 @@ const GalleryPage = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* 4. LIGHTBOX MODAL WITH MULTI-IMAGE SLIDESHOW NAVIGATION */}
+      {/* 4. LIGHTBOX MODAL */}
       {lightboxProject && (
         <div 
-          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 backdrop-blur-sm select-none"
+          className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-3 sm:p-4 overflow-y-auto backdrop-blur-sm select-none top-[104px] sm:top-[126px] md:top-[140px]"
           onClick={() => setLightboxProject(null)}
         >
-          {/* Close Trigger Button */}
-          <button 
-            onClick={() => setLightboxProject(null)}
-            className="absolute top-6 right-6 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors z-55 cursor-pointer"
-          >
-            <X size={24} />
-          </button>
-
-          {/* Modal Container */}
+          {/* Modal Content Container Card */}
           <div 
-            className="max-w-4xl w-full flex flex-col bg-white rounded-3xl overflow-hidden shadow-2xl mx-auto relative"
+            className="max-w-3xl w-full flex flex-col bg-white rounded-3xl overflow-hidden shadow-2xl mx-auto relative my-auto max-h-[92vh] sm:max-h-[78vh]"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Expanded Image Panel / Slider Actions wrapper */}
-            <div className="relative h-[55vh] md:h-[65vh] bg-slate-900 flex items-center justify-center overflow-hidden group">
+            
+            {/* FIXED: The close exit button is now anchored inside the top right corner of the actual content box card.
+                It uses a highly visible solid background to ensure legibility even when overlapping bright image spots.
+            */}
+            <button 
+              onClick={() => setLightboxProject(null)}
+              className="absolute top-4 right-4 p-2.5 bg-[#243453] text-white hover:bg-slate-800 rounded-full transition-colors z-50 cursor-pointer shadow-xl border border-white/10"
+            >
+              <X size={18} />
+            </button>
+
+            {/* Expanded Image Panel */}
+            <div className="relative h-[48vh] sm:h-[38vh] md:h-[46vh] bg-slate-900 flex items-center justify-center overflow-hidden group shrink-0">
               <img 
                 src={lightboxProject.images[currentImgIndex]} 
                 alt={`${lightboxProject.title} view ${currentImgIndex + 1}`} 
                 className="w-full h-full object-contain"
               />
 
-              {/* Slider Directional Arrow Overlays (Only rendered if project has multiple images) */}
+              {/* Slider Directional Arrow Overlays */}
               {lightboxProject.images.length > 1 && (
                 <>
                   <button
                     onClick={handlePrevImage}
-                    className="absolute left-4 p-2 bg-black/50 hover:bg-black/70 text-white rounded-xl backdrop-blur-sm transition-all border border-white/15 cursor-pointer transform hover:scale-105 active:scale-95"
+                    className="absolute left-3 p-2 bg-black/50 hover:bg-black/70 text-white rounded-xl backdrop-blur-sm transition-all border border-white/15 cursor-pointer transform hover:scale-105 active:scale-95 z-10"
                   >
-                    <ChevronLeft size={28} />
+                    <ChevronLeft size={24} />
                   </button>
                   <button
                     onClick={handleNextImage}
-                    className="absolute right-4 p-2 bg-black/50 hover:bg-black/70 text-white rounded-xl backdrop-blur-sm transition-all border border-white/15 cursor-pointer transform hover:scale-105 active:scale-95"
+                    className="absolute right-3 p-2 bg-black/50 hover:bg-black/70 text-white rounded-xl backdrop-blur-sm transition-all border border-white/15 cursor-pointer transform hover:scale-105 active:scale-95 z-10"
                   >
-                    <ChevronRight size={28} />
+                    <ChevronRight size={24} />
                   </button>
 
                   {/* Floating Image Step Counter Badge */}
-                  <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-sm text-white font-black text-xs px-3 py-1.5 rounded-lg border border-white/10">
+                  <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm text-white font-black text-[11px] px-2.5 py-1.5 rounded-lg border border-white/10 z-10">
                     {currentImgIndex + 1} / {lightboxProject.images.length}
                   </div>
                 </>
               )}
             </div>
 
-            {/* Thumbnail Navigation Row (Only renders if project has multiple photos) */}
+            {/* Thumbnail Navigation Row */}
             {lightboxProject.images.length > 1 && (
-              <div className="bg-slate-900 px-6 pb-4 pt-1 flex gap-2 overflow-x-auto justify-center max-w-full border-t border-white/10">
+              <div className="bg-slate-900 px-4 pb-3.5 pt-1.5 flex gap-2 overflow-x-auto justify-center max-w-full border-t border-white/10 shrink-0">
                 {lightboxProject.images.map((img, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentImgIndex(index)}
-                    className={`h-12 w-16 rounded-lg overflow-hidden shrink-0 transition-all border-2 ${
+                    className={`h-10 w-15 rounded-md overflow-hidden shrink-0 transition-all border-2 ${
                       currentImgIndex === index 
-                        ? "border-[#F9D759] scale-105 shadow-md" 
+                        ? "border-[#F9D759] scale-105 shadow-sm" 
                         : "border-transparent opacity-40 hover:opacity-70"
                     }`}
                   >
@@ -325,16 +326,16 @@ const GalleryPage = ({ setCurrentPage }) => {
             )}
 
             {/* Metadata Text Details Area */}
-            <div className="p-6 md:p-8 bg-white text-left">
-              <div className="flex items-center justify-between gap-4 mb-2">
-                <span className="text-xs font-black uppercase tracking-widest text-[#d1ad2b] bg-slate-50 border border-slate-200 px-3 py-1 rounded-md">
+            <div className="p-5 md:p-6 bg-white text-left overflow-y-auto flex-grow pr-16">
+              <div className="flex items-center justify-between gap-4 mb-1">
+                <span className="text-[10px] font-black uppercase tracking-widest text-[#d1ad2b] bg-slate-50 border border-slate-200 px-2.5 py-0.5 rounded-md">
                   {lightboxProject.location}
                 </span>
               </div>
-              <h2 className="text-xl md:text-2xl font-black uppercase tracking-tight text-[#243453] mb-2">
+              <h2 className="text-lg md:text-xl font-black uppercase tracking-tight text-[#243453] mb-1.5">
                 {lightboxProject.title}
               </h2>
-              <p className="text-slate-600 text-sm font-semibold leading-relaxed">
+              <p className="text-slate-600 text-xs md:text-sm font-semibold leading-relaxed">
                 {lightboxProject.desc}
               </p>
             </div>
