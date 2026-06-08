@@ -55,8 +55,7 @@ function AppContent({ currentPage, setCurrentPage, loading }) {
           <Route path="/services/fascias-soffits-guttering" element={<FasciaSoffitPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/services/moss-removal-roof-cleaning" element={<MossRemovalRoofCleaningPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/services/guttering" element={<GutteringPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
-          
-          {/* Catch-all route to safely redirect broken links back to home instead of a blank screen */}
+          <Route path="/gallery" element={ <GalleryPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>

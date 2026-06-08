@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import {
-  Clock, 
+  Clock,
   Phone,
   Sparkles,
   Hammer,
@@ -10,7 +10,7 @@ import {
   Trash2,
   Droplets,
   Search,
-  Construction
+  Construction,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import WhyChoseUs from "../Components/HomePage/WhyChoseUs";
@@ -73,7 +73,6 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
 
         <div className="max-w-screen-2xl w-full mx-auto px-4 md:px-10 relative z-10 text-center">
           <div className="py-12 flex flex-col justify-center items-center">
-            
             {/* Top Badge */}
             <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
               <ShieldCheck size={18} />
@@ -88,7 +87,10 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
 
             {/* Subtext */}
             <p className="text-lg sm:text-xl text-slate-100 leading-relaxed mb-8 font-medium max-w-4xl mx-auto">
-              Action Roofing was built on a legacy of integrity established by our founder, Jai Tahsin, in 2007. Today, we carry that mission forward—pairing nearly two decades of family expertise with a commitment to honest advice and superior roofing craftsmanship.
+              Action Roofing was built on a legacy of integrity established by
+              our founder, Jai Tahsin, in 2007. Today, we carry that mission
+              forward—pairing nearly two decades of family expertise with a
+              commitment to honest advice and superior roofing craftsmanship.
             </p>
 
             {/* Buttons & Sub-info */}
@@ -125,17 +127,12 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
       <section className="py-20 2xl:py-32 bg-white">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="grid lg:grid-cols-2 gap-16 2xl:gap-24 items-center">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-slate-100 aspect-[3/4] rounded-xl shadow-inner flex items-center justify-center border border-slate-200">
-                <p className="text-slate-400 text-xs 2xl:text-sm p-4 text-center italic">
-                  Photo: Dad (Founder)
-                </p>
-              </div>
-              <div className="bg-slate-200 aspect-[3/4] rounded-xl shadow-inner mt-8 flex items-center justify-center border border-slate-200">
-                <p className="text-slate-400 text-xs 2xl:text-sm p-4 text-center italic">
-                  Photo: Current Team on Site
-                </p>
-              </div>
+            <div className="flex justify-center items-center">
+              <img
+                className="w-full rounded-2xl max-h-[500px] max-w-[500px] shadow-2xl"
+                src="/images/jai-roofing.png"
+                alt="Jai Tahsin - Action Roofing Founder"
+              />
             </div>
 
             <div className="space-y-6 max-w-2xl 2xl:max-w-3xl text-left">
@@ -143,13 +140,19 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
                 Our Story
               </h2>
               <p className="text-lg 2xl:text-xl text-slate-600 leading-relaxed font-medium">
-                Action Roofing Services was founded in 2007 by my father, Jai Tahsin, who built a strong reputation across Brighton & Hove for reliable, high-quality roofing.
+                Action Roofing Services was founded in 2007 by my father, Jai
+                Tahsin, who built a strong reputation across Brighton & Hove for
+                reliable, high-quality roofing.
               </p>
               <p className="text-lg 2xl:text-xl text-slate-600 leading-relaxed font-medium">
-                Today, I proudly continue his legacy—ensuring every project is completed with the same commitment to craftsmanship, honesty, and customer care that he started nearly two decades ago.
+                Today, I proudly continue his legacy—ensuring every project is
+                completed with the same commitment to craftsmanship, honesty,
+                and customer care that he started nearly two decades ago.
               </p>
               <p className="text-lg 2xl:text-2xl font-semibold text-[#243453] italic border-l-4 border-[#243453] pl-6 py-4 bg-slate-50 rounded-r-xl leading-relaxed">
-                "We don't just fix roofs; we protect the families beneath them. That’s the standard my father set, and it's the standard we meet every day."
+                "We don't just fix roofs; we protect the families beneath them.
+                That’s the standard my father set, and it's the standard we meet
+                every day."
               </p>
             </div>
           </div>
@@ -166,10 +169,15 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
               </h2>
               <div className="space-y-6 text-lg 2xl:text-xl text-slate-300 leading-relaxed font-medium">
                 <p>
-                  Ardy and I bring over 23 years of combined roofing experience to every project, delivering high-quality workmanship with a friendly, approachable service.
+                  Ardy and I bring over 23 years of combined roofing experience
+                  to every project, delivering high-quality workmanship with a
+                  friendly, approachable service.
                 </p>
                 <p>
-                  We take pride in doing the job properly and treating every home as if it were our own. As an in-house team, we don't believe in shortcuts; we focus on clear communication and honest advice.
+                  We take pride in doing the job properly and treating every
+                  home as if it were our own. As an in-house team, we don't
+                  believe in shortcuts; we focus on clear communication and
+                  honest advice.
                 </p>
               </div>
             </div>
@@ -219,7 +227,8 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
               Our Professional Approach
             </h2>
             <p className="text-slate-600 text-lg 2xl:text-xl font-medium leading-relaxed">
-              We keep the process straightforward and well-communicated from the first inspection through to the final installation.
+              We keep the process straightforward and well-communicated from the
+              first inspection through to the final installation.
             </p>
           </div>
 
@@ -241,7 +250,10 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
                 desc: "We take pride in our workspace. Old materials are removed, surrounding areas are kept tidy, and we take every care to minimize disruption to your property.",
               },
             ].map((step, i) => (
-              <div key={i} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-md text-left space-y-4">
+              <div
+                key={i}
+                className="bg-white p-8 rounded-3xl border border-slate-100 shadow-md text-left space-y-4"
+              >
                 <div className="w-14 h-14 2xl:w-16 2xl:h-16 bg-[#243453] text-[#F9D759] rounded-2xl flex items-center justify-center shrink-0">
                   {step.icon}
                 </div>
@@ -265,7 +277,9 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
               Our Services
             </h2>
             <p className="text-slate-300 text-lg 2xl:text-xl font-medium">
-              We provide a full range of roofing services for homeowners across Brighton & Hove, maintaining the high standards established by our family since 2007.
+              We provide a full range of roofing services for homeowners across
+              Brighton & Hove, maintaining the high standards established by our
+              family since 2007.
             </p>
           </div>
 
@@ -276,7 +290,7 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
                 to={service.path}
                 className={`group p-8 rounded-3xl shadow-md border flex flex-col h-full transition-all duration-300 ${
                   service.isCTA
-                    ? "bg-[#F9D759] border-transparent hover:bg-[#F7CB28] text-[#243453] hover:shadow-2xl" 
+                    ? "bg-[#F9D759] border-transparent hover:bg-[#F7CB28] text-[#243453] hover:shadow-2xl"
                     : "bg-white border-transparent hover:border-[#F9D759]/50 hover:shadow-2xl"
                 }`}
               >
@@ -284,18 +298,22 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
                   <h3 className="font-black text-lg uppercase tracking-tight leading-tight mb-3 text-[#243453]">
                     {service.title}
                   </h3>
-                  <p className={`text-sm leading-relaxed mb-6 font-semibold ${
-                    service.isCTA ? "text-[#243453]/90" : "text-slate-600"
-                  }`}>
+                  <p
+                    className={`text-sm leading-relaxed mb-6 font-semibold ${
+                      service.isCTA ? "text-[#243453]/90" : "text-slate-600"
+                    }`}
+                  >
                     {service.desc}
                   </p>
                 </div>
-                
-                <div className={`flex items-center font-black text-xs uppercase tracking-widest pt-4 w-full justify-between mt-auto border-t transition-colors ${
-                  service.isCTA 
-                    ? "border-[#243453]/10 text-[#243453]" 
-                    : "border-slate-100 text-[#243453] group-hover:text-[#d1ad2b]"
-                }`}>
+
+                <div
+                  className={`flex items-center font-black text-xs uppercase tracking-widest pt-4 w-full justify-between mt-auto border-t transition-colors ${
+                    service.isCTA
+                      ? "border-[#243453]/10 text-[#243453]"
+                      : "border-slate-100 text-[#243453] group-hover:text-[#d1ad2b]"
+                  }`}
+                >
                   <span>{service.isCTA ? "Contact Us" : "Learn More"}</span>
                   <ArrowRight
                     size={16}
@@ -316,7 +334,8 @@ const AboutUsPage = ({ setCurrentPage, currentPage }) => {
       <footer className="py-20 2xl:py-32 bg-white border-t border-slate-100">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10 text-center">
           <p className="text-lg 2xl:text-2xl text-slate-600 italic leading-relaxed max-w-4xl mx-auto font-medium">
-            "Each job is completed by our in-house team, and every project is backed by our guarantee for complete peace of mind."
+            "Each job is completed by our in-house team, and every project is
+            backed by our guarantee for complete peace of mind."
           </p>
           <div className="mt-10 flex flex-col items-center">
             <div className="h-1.5 w-16 bg-[#F9D759] mb-6"></div>

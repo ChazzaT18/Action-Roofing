@@ -72,7 +72,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
         },
       ],
     },
-    /*{ name: "Gallery", path: "/gallery" }, */
+    { name: "Gallery", path: "/gallery" },
     { name: "Contact", path: "/contact-us" },
   ];
 
@@ -138,7 +138,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
             </div>
 
             <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center w-auto">
-              <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-3 md:flex-row md:mt-0 md:border-0">
+              <ul className="flex flex-col p-4 justify-center items-center md:p-0 mt-4 font-medium md:space-x-3 md:flex-row md:mt-0 md:border-0">
                 {navLinks.map((item) => (
                   <li
                     key={item.name}
@@ -162,7 +162,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                       {item.dropdown && (
                         <ChevronDown
                           size={16}
-                          className={`transition-transform ml-1 mt-0.5 duration-300 ${isHoveringServices ? "rotate-180" : ""}`}
+                          className={`transition-transform mr-[-10px] mt-0.5 duration-300 ${isHoveringServices ? "rotate-180" : ""}`}
                         />
                       )}
                     </Link>
