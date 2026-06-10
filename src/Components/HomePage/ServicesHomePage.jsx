@@ -48,7 +48,7 @@ const services = [
     title: "Gutter Clearance & Cleaning",
     desc: "Commercial-grade wet/dry gutter vacuuming to extract silt, leaves, and moss sludge completely. Includes full structural downpipe flushes and bracket alignment verification checks.",
     image: "/images/gutter-vac.jpg",
-    path: "/services/moss-guttering-cleaning",
+    path: "/services/guttering",
     features: ["Vacuum Extraction", "Downpipe Flushing", "Joint & Seal Audits"],
   },
   {
@@ -74,7 +74,7 @@ const ServicesHomePage = ({ currentPage }) => {
               </h2>
               <p className="text-md md:text-lg text-slate-600 leading-relaxed">
                 We provide a full range of roofing services for homeowners and landlords across 
-                Brighton & yHove, from urgent repairs to planned maintenance and inspections.
+                Brighton & Hove, from urgent repairs to planned maintenance and inspections.
               </p>
             </div>
           ) : (
