@@ -25,28 +25,28 @@ const FasciaSoffitPage = ({ setCurrentPage }) => {
   return (
     <div className="bg-white w-full overflow-x-hidden text-[#243453]">
       
-      {/* 1. HERO SECTION (Synchronized with SlateTilePage Layout) */}
+      {/* 1. HERO SECTION */}
       <section className="relative w-full min-h-[85vh] flex items-center bg-[url('/images/fascia-soffits-guttering.jpg')] bg-center bg-cover text-white">
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/30 z-0" />
 
         <div className="max-w-screen-2xl w-full mx-auto px-4 md:px-10 relative z-10 text-center">
-          {/* Main Content Wrapper - Safe zone for fixed header on mobile */}
+          {/* Main Content Wrapper */}
           <div className="py-12 flex flex-col justify-center items-center">
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
+            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 3xl:text-sm mb-6 shadow-lg">
               <ShieldCheck size={18} />
               Maintenance-Free uPVC • 10-Year Guarantee
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-3xl lg:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
+            <h1 className="text-3xl lg:text-4xl 3xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
               Fascia, Soffit & <br />
               <span className="text-[#F9D759]">Guttering Specialists</span>
             </h1>
 
             {/* Subtext */}
-            <p className="text-lg md:text-xl 2xl:text-2xl text-slate-100 leading-relaxed mb-8 font-medium max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl 3xl:text-2xl text-slate-100 leading-relaxed mb-8 font-medium max-w-2xl mx-auto">
               Protect your roofline and improve your home’s appearance with professionally installed fascias, soffits, and guttering in Brighton & Hove.
             </p>
 
@@ -55,7 +55,7 @@ const FasciaSoffitPage = ({ setCurrentPage }) => {
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <Link
                   to="/contact-us"
-                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
+                  className="px-10 py-4.5 3xl:px-10 3xl:py-5 3xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
                 >
                   Book a Free Inspection
                   <ArrowRight
@@ -65,14 +65,14 @@ const FasciaSoffitPage = ({ setCurrentPage }) => {
                 </Link>
                 <a
                   href="tel:07768981913"
-                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
+                  className="px-10 py-4.5 3xl:px-10 3xl:py-5 3xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
                 >
                   <Phone size={20} className="text-[#F9D759]" />
                   Call Now<span className="max-sm:hidden">: 07768 981913</span>
                 </a>
               </div>
 
-              <p className="mt-6 text-xs sm:text-sm 2xl:text-base text-slate-300 italic">
+              <p className="mt-6 text-xs sm:text-sm 3xl:text-base text-slate-300 italic">
                 No pressure · Clear advice · Professional workmanship
               </p>
             </div>
@@ -84,9 +84,8 @@ const FasciaSoffitPage = ({ setCurrentPage }) => {
       <section className="py-24 bg-white">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
-            {/* Left Column: Wording */}
             <div className="lg:w-3/5 text-center lg:text-left">
-              <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-black uppercase mb-8 leading-tight text-[#243453]">
+              <h2 className="text-3xl md:text-4xl 3xl:text-5xl font-black uppercase mb-8 leading-tight text-[#243453]">
                 A Properly Installed <br />
                 <span className="text-[#F9D759]">Roofline Matters</span>
               </h2>
@@ -110,9 +109,9 @@ const FasciaSoffitPage = ({ setCurrentPage }) => {
                 </p>
               </div>
             </div>
-            {/* Right Static Presentation Block */}
+            
             <div className="lg:w-2/5 w-full self-stretch min-h-[350px] lg:min-h-0 relative">
-              <div className="relative h-full min-h-[350px] shadow-2xl w-full rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 bg-slate-900">
+              <div className="relative h-full min-h-[350px] shadow-2xl w-full rounded-[2.5rem] overflow-hidden border border-slate-100 bg-slate-900">
                 <img
                   src="/images/black-guttering-fascia.jpg"
                   alt="black guttering fascia & soffits"
@@ -294,7 +293,7 @@ const FasciaSoffitPage = ({ setCurrentPage }) => {
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2 text-left">
-              <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black uppercase mb-8 leading-tight text-[#243453]">
+              <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-black uppercase mb-8 leading-tight text-[#243453]">
                 Durable, Low-Maintenance <br />
                 <span className="text-[#F9D759]">Modern Materials</span>
               </h2>

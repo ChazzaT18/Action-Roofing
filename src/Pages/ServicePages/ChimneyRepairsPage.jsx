@@ -36,13 +36,13 @@ const ChimneyRepairsPage = ({ setCurrentPage }) => {
           <div className="py-12 sm:pt-20 lg:pt-10 flex flex-col justify-center items-center">
             
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
+            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 3xl:text-sm mb-6 shadow-lg">
               <ShieldCheck size={18} />
               Structural Maintenance & Safety
             </div>
 
             {/* Heading */}
-            <h1 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
+            <h1 className="text-3xl md:text-3xl lg:text-4xl 3xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
               Chimney Repairs in <br />
               <span className="text-[#F9D759]">Brighton & Hove</span>
             </h1>
@@ -59,7 +59,7 @@ const ChimneyRepairsPage = ({ setCurrentPage }) => {
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <Link
                   to="/contact-us"
-                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
+                  className="px-8 py-4 3xl:px-10 3xl:py-5 3xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
                 >
                   Request a Quote
                   <ArrowRight
@@ -69,14 +69,14 @@ const ChimneyRepairsPage = ({ setCurrentPage }) => {
                 </Link>
                 <a
                   href="tel:07768981913"
-                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] backdrop-blur-sm hover:bg-[#243453] text-white border border-slate-500 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
+                  className="px-8 py-4 3xl:px-10 3xl:py-5 3xl:text-xl bg-[#243453] backdrop-blur-sm hover:bg-[#243453] text-white border border-slate-500 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
                 >
                   <Phone size={20} className="text-[#F9D759]" />
                   Call Now<span className="max-sm:hidden">: 07768 981913</span>
                 </a>
               </div>
               
-              <p className="mt-6 text-xs sm:text-sm 2xl:text-base text-slate-300 italic font-medium">
+              <p className="mt-6 text-xs sm:text-sm 3xl:text-base text-slate-300 italic font-medium">
                 Fully insured • Clear advice • Clean, tidy workmanship
               </p>
             </div>
@@ -84,13 +84,12 @@ const ChimneyRepairsPage = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* 2. THE SYSTEM NARRATIVE - Reverted to Original 2-Column Style */}
+      {/* 2. THE SYSTEM NARRATIVE */}
       <section className="py-24 bg-white">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="flex flex-col lg:flex-row gap-16 items-start">
-            {/* Left Column: Brother's Wording */}
             <div className="lg:w-3/5">
-              <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black uppercase mb-8 leading-tight text-[#243453]">
+              <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-black uppercase mb-8 leading-tight text-[#243453]">
                 Chimneys Are a Common{" "}
                 <span className="text-[#F9D759]">Source of Problems</span>
               </h2>
@@ -115,9 +114,8 @@ const ChimneyRepairsPage = ({ setCurrentPage }) => {
               </div>
             </div>
 
-            {/* Right Static Presentation Block */}
             <div className="lg:w-2/5 w-full self-stretch min-h-[350px] lg:min-h-0 relative">
-              <div className="relative h-full min-h-[350px] shadow-2xl w-full rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 bg-slate-900">
+              <div className="relative h-full min-h-[350px] shadow-2xl w-full rounded-[2.5rem] overflow-hidden border border-slate-100 bg-slate-900">
                 <img
                   src="/images/chimney-repairs-3.jpg"
                   alt="chimney-repair"
@@ -130,7 +128,7 @@ const ChimneyRepairsPage = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* 3. SIGNS OF DETERIORATION - Clean Grid, No Image */}
+      {/* 3. SIGNS OF DETERIORATION */}
       <section className="py-24 bg-[#243453] text-white">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="text-center mb-16">
@@ -196,7 +194,7 @@ const ChimneyRepairsPage = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* 4. SPECIALIST SERVICES (Different Layout: Two Wide Boxes) */}
+      {/* 4. SPECIALIST SERVICES */}
       <section className="py-24 bg-white">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="grid lg:grid-cols-2 gap-8">
@@ -245,7 +243,7 @@ const ChimneyRepairsPage = ({ setCurrentPage }) => {
         </div>
       </section>
 
-{/* 5. THE "PHOTO EVIDENCE" PROMISE */}
+      {/* 5. THE "PHOTO EVIDENCE" PROMISE */}
       <section className="py-24 bg-white px-4 md:px-10">
         <div className="max-w-screen-2xl mx-auto">
           <div className="bg-[#F9D759] border-6 border-[#243453] rounded-[2rem] lg:rounded-[3rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl items-stretch">
@@ -303,7 +301,7 @@ const ChimneyRepairsPage = ({ setCurrentPage }) => {
 
       <ServicesCTA />
 
-      {/* 6. FINAL WORD (Brother's Closing Statement) */}
+      {/* 6. FINAL WORD */}
       <footer className="py-24 bg-white text-center">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="max-w-3xl mx-auto">

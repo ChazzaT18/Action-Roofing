@@ -15,6 +15,7 @@ import LoadingOverlay from "./Components/LoadingOverlay";
 import PageLoader from "./Components/PageLoader";
 import ChimneyRepairsPage from "./Pages/ServicePages/ChimneyRepairsPage";
 import LeadworkPage from "./Pages/ServicePages/LeadworkPage";
+import FlatRoofingPage from "./Pages/ServicePages/FlatRoofingPage";
 import GutteringPage from "./Pages/ServicePages/GutteringPage";
 import MossRemovalRoofCleaningPage from "./Pages/ServicePages/MossRemovalRoofCleaningPage";
 import TermsPage from "./Pages/TermsPage";
@@ -63,6 +64,7 @@ function AppContent({ currentPage, setCurrentPage, loading }) {
           <Route path="/services/leadwork" element={<LeadworkPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/services/fascias-soffits-guttering" element={<FasciaSoffitPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/services/moss-removal-roof-cleaning" element={<MossRemovalRoofCleaningPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
+          <Route path="/services/flat-roofing" element={<FlatRoofingPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/services/guttering" element={<GutteringPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/gallery" element={ <GalleryPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />
           <Route path="/terms-conditions" element={<TermsPage setCurrentPage={setCurrentPage} currentPage={currentPage} />} />

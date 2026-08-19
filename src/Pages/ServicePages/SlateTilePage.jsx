@@ -43,19 +43,19 @@ const SlateTilePage = ({ setCurrentPage }) => {
           {/* Main Content Wrapper - Safe zone for fixed header on mobile */}
           <div className="py-12 flex flex-col justify-center items-center">
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
+            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 3xl:text-sm mb-6 shadow-lg">
               <ShieldCheck size={18} />
               10-Year Workmanship Guarantee
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-3xl lg:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
+            <h1 className="text-3xl lg:text-4xl 3xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
               New Slate & Tile <br />
               <span className="text-[#F9D759]">Roof Installations</span>
             </h1>
 
             {/* Subtext */}
-            <p className="text-lg md:text-xl 2xl:text-2xl text-slate-100 leading-relaxed mb-8 font-medium max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl 3xl:text-2xl text-slate-100 leading-relaxed mb-8 font-medium max-w-2xl mx-auto">
               Expert replacements in Brighton & Hove. Built for durability and
               aesthetics with a focus on doing the job properly.
             </p>
@@ -65,7 +65,7 @@ const SlateTilePage = ({ setCurrentPage }) => {
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <Link
                   to="/contact-us"
-                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
+                  className="px-10 py-4.5 3xl:px-10 3xl:py-5 3xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
                 >
                   Book a Free Inspection
                   <ArrowRight
@@ -75,14 +75,14 @@ const SlateTilePage = ({ setCurrentPage }) => {
                 </Link>
                 <a
                   href="tel:07768981913"
-                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
+                  className="px-10 py-4.5 3xl:px-10 3xl:py-5 3xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
                 >
                   <Phone size={20} className="text-[#F9D759]" />
                   Call Now<span className="max-sm:hidden">: 07768 981913</span>
                 </a>
               </div>
 
-              <p className="mt-6 text-xs sm:text-sm 2xl:text-base text-slate-300 italic">
+              <p className="mt-6 text-xs sm:text-sm 3xl:text-base text-slate-300 italic">
                 No pressure · Clear advice · Professional workmanship
               </p>
             </div>
@@ -91,12 +91,11 @@ const SlateTilePage = ({ setCurrentPage }) => {
       </section>
 
       {/* 2. THE SYSTEM NARRATIVE */}
-
       <section className="py-24 bg-white">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-3/5">
-              <h2 className="text-3xl 2xl:text-4xl font-black uppercase mb-8 leading-tight text-[#243453]">
+              <h2 className="text-3xl 3xl:text-4xl font-black uppercase mb-8 leading-tight text-[#243453]">
                 Slate & Tile{" "}
                 <span className="text-[#F9D759]">Roof Installations</span>
               </h2>
@@ -114,7 +113,6 @@ const SlateTilePage = ({ setCurrentPage }) => {
                       className="text-[#F9D759] shrink-0 mt-1"
                       size={18}
                     />
-
                     <span>
                       We will only recommend work that genuinely needs to be
                       done.
@@ -126,7 +124,6 @@ const SlateTilePage = ({ setCurrentPage }) => {
                       className="text-[#F9D759] shrink-0 mt-1"
                       size={18}
                     />
-
                     <span>
                       Any work we carry out will be completed with the same care
                       and attention we would expect on our own property.
@@ -151,7 +148,7 @@ const SlateTilePage = ({ setCurrentPage }) => {
               </div>
             </div>
 
-            <div className="lg:w-2/5 flex max-h-[350px] items-center justify-center shadow-2xl rounded-4xl justify-center w-full">
+            <div className="lg:w-2/5 flex max-h-[350px] items-center justify-center shadow-2xl rounded-4xl w-full">
               <img
                 src="/images/red-tiling.jpg"
                 alt="Action Roofing Slate and Tile Installation Detail"
@@ -172,17 +169,16 @@ const SlateTilePage = ({ setCurrentPage }) => {
       {/* 3. WHAT'S INCLUDED IN A FULL REPLACEMENT */}
       <section className="py-24 bg-slate-50">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10 text-center mb-16">
-          <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black uppercase text-[#243453] mb-4">
+          <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-black uppercase text-[#243453] mb-4">
             What’s Included In A{" "}
             <span className="text-[#F9D759]">Full Roof Installation?</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-slate-600 text-base 2xl:text-lg font-medium">
+          <p className="max-w-2xl mx-auto text-slate-600 text-base 3xl:text-lg font-medium">
             We operate transparently with an end-to-end framework that covers
             all components of structural water management.
           </p>
         </div>
 
-        {/* Reverted to 3 Columns on Large Screens with side-by-side icons */}
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
@@ -235,12 +231,10 @@ const SlateTilePage = ({ setCurrentPage }) => {
               key={i}
               className="p-8 bg-white rounded-3xl shadow-md group border-b-4 border-[#243453] text-left flex items-center gap-4"
             >
-              {/* Pinned Left Icon */}
               <div className="bg-[#F9D759] p-3 rounded-xl shrink-0 text-[#243453]">
                 <item.icon size={30} />
               </div>
 
-              {/* Content Column */}
               <div>
                 <h3 className="text-base font-black uppercase mb-1.5 text-[#243453] tracking-tight leading-tight">
                   {item.title}
@@ -259,7 +253,7 @@ const SlateTilePage = ({ setCurrentPage }) => {
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black uppercase mb-8 leading-tight">
+              <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-black uppercase mb-8 leading-tight">
                 When Is A Repair <br />
                 <span className="text-[#F9D759]">No Longer Enough?</span>
               </h2>
@@ -282,7 +276,6 @@ const SlateTilePage = ({ setCurrentPage }) => {
               </div>
             </div>
 
-            {/* 2-Column Square Grid with side-by-side descriptive icons */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 {
@@ -320,12 +313,10 @@ const SlateTilePage = ({ setCurrentPage }) => {
                   key={i}
                   className="p-6 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-4 h-full"
                 >
-                  {/* Pinned Left Icon - Specific to each issue */}
                   <div className="bg-white/10 p-3 rounded-xl text-[#F9D759] shrink-0">
                     <item.icon size={22} />
                   </div>
 
-                  {/* Text Content */}
                   <div>
                     <h4 className="text-base font-black uppercase tracking-wide mb-1 text-white leading-tight">
                       {item.title}
@@ -395,13 +386,13 @@ const SlateTilePage = ({ setCurrentPage }) => {
       </section>
 
       {/* 6. 10 YEAR WARRANTY */}
-      <section className="bg-[#243453] py-24 2xl:py-32 px-4 md:px-10 text-white overflow-hidden">
+      <section className="bg-[#243453] py-24 3xl:py-32 px-4 md:px-10 text-white overflow-hidden">
         <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
           <div className="lg:col-span-7 space-y-10 text-left">
-            <h2 className="text-2xl md:text-3xl 2xl:text-4xl mb-6 font-black border-l-8 border-[#F9D759] pl-8 uppercase tracking-tight leading-tight">
+            <h2 className="text-2xl md:text-3xl 3xl:text-4xl mb-6 font-black border-l-8 border-[#F9D759] pl-8 uppercase tracking-tight leading-tight">
               10-Year Written <br /> Workmanship Guarantee
             </h2>
-            <div className="space-y-8 text-slate-200 text-lg 2xl:text-xl leading-relaxed font-medium">
+            <div className="space-y-8 text-slate-200 text-lg 3xl:text-xl leading-relaxed font-medium">
               <p>
                 All full roof installations are backed by our 10-year
                 workmanship guarantee for added peace of mind.
@@ -426,7 +417,7 @@ const SlateTilePage = ({ setCurrentPage }) => {
                   <div className="bg-white/10 p-2.5 rounded-lg shrink-0">
                     <item.icon className="text-[#F9D759]" size={24} />
                   </div>
-                  <span className="font-bold text-slate-100 text-sm 2xl:text-base uppercase tracking-wider">
+                  <span className="font-bold text-slate-100 text-sm 3xl:text-base uppercase tracking-wider">
                     {item.text}
                   </span>
                 </div>
@@ -436,13 +427,13 @@ const SlateTilePage = ({ setCurrentPage }) => {
 
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="bg-white w-80 h-80 2xl:w-[450px] 2xl:h-[450px] rounded-[50px] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.7)] flex flex-col items-center justify-center text-center p-10 border-t-[16px] border-[#F9D759] rotate-2">
+              <div className="bg-white w-80 h-80 3xl:w-[450px] 3xl:h-[450px] rounded-[50px] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.7)] flex flex-col items-center justify-center text-center p-10 border-t-[16px] border-[#F9D759] rotate-2">
                 <ShieldCheck
                   size={72}
                   className="text-[#243453] mb-6"
                   strokeWidth={2.5}
                 />
-                <span className="text-5xl 2xl:text-7xl font-black text-[#243453] leading-none tracking-tighter">
+                <span className="text-5xl 3xl:text-7xl font-black text-[#243453] leading-none tracking-tighter">
                   10-YEAR
                 </span>
                 <span className="text-sm font-black uppercase tracking-[0.3em] text-slate-500 mt-3">
@@ -461,9 +452,7 @@ const SlateTilePage = ({ setCurrentPage }) => {
       {/* 7. THE ACTION ROOFING PROMISE */}
       <section className="py-16 bg-white px-4 md:px-10">
         <div className="max-w-screen-2xl mx-auto">
-          {/* Main container with overflow-hidden to keep the image corners neat */}
           <div className="bg-[#F9D759] border-6 border-[#243453] rounded-[2rem] overflow-hidden flex flex-col lg:flex-row shadow-2xl items-stretch">
-            {/* Left Content Side */}
             <div className="lg:w-3/5 p-8 md:p-12 text-[#243453] text-left">
               <h2 className="text-2xl md:text-4xl font-black uppercase mb-8 leading-tight tracking-tight text-[#243453]">
                 Property Integrity. <br />
@@ -505,7 +494,6 @@ const SlateTilePage = ({ setCurrentPage }) => {
               </div>
             </div>
 
-            {/* Right Image Side - Stretches to full native height and width of the half container */}
             <div className="lg:w-2/5 w-full self-stretch min-h-[350px] lg:min-h-0 relative">
               <img
                 src="/images/tile-slate-lead.png"

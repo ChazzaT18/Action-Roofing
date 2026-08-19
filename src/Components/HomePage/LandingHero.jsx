@@ -34,17 +34,17 @@ const LandingHero = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 max-sm:mt-[30px] py-2 gap-8 items-center">
             <div className="lg:col-span-8 lg:col-start-3 max-sm:my-10 text-white flex flex-col justify-center gap-6 items-center text-center">
               <div className="space-y-4">
-                <p className="text-[#F9D759] font-bold tracking-widest uppercase 2xl:text-xl text-xs sm:text-base">
+                <p className="text-[#F9D759] font-bold tracking-widest uppercase xl:text-lg 3xl:text-xl text-xs sm:text-base">
                   Brighton & Hove's Trusted Choice
                 </p>
-                <h1 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl font-extrabold leading-tight max-w-4xl">
+                <h1 className="text-3xl md:text-2xl lg:text-3xl 2xl:max-w-[60%] mx-auto 3xl:text-4xl font-extrabold leading-tight max-w-4xl">
                   Family-Run Roofing Specialists in{" "}
                   <span className="text-[#F9D759]">Brighton & Hove</span> Since
                   2007
                 </h1>
               </div>
 
-              <p className="2xl:text-2xl md:text-lg text-slate-100 max-w-3xl leading-relaxed">
+              <p className="3xl:text-2xl xl:text-xl md:text-lg text-slate-100 max-w-3xl leading-relaxed">
                 Founded in 2007 and built on decades of hands-on experience,
                 Action Roofing is committed to doing the job properly, providing
                 tile and slate roofing, repairs, leadwork and maintenance across
@@ -68,7 +68,7 @@ const LandingHero = () => {
                 <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                   <Link
                     to="contact-us"
-                    className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105"
+                    className="px-8 py-4 3xl:px-10 2xl:py-5 3xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform hover:scale-105"
                   >
                     Get a Free Quote
                     <ArrowRight
@@ -78,7 +78,7 @@ const LandingHero = () => {
                   </Link>
                   <Link
                     to="/services/emergency-repairs"
-                    className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105"
+                    className="px-8 py-4 3xl:px-10 2xl:py-5 3xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform hover:scale-105"
                   >
                     <Hammer size={20} className="text-[#F9D759]" />
                     Emergency Repairs
@@ -108,7 +108,7 @@ const LandingHero = () => {
                 </span>
                 <div className="h-[1px] w-12 bg-slate-200 my-1" />
                 {/* Bumped to 2xl:text-base */}
-                <span className="text-[10px] 2xl:text-base font-bold text-[#F48120] uppercase">
+                <span className="text-[10px] lg:text-sm 3xl:text-base font-bold text-[#F48120] uppercase">
                   All work guaranteed on full roof installations
                 </span>
               </div>

@@ -53,7 +53,7 @@ const ContactUsPage = ({ setCurrentPage }) => {
             <span className="inline-block bg-[#F9D759] text-[#243453] px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-sm">
               Brighton & Hove Estimates
             </span>
-            <h1 className="text-3xl md:text-4xl 2xl:text-5xl font-black uppercase tracking-tight leading-tight">
+            <h1 className="text-3xl md:text-3xl 3xl:text-4xl font-black uppercase tracking-tight leading-tight">
               Get a Free <span className="text-[#F9D759]">Roof Inspection</span>
             </h1>
             <p className="text-slate-300 text-base md:text-lg font-medium leading-relaxed max-w-3xl">
@@ -87,7 +87,7 @@ const ContactUsPage = ({ setCurrentPage }) => {
         {/* SUCCESS OVERLAY */}
         {showSuccess && (
           <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#243453]/90 backdrop-blur-sm">
-            <div className="bg-white rounded-3xl p-8 2xl:p-12 max-w-sm 2xl:max-w-md w-full text-center shadow-2xl relative">
+            <div className="bg-white rounded-3xl p-8 3xl:p-12 max-w-sm 3xl:max-w-md w-full text-center shadow-2xl relative">
               <button
                 type="button"
                 onClick={() => setShowSuccess(false)}
@@ -104,16 +104,16 @@ const ContactUsPage = ({ setCurrentPage }) => {
                   />
                 </div>
               </div>
-              <h3 className="text-2xl 2xl:text-3xl font-black text-[#243453] mb-2 uppercase">
+              <h3 className="text-2xl 3xl:text-3xl font-black text-[#243453] mb-2 uppercase">
                 Message Sent!
               </h3>
-              <p className="text-slate-600 2xl:text-xl mb-6">
+              <p className="text-slate-600 3xl:text-xl mb-6">
                 We've received your request and will call you back shortly.
               </p>
               <button
                 type="button"
                 onClick={() => setShowSuccess(false)}
-                className="w-full bg-[#F9D759] text-[#243453] cursor-pointer 2xl:text-xl font-black py-3 2xl:py-5 rounded-xl hover:bg-[#F7CB28] transition-all"
+                className="w-full bg-[#F9D759] text-[#243453] cursor-pointer 3xl:text-xl font-black py-3 3xl:py-5 rounded-xl hover:bg-[#F7CB28] transition-all"
               >
                 Close
               </button>
@@ -122,35 +122,35 @@ const ContactUsPage = ({ setCurrentPage }) => {
         )}
 
         {/* MAIN CONTAINER */}
-        <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 2xl:gap-16 items-center">
+        <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 3xl:gap-16 items-center">
           
           {/* CONTACT INFO COLUMN */}
           <div className="lg:col-span-6 space-y-8 lg:px-6 text-left">
             <div>
-              <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black text-[#243453] uppercase mb-4 leading-tight">
+              <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-black text-[#243453] uppercase mb-4 leading-tight">
                 Trusted Brighton & Hove Roofers
               </h2>
-              <p className="text-slate-600 mb-4 text-base md:text-lg 2xl:text-xl font-medium">
+              <p className="text-slate-600 mb-4 text-base md:text-lg 3xl:text-xl font-medium">
                 If you’re concerned about your roof or need professional advice,
                 we’re here to help.
               </p>
-              <p className="text-[#243453] font-bold underline decoration-[#F9D759] decoration-4 text-base md:text-lg 2xl:text-xl">
+              <p className="text-[#243453] font-bold underline decoration-[#F9D759] decoration-4 text-base md:text-lg 3xl:text-xl">
                 Reliable roofing services for repairs, maintenance and emergency
                 work.
               </p>
             </div>
 
-            {/* Direct Communications Info Cards (Footer-Inspired Structure) */}
+            {/* Direct Communications Info Cards */}
             <div className="space-y-4 max-w-md">
               <a 
                 href="tel:07768981913" 
                 className="flex items-center gap-4 p-4.5 bg-slate-50 border border-slate-100 rounded-2xl text-slate-700 hover:text-[#243453] hover:bg-slate-100/50 transition-colors group"
               >
-                <div className="bg-[#243453] p-2.5 2xl:p-3 rounded-xl text-[#F9D759] group-hover:bg-[#F9D759] group-hover:text-[#243453] transition-all shrink-0 shadow-sm">
+                <div className="bg-[#243453] p-2.5 3xl:p-3 rounded-xl text-[#F9D759] group-hover:bg-[#F9D759] group-hover:text-[#243453] transition-all shrink-0 shadow-sm">
                   <Phone size={20} />
                 </div>
                 <div>
-                  <p className="text-[10px] 2xl:text-xs uppercase font-black text-slate-400 tracking-wide mb-0.5">Call for a quote</p>
+                  <p className="text-[10px] 3xl:text-xs uppercase font-black text-slate-400 tracking-wide mb-0.5">Call for a quote</p>
                   <p className="text-base font-black text-[#243453]">07768 981913</p>
                 </div>
               </a>
@@ -159,76 +159,86 @@ const ContactUsPage = ({ setCurrentPage }) => {
                 href="mailto:actionroofingservices@outlook.com" 
                 className="flex items-center gap-4 p-4.5 bg-slate-50 border border-slate-100 rounded-2xl text-slate-700 hover:text-[#243453] hover:bg-slate-100/50 transition-colors group"
               >
-                <div className="bg-[#243453] p-2.5 2xl:p-3 rounded-xl text-[#F9D759] group-hover:bg-[#F9D759] group-hover:text-[#243453] transition-all shrink-0 shadow-sm">
+                <div className="bg-[#243453] p-2.5 3xl:p-3 rounded-xl text-[#F9D759] group-hover:bg-[#F9D759] group-hover:text-[#243453] transition-all shrink-0 shadow-sm">
                   <Mail size={20} />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="text-[10px] 2xl:text-xs uppercase font-black text-slate-400 tracking-wide mb-0.5">Email us</p>
+                  <p className="text-[10px] 3xl:text-xs uppercase font-black text-slate-400 tracking-wide mb-0.5">Email us</p>
                   <p className="text-base font-black text-[#243453] truncate">actionroofingservices@outlook.com</p>
                 </div>
               </a>
 
               <div className="flex items-center gap-4 p-4.5 bg-slate-50 border border-slate-100 rounded-2xl text-slate-700">
-                <div className="bg-[#243453] p-2.5 2xl:p-3 rounded-xl text-[#F9D759] shrink-0 shadow-sm">
+                <div className="bg-[#243453] p-2.5 3xl:p-3 rounded-xl text-[#F9D759] shrink-0 shadow-sm">
                   <Clock size={20} />
                 </div>
                 <div>
-                  <p className="text-[10px] 2xl:text-xs uppercase font-black text-slate-400 tracking-wide mb-0.5">Hours</p>
+                  <p className="text-[10px] 3xl:text-xs uppercase font-black text-slate-400 tracking-wide mb-0.5">Hours</p>
                   <p className="text-base font-black text-[#243453]">Mon-Sat: 8am-6pm</p>
                 </div>
               </div>
             </div>
             
-            <p className="text-[10px] 2xl:text-sm max-sm:w-full max-sm:text-center text-slate-400 italic pt-2">
+            <p className="text-[10px] 3xl:text-sm max-sm:w-full max-sm:text-center text-slate-400 italic pt-2">
               We aim to respond as quickly as possible.
             </p>
           </div>
 
           {/* FORM COLUMN */}
-          <div className="lg:col-span-6 bg-[#243453] p-8 md:px-12 2xl:p-16 rounded-3xl shadow-2xl text-white">
-            <h3 className="text-xl md:text-2xl 2xl:text-3xl font-black uppercase mb-1 text-left">
+          <div className="lg:col-span-6 bg-[#243453] p-8 md:px-12 3xl:p-16 rounded-3xl shadow-2xl text-white">
+            <h3 className="text-xl md:text-2xl 3xl:text-3xl font-black uppercase mb-1 text-left">
               Free Inspection
             </h3>
-            <p className="text-slate-300 text-xs 2xl:text-base mb-6 text-left">
+            <p className="text-slate-300 text-xs 3xl:text-base mb-6 text-left">
               No-obligation roof check.
             </p>
 
-            <form name="contact" onSubmit={handleSubmit} className="space-y-3 2xl:space-y-5">
+            <form name="contact" onSubmit={handleSubmit} className="space-y-3 3xl:space-y-5">
               <input type="hidden" name="form-name" value="contact" />
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 2xl:gap-5 text-left">
+              {/* Row 1: Name and Phone */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 3xl:gap-5 text-left">
                 <input
                   name="full-name"
                   type="text"
                   placeholder="Name"
-                  className="w-full bg-white/10 border border-white/20 p-3 2xl:p-5 2xl:text-xl rounded-xl focus:border-[#F9D759] outline-none text-white font-semibold placeholder-slate-400"
+                  className="w-full bg-white/10 border border-white/20 p-3 3xl:p-5 3xl:text-xl rounded-xl focus:border-[#F9D759] outline-none text-white font-semibold placeholder-slate-400"
                   required
                 />
                 <input
                   name="phone-number"
                   type="tel"
                   placeholder="Phone"
-                  className="w-full bg-white/10 border border-white/20 p-3 2xl:p-5 2xl:text-xl rounded-xl focus:border-[#F9D759] outline-none text-white font-semibold placeholder-slate-400"
+                  className="w-full bg-white/10 border border-white/20 p-3 3xl:p-5 3xl:text-xl rounded-xl focus:border-[#F9D759] outline-none text-white font-semibold placeholder-slate-400"
                   required
                 />
               </div>
               
-              <div className="text-left">
+              {/* Row 2: Email and Postcode */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 3xl:gap-5 text-left">
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full bg-white/10 border border-white/20 p-3 3xl:p-5 3xl:text-xl rounded-xl focus:border-[#F9D759] outline-none text-white font-semibold placeholder-slate-400"
+                  required
+                />
                 <input
                   name="postcode"
                   type="text"
                   placeholder="Postcode"
-                  className="w-full bg-white/10 border border-white/20 p-3 2xl:p-5 2xl:text-xl rounded-xl focus:border-[#F9D759] outline-none text-white font-semibold placeholder-slate-400"
+                  className="w-full bg-white/10 border border-white/20 p-3 3xl:p-5 3xl:text-xl rounded-xl focus:border-[#F9D759] outline-none text-white font-semibold placeholder-slate-400"
                   required
                 />
               </div>
 
+              {/* Row 3: Message */}
               <div className="text-left">
                 <textarea
                   name="message"
                   placeholder="Issue..."
                   rows="4"
-                  className="w-full bg-white/10 border border-white/20 p-3 2xl:p-5 2xl:text-xl rounded-xl focus:border-[#F9D759] outline-none resize-none text-white font-semibold placeholder-slate-400"
+                  className="w-full bg-white/10 border border-white/20 p-3 3xl:p-5 3xl:text-xl rounded-xl focus:border-[#F9D759] outline-none resize-none text-white font-semibold placeholder-slate-400"
                   required
                 ></textarea>
               </div>
@@ -236,7 +246,7 @@ const ContactUsPage = ({ setCurrentPage }) => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#F9D759] text-[#243453] font-black py-4 2xl:py-6 2xl:text-xl rounded-xl hover:bg-[#F7CB28] transition-all cursor-pointer flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed uppercase"
+                className="w-full bg-[#F9D759] text-[#243453] font-black py-4 3xl:py-6 3xl:text-xl rounded-xl hover:bg-[#F7CB28] transition-all cursor-pointer flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed uppercase"
               >
                 {isSubmitting ? (
                   <>

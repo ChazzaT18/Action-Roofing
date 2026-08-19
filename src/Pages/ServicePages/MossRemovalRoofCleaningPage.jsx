@@ -34,17 +34,17 @@ const MossRemovalRoofCleaningPage = ({ setCurrentPage }) => {
         <div className="max-w-screen-2xl w-full mx-auto px-4 md:px-10 relative z-10 text-center">
           <div className="py-12 flex flex-col justify-center items-center">
             
-            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
+            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 3xl:text-sm mb-6 shadow-lg">
               <Sparkles size={16} />
               Professional Roof Maintenance
             </div>
 
-            <h1 className="text-3xl md:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
+            <h1 className="text-3xl md:text-4xl 3xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
               Roof Moss Removal <br />
               <span className="text-[#F9D759]">& Roof Cleaning</span>
             </h1>
 
-            <p className="text-lg md:text-xl 2xl:text-2xl text-slate-100 leading-relaxed mb-10 font-medium max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl 3xl:text-2xl text-slate-100 leading-relaxed mb-10 font-medium max-w-2xl mx-auto">
               Professional roof moss removal and biocide treatments across Brighton and surrounding areas.
             </p>
 
@@ -52,7 +52,7 @@ const MossRemovalRoofCleaningPage = ({ setCurrentPage }) => {
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <Link
                   to="/contact-us"
-                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
+                  className="px-10 py-4.5 3xl:px-10 3xl:py-5 3xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
                 >
                   Get a Free Quote
                   <ArrowRight
@@ -62,14 +62,14 @@ const MossRemovalRoofCleaningPage = ({ setCurrentPage }) => {
                 </Link>
                 <a
                   href="tel:07768981913"
-                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
+                  className="px-10 py-4.5 3xl:px-10 3xl:py-5 3xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
                 >
                   <Phone size={20} className="text-[#F9D759]" />
                   Call Now<span className="max-sm:hidden">: 07768 981913</span>
                 </a>
               </div>
 
-              <p className="mt-6 text-xs sm:text-sm 2xl:text-base text-slate-300 italic">
+              <p className="mt-6 text-xs sm:text-sm 3xl:text-base text-slate-300 italic">
                 Free inspections · Honest advice · No pressure
               </p>
             </div>
@@ -83,7 +83,7 @@ const MossRemovalRoofCleaningPage = ({ setCurrentPage }) => {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             
             <div className="lg:w-3/5 w-full text-center lg:text-left">
-              <h2 className="text-3xl 2xl:text-4xl font-black uppercase mb-8 leading-tight text-[#243453]">
+              <h2 className="text-3xl 3xl:text-4xl font-black uppercase mb-8 leading-tight text-[#243453]">
                 Careful Maintenance, <br />
                 <span className="text-[#F9D759]">Long-Term Protection</span>
               </h2>
@@ -115,13 +115,13 @@ const MossRemovalRoofCleaningPage = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* 3. WHY IS MOSS BAD FOR ROOFS GRID (Updated to 6 balanced tiles) */}
+      {/* 3. WHY IS MOSS BAD FOR ROOFS GRID */}
       <section className="py-24 bg-[#243453] text-white">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             
             <div className="text-left">
-              <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black uppercase mb-8 leading-tight">
+              <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-black uppercase mb-8 leading-tight">
                 Why Is Moss <br />
                 <span className="text-[#F9D759]">Bad For Roofs?</span>
               </h2>
@@ -139,7 +139,6 @@ const MossRemovalRoofCleaningPage = ({ setCurrentPage }) => {
               </div>
             </div>
 
-            {/* Perfect 3x2 Grid Matrix (6 items total) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 {
@@ -196,18 +195,17 @@ const MossRemovalRoofCleaningPage = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* 4. OUR MOSS REMOVAL PROCESS (Updated to 6 balanced tiles) */}
+      {/* 4. OUR MOSS REMOVAL PROCESS */}
       <section className="py-24 bg-slate-50">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10 text-center mb-16">
-          <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black uppercase text-[#243453] mb-4">
+          <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-black uppercase text-[#243453] mb-4">
             Our Moss <span className="text-[#F9D759]">Removal Process</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-slate-600 text-base 2xl:text-lg font-medium">
+          <p className="max-w-2xl mx-auto text-slate-600 text-base 3xl:text-lg font-medium">
             We operate transparently with an end-to-end cleaning framework designed to keep your home protected.
           </p>
         </div>
 
-        {/* Perfect 3-Column Grid Layout (6 items total = 2 rows of 3) */}
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
@@ -267,7 +265,7 @@ const MossRemovalRoofCleaningPage = ({ setCurrentPage }) => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             
             <div className="lg:col-span-7 text-left space-y-6">
-              <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black text-[#243453] border-l-8 border-[#F9D759] pl-6 uppercase tracking-tight">
+              <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-black text-[#243453] border-l-8 border-[#F9D759] pl-6 uppercase tracking-tight">
                 A Careful Approach <br />To Roof Cleaning
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed font-medium">

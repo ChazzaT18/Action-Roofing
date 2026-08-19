@@ -49,7 +49,8 @@ const Header = ({ currentPage, setCurrentPage }) => {
         { name: "All Services", path: "/services" },
         { name: "Emergency Roof Repairs", path: "/services/emergency-repairs" },
         { name: "Slate & Tile Roofing", path: "/services/slate-tile-roofing" },
-        { name: "Leadwork & Flashing", path: "/services/leadwork" },
+        { name: "Flat Roofing", path: "/services/flat-roofing" },
+        { name: "Lead Roofing & Leadwork", path: "/services/leadwork" },
         { name: "Chimney Repairs", path: "/services/chimney-repairs" },
         {
           name: "Fascias, Soffits & Gutters",
@@ -92,7 +93,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
               />
               <img
                 src="/images/action roofing text.png"
-                className="hidden lg:block transition-all mt-2 duration-500 ease-in-out object-contain lg:h-6 xl:h-7 2xl:h-9"
+                className="hidden lg:block transition-all mt-2 duration-500 ease-in-out object-contain lg:h-6 xl:h-7 3xl:h-9"
                 alt="Action Roofing Logo Text"
               />
               <img
@@ -117,7 +118,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
               </a>
               <Link
                 to="/contact-us"
-                className="group flex max-sm:hidden items-center gap-2 text-[#243453] bg-[#F9D759] hover:bg-[#F7CB28] cursor-pointer font-bold 2xl:text-lg rounded-md text-xs lg:text-sm px-5 py-2.5 transition-all hover:scale-105 shadow-md"
+                className="group flex max-sm:hidden items-center gap-2 text-[#243453] bg-[#F9D759] hover:bg-[#F7CB28] cursor-pointer font-bold 3xl:text-lg rounded-md text-xs lg:text-sm px-5 py-2.5 transition-all hover:scale-105 shadow-md"
               >
                 <Send size={14} fill="currentColor" />
                 <span>Enquire Now</span>
@@ -136,7 +137,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                 {navLinks.map((item) => (
                   <li
                     key={item.name}
-                    className="relative flex justify-center 2xl:text-xl items-center group/nav"
+                    className="relative flex justify-center 3xl:text-xl items-center group/nav"
                     onMouseEnter={() =>
                       item.dropdown && setIsHoveringServices(true)
                     }
@@ -178,7 +179,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                             >
                               <Link
                                 to={sub.path}
-                                className="block px-4 py-3 hover:bg-[#243453] hover:text-white text-[#243453] transition-colors font-bold uppercase tracking-wider text-xs 2xl:text-sm"
+                                className="block px-4 py-3 hover:bg-[#243453] hover:text-white text-[#243453] transition-colors font-bold uppercase tracking-wider text-xs 3xl:text-sm"
                               >
                                 {sub.name}
                               </Link>
@@ -262,13 +263,13 @@ const Header = ({ currentPage, setCurrentPage }) => {
         <div
           className="w-full flex justify-center items-center text-[12px] sm:text-xs py-1.5 font-bold bg-[#F9D759] text-[#243453] shadow-md relative z-10 translate-y-0"
         >
-          <div className="w-full max-w-screen-2xl flex justify-around 2xl:text-lg items-center px-6">
+          <div className="w-full max-w-screen-2xl flex justify-around 3xl:text-base 3xl:text-lg items-center px-6">
             <a
               href="tel:07768981913"
               className="flex items-center gap-2 hover:underline"
             >
               <Phone
-                className="max-sm:hidden w-3.5 h-3.5 2xl:w-5 2xl:h-5"
+                className="max-sm:hidden w-3.5 h-3.5 3xl:w-5 2xl:h-5"
                 size={20}
               />
               <span>07768 981913</span>
@@ -278,7 +279,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
               <img
                 src="/images/Pavillion.png"
                 alt="Brighton"
-                className="h-4 w-auto mb-1 max-sm:hidden 2xl:h-6"
+                className="h-4 w-auto mb-1 max-sm:hidden 3xl:h-6"
               />
               <span>Brighton & Hove</span>
             </div>

@@ -77,21 +77,21 @@ const ServicesPage = ({ setCurrentPage }) => {
           }}
         />
 
-        {/* 2. Black Overlay - Standardized with other pages */}
+        {/* 2. Black Overlay */}
         <div className="absolute inset-0 bg-black/10 z-1" />
 
         <div className="max-w-screen-2xl w-full mx-auto px-4 md:px-10 relative z-10 text-center">
-          {/* Main Content Wrapper - Safe zone for fixed header on mobile */}
+          {/* Main Content Wrapper */}
           <div className="py-12 flex flex-col justify-center items-center">
             
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
+            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 3xl:text-sm mb-6 shadow-lg">
               <ShieldCheck size={18} />
               The Action Roofing Standard
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
+            <h1 className="text-3xl md:text-3xl lg:text-4xl 3xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
               Our Roofing <br />
               <span className="text-[#F9D759]">Services</span>
             </h1>
@@ -108,7 +108,7 @@ const ServicesPage = ({ setCurrentPage }) => {
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <Link
                   to="/contact-us"
-                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
+                  className="px-8 py-4 3xl:px-10 3xl:py-5 3xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
                 >
                   Get a Free Quote
                   <ArrowRight
@@ -118,14 +118,14 @@ const ServicesPage = ({ setCurrentPage }) => {
                 </Link>
                 <a
                   href="tel:07768981913"
-                  className="px-8 py-4 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453]/80 backdrop-blur-sm hover:bg-[#243453] text-white border border-slate-500 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
+                  className="px-8 py-4 3xl:px-10 3xl:py-5 3xl:text-xl bg-[#243453]/80 backdrop-blur-sm hover:bg-[#243453] text-white border border-slate-500 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
                 >
                   <Phone size={20} className="text-[#F9D759]" />
                   Call Now<span className="max-sm:hidden">: 07768 981913</span>
                 </a>
               </div>
 
-              <p className="mt-6 text-xs sm:text-sm 2xl:text-base text-slate-300 italic font-medium">
+              <p className="mt-6 text-xs sm:text-sm 3xl:text-base text-slate-300 italic font-medium">
                 Free inspections · No obligation · Expert Advice
               </p>
             </div>
@@ -135,11 +135,11 @@ const ServicesPage = ({ setCurrentPage }) => {
 
       <ServicesHomePage />
 
-      {/* 3. OUR APPROACH (Process Restored) */}
+      {/* 3. OUR APPROACH */}
       <section className="py-24 bg-[#243453] text-white">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="max-w-3xl mb-16 text-left">
-            <h2 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl font-black text-white border-l-8 border-[#F9D759] pl-6 mb-6 uppercase tracking-tight">
+            <h2 className="text-3xl md:text-3xl lg:text-4xl 3xl:text-5xl font-black text-white border-l-8 border-[#F9D759] pl-6 mb-6 uppercase tracking-tight">
               Our Professional Approach
             </h2>
             <p className="text-slate-300 text-lg">
@@ -194,16 +194,16 @@ const ServicesPage = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* 4. STRUCTURAL AWARENESS (The Technical "How") */}
+      {/* 4. STRUCTURAL AWARENESS */}
       <section className="py-24 bg-white">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             {/* Text Column */}
             <div className="lg:w-1/2 text-left space-y-8">
-              <h2 className="text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl border-l-8 pl-6 border-[#F9D759] 2xl:text-4xl font-black uppercase text-[#243453] tracking-tight">
+              <h2 className="text-3xl md:text-3xl lg:text-4xl 3xl:text-5xl border-l-8 pl-6 border-[#F9D759] font-black uppercase text-[#243453] tracking-tight">
                 Beyond the Surface
               </h2>
-              <p className="2xl:text-lg text-slate-600 leading-relaxed font-medium">
+              <p className="3xl:text-lg text-slate-600 leading-relaxed font-medium">
                 A quality roof is defined by the precision of its hidden layers.
                 We look deeper into the **timbers, underlays, and leadwork** to
                 ensure structural longevity and prevent future ingress issues.

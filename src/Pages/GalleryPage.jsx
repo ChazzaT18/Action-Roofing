@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { 
   Camera, 
   ArrowRight, 
   X, 
-  Maximize2, 
   CheckCircle2,
   Phone,
   ChevronLeft,
@@ -15,13 +14,13 @@ import ServicesCTA from "./ServicePages/ServicesCTA";
 const GalleryPage = ({ setCurrentPage }) => {
   const [lightboxProject, setLightboxProject] = useState(null);
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
+  const scrollContainerRef = useRef(null);
 
   useEffect(() => {
     setCurrentPage("gallery");
     window.scrollTo(0, 0);
   }, [setCurrentPage]);
 
-  // Projects structured with an array of images to allow full slideshow browsing per project
   const projects = [
     {
       id: 1,
@@ -70,7 +69,17 @@ const GalleryPage = ({ setCurrentPage }) => {
     }
   ];
 
-  // Slideshow Navigation Handlers
+  const scrollProjects = (direction) => {
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const scrollAmount = container.offsetWidth * 0.8;
+      container.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  };
+
   const handlePrevImage = (e) => {
     e.stopPropagation();
     if (!lightboxProject) return;
@@ -89,30 +98,29 @@ const GalleryPage = ({ setCurrentPage }) => {
 
   const openLightbox = (project) => {
     setLightboxProject(project);
-    setCurrentImgIndex(0); // Always start from the first image of that project
+    setCurrentImgIndex(0);
   };
 
   return (
     <div className="bg-white w-full overflow-x-hidden text-[#243453]">
       
-      {/* 1. FULL SCREEN HERO SECTION */}
+      {/* 1. HERO SECTION */}
       <section className="relative w-full min-h-[85vh] flex items-center bg-[url('/images/brighton-job.jpg')] bg-center bg-cover text-white">
         <div className="absolute inset-0 bg-black/50 z-0" />
 
         <div className="max-w-screen-2xl w-full mx-auto px-4 md:px-10 relative z-10 text-center">
           <div className="py-12 flex flex-col justify-center items-center">
-            
-            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
+            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 3xl:text-sm mb-6 shadow-lg">
               <Camera size={16} />
               Our Workmanship Portfolio
             </div>
 
-            <h1 className="text-3xl md:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
+            <h1 className="text-3xl md:text-4xl 3xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
               Our Completed <br />
               <span className="text-[#F9D759]">Recent Projects</span>
             </h1>
 
-            <p className="text-lg md:text-xl 2xl:text-2xl text-slate-100 leading-relaxed mb-10 font-medium max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl 3xl:text-2xl text-slate-100 leading-relaxed mb-10 font-medium max-w-2xl mx-auto">
               Real photos from real jobs across Brighton & Hove. We take pride in clean lines, honest techniques, and doing the job properly.
             </p>
 
@@ -120,7 +128,7 @@ const GalleryPage = ({ setCurrentPage }) => {
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <Link
                   to="/contact-us"
-                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
+                  className="px-10 py-4 3xl:px-10 3xl:py-5 3xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
                 >
                   Get a Free Quote
                   <ArrowRight
@@ -130,14 +138,14 @@ const GalleryPage = ({ setCurrentPage }) => {
                 </Link>
                 <a
                   href="tel:07768981913"
-                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
+                  className="px-10 py-4 3xl:px-10 3xl:py-5 3xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-bold rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
                 >
                   <Phone size={20} className="text-[#F9D759]" />
                   Call Now<span className="max-sm:hidden">: 07768 981913</span>
                 </a>
               </div>
 
-              <p className="mt-6 text-xs sm:text-sm 2xl:text-base text-slate-300 italic">
+              <p className="mt-6 text-xs sm:text-sm 3xl:text-base text-slate-300 italic">
                 Free inspections · Transparent advice · Honest pricing
               </p>
             </div>
@@ -145,64 +153,83 @@ const GalleryPage = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* 2. SPECIFICATION MATRIX GRID */}
+      {/* 2. PROJECT CAROUSEL SECTION (3-Wide on Laptops & Above, Entire Tile Clickable) */}
       <section className="py-24 bg-white">
-        <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
+        <div className="max-w-screen-2xl mx-auto px-4 md:px-10 relative">
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 gap-6 2xl:gap-8">
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <span className="text-xs font-black uppercase tracking-widest text-[#d1ad2b]">Showcase</span>
+              <h2 className="text-2xl md:text-3xl font-black uppercase text-[#243453]">Explore All Works</h2>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => scrollProjects("left")}
+                aria-label="Previous Projects"
+                className="p-3 rounded-full border border-slate-200 text-[#243453] hover:bg-[#243453] hover:text-white transition-all shadow-sm active:scale-95 cursor-pointer"
+              >
+                <ChevronLeft size={20} />
+              </button>
+              <button
+                onClick={() => scrollProjects("right")}
+                aria-label="Next Projects"
+                className="p-3 rounded-full border border-slate-200 text-[#243453] hover:bg-[#243453] hover:text-white transition-all shadow-sm active:scale-95 cursor-pointer"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
+          </div>
+
+          {/* Scrollable Track */}
+          <div 
+            ref={scrollContainerRef}
+            className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 no-scrollbar [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
             {projects.map((project) => (
               <div 
                 key={project.id}
-                className="group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-md flex flex-col h-full"
+                onClick={() => openLightbox(project)}
+                className="w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0 snap-start group bg-white rounded-3xl overflow-hidden border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer"
               >
                 {/* Image Wrap Area */}
-                <div 
-                  onClick={() => openLightbox(project)}
-                  className="relative aspect-[16/10] overflow-hidden bg-slate-900 cursor-zoom-in"
-                >
+                <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
                   <img
                     src={project.src}
                     alt={project.title}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110 group-hover:opacity-90"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
                   />
 
-                  {/* Location Tag Overlay */}
+                  {/* Location Tag */}
                   <div className="absolute top-4 left-4 bg-[#243453] text-white font-black uppercase text-[9px] tracking-widest px-2.5 py-1 rounded-md shadow-md z-10 border border-white/10">
                     {project.location}
                   </div>
 
-                  {/* Multi-Photo Count Indicator Overlay */}
+                  {/* Multi-Photo Indicator */}
                   {project.images.length > 1 && (
                     <div className="absolute bottom-4 right-4 bg-black/70 backdrop-blur-sm text-white font-black text-[10px] uppercase tracking-wider px-2.5 py-1.5 rounded-lg shadow-md z-10 flex items-center gap-1.5 border border-white/10">
                       <Camera size={12} className="text-[#F9D759]" />
                       {project.images.length} Photos
                     </div>
                   )}
-
-                  {/* Hover Overlay Visuals */}
-                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div className="bg-white/90 p-3 rounded-full text-[#243453] shadow-xl transform scale-75 group-hover:scale-100 transition-transform">
-                      <Maximize2 size={16} />
-                    </div>
-                  </div>
                 </div>
 
                 {/* Content Descriptions */}
                 <div className="p-6 flex flex-col flex-grow text-left">
-                  <h3 className="font-black text-lg text-[#243453] uppercase tracking-tight mb-2 leading-tight">
+                  <h3 className="font-black text-lg text-[#243453] uppercase tracking-tight mb-2 leading-tight group-hover:text-[#d1ad2b] transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-slate-600 text-xs font-semibold leading-relaxed mb-6 flex-grow">
                     {project.desc}
                   </p>
 
-                  {/* Custom Materials Technical Badges */}
+                  {/* Badges */}
                   <div className="flex flex-wrap gap-1.5 pt-4 border-t border-slate-100 mt-auto">
                     {project.specs.map((spec, sIdx) => (
                       <span 
                         key={sIdx}
-                        className="text-[9px] font-black uppercase tracking-wider px-2 py-1 bg-slate-50 border border-slate-200 text-slate-500 rounded-md"
+                        className="text-[8px] font-black uppercase tracking-wider px-2 py-1 bg-slate-50 border border-slate-200 text-slate-500 rounded-md"
                       >
                         {spec}
                       </span>
@@ -216,11 +243,10 @@ const GalleryPage = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* 3. TRANSPARENCY PROMISE HOOK SECTION */}
+      {/* 3. TRANSPARENCY PROMISE */}
       <section className="py-20 bg-slate-50 border-t border-slate-200">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="bg-[#243453] rounded-[2.5rem] p-8 md:p-16 text-white text-left relative overflow-hidden shadow-2xl border-b-8 border-[#F9D759]">
-            
             <div className="max-w-3xl space-y-6">
               <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-3 py-1 rounded-md font-black uppercase tracking-widest text-[10px]">
                 Our Standard
@@ -247,25 +273,21 @@ const GalleryPage = ({ setCurrentPage }) => {
                 ))}
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
-      {/* 4. LIGHTBOX MODAL - FIXED THE THE HORIZONTAL HOVER LINE FROM image_873b10.png */}
+      {/* 4. LIGHTBOX MODAL */}
       {lightboxProject && (
         <div 
-          // FIXED: Set backdrop boundaries to inset-0 to fully canvas the screen, using padding to push inner elements safely down
           className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-3 sm:p-4 overflow-y-auto backdrop-blur-sm select-none pt-[104px] sm:pt-[126px] md:pt-[140px]"
           onClick={() => setLightboxProject(null)}
         >
-          {/* Modal Content Container Card */}
           <div 
             className="max-w-3xl w-full flex flex-col bg-white rounded-3xl overflow-hidden shadow-2xl mx-auto relative my-auto max-h-[92vh] sm:max-h-[78vh]"
             onClick={(e) => e.stopPropagation()}
           >
-            
-            {/* High Visibility Close Trigger Button */}
+            {/* Top-Right Close Button */}
             <button 
               onClick={() => setLightboxProject(null)}
               className="absolute top-4 right-4 p-2.5 bg-[#243453] text-white hover:bg-slate-800 rounded-full transition-colors z-50 cursor-pointer shadow-xl border border-white/10"
@@ -281,7 +303,6 @@ const GalleryPage = ({ setCurrentPage }) => {
                 className="w-full h-full object-contain"
               />
 
-              {/* Slider Directional Arrow Overlays */}
               {lightboxProject.images.length > 1 && (
                 <>
                   <button
@@ -297,7 +318,6 @@ const GalleryPage = ({ setCurrentPage }) => {
                     <ChevronRight size={24} />
                   </button>
 
-                  {/* Floating Image Step Counter Badge */}
                   <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm text-white font-black text-[11px] px-2.5 py-1.5 rounded-lg border border-white/10 z-10">
                     {currentImgIndex + 1} / {lightboxProject.images.length}
                   </div>
@@ -318,13 +338,17 @@ const GalleryPage = ({ setCurrentPage }) => {
                         : "border-transparent opacity-40 hover:opacity-70"
                     }`}
                   >
-                    <img src={img} alt="Thumbnail lookup" className="w-full h-full object-cover" />
+                    <img 
+                      src={img} 
+                      alt="Thumbnail lookup" 
+                      className="w-full h-full object-cover [image-rendering:auto] transform-gpu backface-hidden" 
+                    />
                   </button>
                 ))}
               </div>
             )}
 
-            {/* Metadata Text Details Area */}
+            {/* Metadata Text Details */}
             <div className="p-5 md:p-6 bg-white text-left overflow-y-auto flex-grow pr-16">
               <div className="flex items-center justify-between gap-4 mb-1">
                 <span className="text-[10px] font-black uppercase tracking-widest text-[#d1ad2b] bg-slate-50 border border-slate-200 px-2.5 py-0.5 rounded-md">

@@ -17,7 +17,14 @@ const services = [
     features: ["Breathable Underlays", "Coastal Durability", "Full Replacements"],
   },
   {
-    title: "Leadwork & Flashing",
+    title: "Flat Roofing",
+    desc: "Specialist installation and repairs of torch-on felt, seamless GRP fibreglass, and durable single-ply EPDM rubber systems tailored with precision falls and lead detailing.",
+    image: "/images/flat-roof-landing-hero.jpg",
+    path: "/services/flat-roofing",
+    features: ["Torch-On Felt", "GRP Fibreglass", "EPDM Rubber"],
+  },
+  {
+    title: "Leadwork Roofing & Leadwork",
     desc: "Precision leadwork and flashing repairs for chimneys, valleys, abutments and roof junctions, completed using traditional bossing and welding techniques for long-lasting weather protection.",
     image: "/images/leadwork.jpg",
     path: "/services/leadwork",
@@ -77,24 +84,22 @@ const ServicesHomePage = ({ currentPage }) => {
                 Brighton & Hove, from urgent repairs to planned maintenance and inspections.
               </p>
             </div>
-          ) : (
-            <></>
-          )}
+          ) : null}
 
-          {/* Core grid configuration (Locked to 2 or 4 columns) */}
-          <div className="grid grid-cols-1 max-sm:grid-cols-1 grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 gap-6 2xl:gap-8">
+          {/* 1-col mobile, 2-col tablet (sm/md), 3-col laptop+ (lg) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 3xl:gap-8">
             {services.map((service, index) => (
               <Link
                 key={index}
                 to={service.path}
                 className={`group relative flex flex-col rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border ${
                   service.isCTA
-                    ? "bg-[#F9D759] border-transparent hover:bg-[#F7CB28]"
+                    ? "bg-[#F9D759] border-transparent hover:bg-[#F7CB28] sm:hidden lg:flex"
                     : "bg-white border-slate-100"
                 }`}
               >
                 {/* Unified Image Section */}
-                <div className="relative h-64 md:h-44 2xl:h-56 overflow-hidden bg-black">
+                <div className="relative h-72 md:h-60 overflow-hidden bg-black">
                   <img
                     src={service.image}
                     alt={service.title}
@@ -111,7 +116,7 @@ const ServicesHomePage = ({ currentPage }) => {
 
                 {/* Text Content */}
                 <div className="p-6 flex flex-col flex-grow text-left">
-                  {/* 1. TOP SECTION: Title and Description */}
+                  {/* TOP SECTION: Title and Description */}
                   <div className="flex-grow">
                     <h3 className="text-lg font-black text-[#243453] mb-3 uppercase tracking-tight leading-tight">
                       {service.title}
@@ -124,7 +129,7 @@ const ServicesHomePage = ({ currentPage }) => {
                     </p>
                   </div>
 
-                  {/* 2. BOTTOM SECTION: Technical Vertical List */}
+                  {/* BOTTOM SECTION: Technical Vertical List */}
                   <div className="space-y-2.5 mt-auto pt-5">
                     {service.features.map((feat, i) => (
                       <div
@@ -141,7 +146,7 @@ const ServicesHomePage = ({ currentPage }) => {
                     ))}
                   </div>
 
-                  {/* 3. FOOTER ROW ACTION INTERFACE */}
+                  {/* FOOTER ROW ACTION INTERFACE */}
                   <div className={`mt-4 pt-4 border-t flex items-center justify-between font-black text-[10px] uppercase tracking-[0.15em] ${
                     service.isCTA 
                       ? "border-[#243453]/10 text-[#243453]" 

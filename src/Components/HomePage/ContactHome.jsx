@@ -35,13 +35,12 @@ const ContactHome = () => {
 
   return (
     <section
-      className="bg-white py-12 md:py-16 2xl:py-24 px-4 md:px-10 relative"
+      className="bg-white py-12 md:py-16 3xl:py-24 px-4 md:px-10 relative"
       id="contact-form"
     >
-      {/* SUCCESS OVERLAY - Scaled up for 2xl */}
       {showSuccess && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#243453]/90 backdrop-blur-sm">
-          <div className="bg-white rounded-3xl p-8 2xl:p-12 max-w-sm 2xl:max-w-md w-full text-center shadow-2xl relative">
+          <div className="bg-white rounded-3xl p-8 3xl:p-12 max-w-sm 3xl:max-w-md w-full text-center shadow-2xl relative">
             <button
               onClick={() => setShowSuccess(false)}
               className="absolute top-4 right-4 text-slate-400 cursor-pointer hover:text-[#243453]"
@@ -65,7 +64,7 @@ const ContactHome = () => {
             </p>
             <button
               onClick={() => setShowSuccess(false)}
-              className="w-full bg-[#F9D759] text-[#243453] cursor-pointer 2xl:text-xl font-black py-3 2xl:py-5 rounded-xl hover:bg-[#F7CB28] transition-all"
+              className="w-full bg-[#F9D759] text-[#243453] cursor-pointer 3xl:text-xl font-black py-3 3xl:py-5 rounded-xl hover:bg-[#F7CB28] transition-all"
             >
               Close
             </button>
@@ -73,98 +72,104 @@ const ContactHome = () => {
         </div>
       )}
 
-      <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 2xl:gap-16 items-center">
+      <div className="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 3xl:gap-16 items-center">
         {/* CONTACT INFO COLUMN */}
         <div className="lg:col-span-6 space-y-6 lg:px-6">
           <div>
-            {/* Bumped to 2xl:text-4xl */}
-            <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black text-[#243453] uppercase mb-4 leading-tight">
+            <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-black text-[#243453] uppercase mb-4 leading-tight">
               Trusted Brighton & Hove Roofers
             </h2>
-            {/* Bumped to 2xl:text-xl */}
-            <p className="text-slate-600 mb-4 text-base md:text-lg 2xl:text-xl">
+            <p className="text-slate-600 mb-4 text-base md:text-lg 3xl:text-xl">
               If you’re concerned about your roof or need professional advice,
               we’re here to help.
             </p>
-            {/* Bumped to 2xl:text-xl */}
-            <p className="text-[#243453] font-bold underline decoration-[#F9D759] decoration-4 text-base md:text-lg 2xl:text-xl">
+            <p className="text-[#243453] font-bold underline decoration-[#F9D759] decoration-4 text-base md:text-lg 3xl:text-xl">
               Reliable roofing services for repairs, maintenance and emergency
               work.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row lg:flex-col gap-3">
-            {/* Bumped button text to 2xl:text-xl and sizing to 2xl:w-80 */}
             <a
               href="tel:07768981913"
-              className="flex items-center justify-center gap-3 w-full sm:w-64 2xl:w-80 2xl:text-xl 2xl:py-5 bg-[#F9D759] text-[#243453] font-black py-3.5 rounded-xl shadow-lg hover:bg-[#243453] hover:text-white transition-all transform hover:-translate-y-1"
+              className="flex items-center justify-center gap-3 w-full sm:w-64 3xl:w-80 3xl:text-xl 3xl:py-5 bg-[#F9D759] text-[#243453] font-black py-3.5 rounded-xl shadow-lg hover:bg-[#243453] hover:text-white transition-all transform hover:-translate-y-1"
             >
               <Phone size={20} /> CALL NOW
             </a>
 
             <a
               href="mailto:actionroofingservices@outlook.com"
-              className="flex items-center justify-center gap-3 w-full sm:w-64 2xl:w-80 2xl:text-xl 2xl:py-5 bg-slate-100 text-[#243453] font-black py-3.5 rounded-xl shadow-md hover:bg-slate-200 transition-all transform hover:-translate-y-1"
+              className="flex items-center justify-center gap-3 w-full sm:w-64 3xl:w-80 3xl:text-xl 3xl:py-5 bg-slate-100 text-[#243453] font-black py-3.5 rounded-xl shadow-md hover:bg-slate-200 transition-all transform hover:-translate-y-1"
             >
               <MessageSquareMore size={20} /> MESSAGE US
             </a>
           </div>
-          {/* Bumped helper text to 2xl:text-sm */}
-          <p className="text-[10px] 2xl:text-sm max-sm:w-full max-sm:text-center text-slate-400 italic">
+          <p className="text-[10px] 3xl:text-sm max-sm:w-full max-sm:text-center text-slate-400 italic">
             We aim to respond as quickly as possible.
           </p>
         </div>
 
         {/* FORM COLUMN */}
-        <div className="lg:col-span-6 bg-[#243453] p-8 md:px-12 2xl:p-16 rounded-3xl shadow-2xl text-white">
-          {/* Bumped to 2xl:text-3xl */}
-          <h3 className="text-xl md:text-2xl 2xl:text-3xl font-black uppercase mb-1">
+        <div className="lg:col-span-6 bg-[#243453] p-8 md:px-12 3xl:p-16 rounded-3xl shadow-2xl text-white">
+          <h3 className="text-xl md:text-2xl 3xl:text-3xl font-black uppercase mb-1">
             Free Inspection
           </h3>
-          {/* Bumped to 2xl:text-base */}
-          <p className="text-slate-300 text-xs 2xl:text-base mb-6">
+          <p className="text-slate-300 text-xs 3xl:text-base mb-6">
             No-obligation roof check.
           </p>
 
-          <form name="contact" onSubmit={handleSubmit} className="space-y-3 2xl:space-y-5">
+          <form name="contact" onSubmit={handleSubmit} className="space-y-3 3xl:space-y-5">
             <input type="hidden" name="form-name" value="contact" />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 2xl:gap-5">
+            {/* Row 1: Name and Phone */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 3xl:gap-5">
               <input
                 name="full-name"
                 type="text"
                 placeholder="Name"
-                className="w-full bg-white/10 border border-white/20 p-3 2xl:p-5 2xl:text-xl rounded-xl focus:border-[#F9D759] outline-none"
+                className="w-full bg-white/10 border border-white/20 p-3 3xl:p-5 3xl:text-xl rounded-xl focus:border-[#F9D759] outline-none"
                 required
               />
               <input
                 name="phone-number"
                 type="tel"
                 placeholder="Phone"
-                className="w-full bg-white/10 border border-white/20 p-3 2xl:p-5 2xl:text-xl rounded-xl focus:border-[#F9D759] outline-none"
+                className="w-full bg-white/10 border border-white/20 p-3 3xl:p-5 3xl:text-xl rounded-xl focus:border-[#F9D759] outline-none"
                 required
               />
             </div>
-            <input
-              name="postcode"
-              type="text"
-              placeholder="Postcode"
-              className="w-full bg-white/10 border border-white/20 p-3 2xl:p-5 2xl:text-xl rounded-xl focus:border-[#F9D759] outline-none"
-              required
-            />
+
+            {/* Row 2: Email and Postcode */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 3xl:gap-5">
+              <input
+                name="email"
+                type="email"
+                placeholder="Email Address"
+                className="w-full bg-white/10 border border-white/20 p-3 3xl:p-5 3xl:text-xl rounded-xl focus:border-[#F9D759] outline-none"
+                required
+              />
+              <input
+                name="postcode"
+                type="text"
+                placeholder="Postcode"
+                className="w-full bg-white/10 border border-white/20 p-3 3xl:p-5 3xl:text-xl rounded-xl focus:border-[#F9D759] outline-none"
+                required
+              />
+            </div>
+
+            {/* Message Area */}
             <textarea
               name="message"
               placeholder="Issue..."
               rows="4"
-              className="w-full bg-white/10 border border-white/20 p-3 2xl:p-5 2xl:text-xl rounded-xl focus:border-[#F9D759] outline-none resize-none"
+              className="w-full bg-white/10 border border-white/20 p-3 3xl:p-5 3xl:text-xl rounded-xl focus:border-[#F9D759] outline-none resize-none"
               required
             ></textarea>
 
-            {/* Bumped submit button to 2xl:text-xl and taller padding */}
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-[#F9D759] text-[#243453] font-black py-4 2xl:py-6 2xl:text-xl rounded-xl hover:bg-[#F7CB28] transition-all cursor-pointer flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full bg-[#F9D759] text-[#243453] font-black py-4 3xl:py-6 3xl:text-xl rounded-xl hover:bg-[#F7CB28] transition-all cursor-pointer flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <>

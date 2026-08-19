@@ -35,19 +35,19 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
           <div className="py-12 pt-[140px] sm:pt-20 lg:pt-10 flex flex-col justify-center items-center">
             
             {/* Top Badge - Specific to Emergency */}
-            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 2xl:text-sm mb-6 shadow-lg">
+            <div className="inline-flex items-center gap-2 bg-[#F9D759] text-[#243453] px-4 py-2 rounded-full font-black uppercase tracking-widest text-xs 3xl:text-sm mb-6 shadow-lg">
               <Clock size={18} />
               24/7 Brighton & Hove Response
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-3xl md:text-4xl 2xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
+            <h1 className="text-3xl md:text-4xl 3xl:text-5xl font-black mb-6 leading-tight uppercase tracking-tight">
               Emergency <br />
               <span className="text-[#F9D759]">Roof Repairs</span>
             </h1>
 
             {/* Subtext */}
-            <p className="text-lg md:text-xl 2xl:text-2xl text-slate-100 leading-relaxed mb-10 font-medium max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl 3xl:text-2xl text-slate-100 leading-relaxed mb-10 font-medium max-w-2xl mx-auto">
               Direct access to qualified roofers when you need us most. We
               provide rapid structural stabilizing and leak prevention across
               Brighton & Hove.
@@ -58,7 +58,7 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <Link
                   to="/contact-us"
-                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-black rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
+                  className="px-10 py-4.5 3xl:px-10 3xl:py-5 3xl:text-xl bg-[#F9D759] hover:bg-[#F7CB28] text-[#243453] font-black rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 group transform active:scale-95 sm:hover:scale-105"
                 >
                   Get a Free Quote
                   <ArrowRight
@@ -68,14 +68,14 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
                 </Link>
                 <a
                   href="tel:07768981913"
-                  className="px-10 py-4.5 2xl:px-10 2xl:py-5 2xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-black rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
+                  className="px-10 py-4.5 3xl:px-10 3xl:py-5 3xl:text-xl bg-[#243453] hover:bg-slate-800 text-white border border-slate-600 font-black rounded-xl shadow-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 sm:hover:scale-105"
                 >
                   <Phone size={20} className="text-[#F9D759]" />
                   Call Now<span className="max-sm:hidden">: 07768 981913</span>
                 </a>
               </div>
 
-              <p className="mt-6 text-xs sm:text-sm 2xl:text-base text-slate-300 italic">
+              <p className="mt-6 text-xs sm:text-sm 3xl:text-base text-slate-300 italic">
                 Free inspections · No obligation · Rapid Local Response
               </p>
             </div>
@@ -111,7 +111,7 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
             
             {/* Left Narrative Column */}
             <div className="lg:w-3/5 w-full text-center lg:text-left">
-              <h2 className="text-3xl 2xl:text-4xl font-black uppercase mb-8 leading-tight text-[#243453]">
+              <h2 className="text-3xl 3xl:text-4xl font-black uppercase mb-8 leading-tight text-[#243453]">
                 Straightforward <br />
                 <span className="text-[#F9D759]">Leak Solutions</span>
               </h2>
@@ -130,7 +130,7 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
 
             {/* Right Static Presentation Block */}
             <div className="lg:w-2/5 w-full self-stretch min-h-[350px] lg:min-h-0 relative">
-              <div className="relative h-full min-h-[350px] shadow-2xl w-full rounded-[2.5rem] overflow-hidden shadow-xl border border-slate-100 bg-slate-900">
+              <div className="relative h-full min-h-[350px] shadow-2xl w-full rounded-[2.5rem] overflow-hidden border border-slate-100 bg-slate-900">
                 <img
                   src="/images/roof-repairs-2.jpg"
                   alt="Action Roofing Rapid Leak Stabilisation"
@@ -147,7 +147,7 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
       {/* 4. AUTHORITY GRID */}
       <section className="py-24 bg-slate-50 border-t border-slate-100">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10 text-center mb-16">
-          <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black uppercase text-[#243453] mb-4">
+          <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-black uppercase text-[#243453] mb-4">
             Common Emergency Repairs
           </h2>
           <div className="h-1.5 w-24 bg-[#F9D759] mx-auto"></div>
@@ -198,7 +198,7 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="space-y-8 text-left">
-              <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black text-[#243453] border-l-8 border-[#F9D759] pl-6 uppercase tracking-tight">
+              <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-black text-[#243453] border-l-8 border-[#F9D759] pl-6 uppercase tracking-tight">
                 More Than Just A Quick Fix
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed font-medium">
@@ -227,7 +227,7 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
 
             <div className="bg-[#243453] p-10 rounded-3xl text-white border-b-8 border-[#F9D759] shadow-2xl text-left">
               <Search className="text-[#F9D759] mb-6" size={40} />
-              <h3 className="text-xl md:text-2xl 2xl:text-3xl font-black uppercase mb-6">
+              <h3 className="text-xl md:text-2xl 3xl:text-3xl font-black uppercase mb-6">
                 Why Speed Matters
               </h3>
               <div className="space-y-6">
@@ -267,7 +267,7 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
       {/* 6. THE PROCESS */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10">
-          <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black uppercase text-center mb-16">
+          <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-black uppercase text-center mb-16">
             What Happens When You Call?
           </h2>
           <div className="grid md:grid-cols-4 gap-8">
@@ -323,7 +323,7 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
                 <Banknote size={18} />
                 Transparent Pricing
               </div>
-              <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black uppercase mb-6 leading-tight">
+              <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-black uppercase mb-6 leading-tight">
                 Emergency <br />
                 <span className="text-[#F9D759]">Call-Out Rates</span>
               </h2>
@@ -395,7 +395,7 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
       <section className="py-24 bg-slate-50">
         <div className="max-w-screen-2xl mx-auto px-4 md:px-10 text-left">
           <div className="max-w-3xl mb-16">
-            <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black text-[#243453] border-l-8 border-[#F9D759] pl-6 mb-6 uppercase tracking-tight">
+            <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-black text-[#243453] border-l-8 border-[#F9D759] pl-6 mb-6 uppercase tracking-tight">
               A Trusted Family Response
             </h2>
             <p className="text-lg text-slate-600 font-medium mb-4 leading-relaxed">

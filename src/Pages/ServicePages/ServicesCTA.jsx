@@ -5,7 +5,7 @@ const ServicesCTA = () => {
   return (
     <section className="py-24 bg-[#243453] text-white text-center">
       <div className="max-w-6xl mx-auto px-4 md:px-10">
-        <h2 className="text-2xl md:text-3xl 2xl:text-4xl font-black uppercase mb-12 tracking-tight">
+        <h2 className="text-2xl md:text-3xl 3xl:text-4xl font-black uppercase mb-12 tracking-tight">
           Need an Honest <span className="text-[#F9D759]">Assessment?</span>
         </h2>
 
