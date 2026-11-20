@@ -45,7 +45,7 @@ const LandingHero = () => {
               </div>
 
               <p className="3xl:text-2xl xl:text-xl md:text-lg text-slate-100 max-w-3xl leading-relaxed">
-                Founded in 2007 and built on decades of hands-on experience,
+                Founded in 1987 and built on decades of hands-on experience,
                 Action Roofing is committed to doing the job properly, providing
                 tile and slate roofing, repairs, leadwork and maintenance across
                 Brighton & Hove.

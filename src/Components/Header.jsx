@@ -203,59 +203,70 @@ const Header = ({ currentPage, setCurrentPage }) => {
               : "-translate-y-full pointer-events-none shadow-xl"
           }`}
         >
-          <ul className="flex flex-col p-6 space-y-2 font-bold text-center">
-            {navLinks.map((item) => (
-              <li key={item.name}>
-                {!item.dropdown ? (
-                  <Link
-                    to={item.path}
-                    className={`block text-xl ${
-                      currentPage === item.name.toLowerCase()
-                        ? "text-[#F9D759]"
-                        : "text-white"
-                    } py-2`}
-                  >
-                    {item.name}
-                  </Link>
-                ) : (
-                  <div className="w-full">
-                    <button
-                      onClick={() => setIsServicesOpen(!isServicesOpen)}
-                      className={`w-full ml-3.5 flex items-center justify-center gap-2 py-2 text-xl ${
+          <ul className="flex flex-col p-6 font-bold text-center">
+            {navLinks.map((item) => {
+              const isHiddenItem = !item.dropdown && isServicesOpen;
+
+              return (
+                <li
+                  key={item.name}
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                    isHiddenItem
+                      ? "max-h-0 opacity-0 my-0 pointer-events-none"
+                      : "max-h-16 opacity-100 my-1"
+                  } ${item.dropdown && isServicesOpen ? "max-h-none overflow-visible" : ""}`}
+                >
+                  {!item.dropdown ? (
+                    <Link
+                      to={item.path}
+                      className={`block text-lg ${
                         currentPage === item.name.toLowerCase()
                           ? "text-[#F9D759]"
                           : "text-white"
-                      }`}
+                      } py-2`}
                     >
-                      <span>{item.name}</span>
-                      <ChevronDown
-                        size={24}
-                        className={`transition-transform text-white duration-300 ${isServicesOpen ? "rotate-180" : ""}`}
-                      />
-                    </button>
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <div className="w-full">
+                      <button
+                        onClick={() => setIsServicesOpen(!isServicesOpen)}
+                        className={`w-full ml-3.5 flex items-center justify-center gap-2 py-2 text-lg ${
+                          currentPage === item.name.toLowerCase()
+                            ? "text-[#F9D759]"
+                            : "text-white"
+                        }`}
+                      >
+                        <span>{item.name}</span>
+                        <ChevronDown
+                          size={24}
+                          className={`transition-transform text-white duration-300 ${isServicesOpen ? "rotate-180" : ""}`}
+                        />
+                      </button>
 
-                    {/* MOBILE DROPDOWN CONTENT */}
-                    <div
-                      className={`overflow-hidden transition-all duration-300 bg-black/40 rounded-lg ${
-                        isServicesOpen
-                          ? "max-h-[500px] opacity-100 py-2"
-                          : "max-h-0 opacity-0"
-                      }`}
-                    >
-                      {item.dropdown.map((sub) => (
-                        <Link
-                          key={sub.name}
-                          to={sub.path}
-                          className="block py-4 text-[#F9D759] uppercase tracking-widest text-xs font-black border-b border-white/5 last:border-0 active:bg-[#F9D759] active:text-[#243453]"
-                        >
-                          {sub.name}
-                        </Link>
-                      ))}
+                      {/* MOBILE DROPDOWN CONTENT */}
+                      <div
+                        className={`overflow-hidden transition-all duration-300 bg-black/40 rounded-lg ${
+                          isServicesOpen
+                            ? "max-h-[500px] opacity-100 py-2"
+                            : "max-h-0 opacity-0"
+                        }`}
+                      >
+                        {item.dropdown.map((sub) => (
+                          <Link
+                            key={sub.name}
+                            to={sub.path}
+                            className="block py-4 text-[#F9D759] uppercase tracking-widest text-xs font-black border-b border-white/5 last:border-0 active:bg-[#F9D759] active:text-[#243453]"
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </li>
-            ))}
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
 

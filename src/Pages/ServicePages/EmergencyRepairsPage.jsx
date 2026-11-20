@@ -341,50 +341,23 @@ const EmergencyRepairsPage = ({ setCurrentPage }) => {
               </div>
             </div>
 
-            <div className="lg:w-1/2 w-full grid gap-4 text-left">
-              <div className="bg-white rounded-2xl p-8 flex justify-between items-center shadow-md text-[#243453]">
+            <div className="lg:w-1/2 w-full my-auto text-left">
+              <div className="bg-white rounded-2xl p-8 sm:p-10 flex justify-between items-center shadow-md text-[#243453] border-b-4 border-[#F9D759]">
                 <div>
-                  <h3 className="font-black uppercase text-base sm:text-xl tracking-tight">
-                    Daytime Call-Out
+                  <h3 className="font-black uppercase text-lg sm:text-2xl tracking-tight">
+                    Standard Call-Out Charge
                   </h3>
-                  <p className="text-slate-500 text-xs sm:text-sm font-bold mt-0.5">
-                    Includes first hour on site
+                  <p className="text-slate-500 text-xs sm:text-sm font-bold mt-1">
+                    Covers attendance, initial inspection & assessment
                   </p>
                 </div>
-                <div className="text-xl sm:text-2xl font-black">
-                  From £150
+                <div className="text-3xl sm:text-4xl font-black text-[#243453] shrink-0 ml-4">
+                  £30
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl p-8 flex justify-between items-center shadow-md text-[#243453]">
-                <div>
-                  <h3 className="font-black uppercase text-base sm:text-xl tracking-tight">
-                    Out-of-Hours
-                  </h3>
-                  <p className="text-slate-500 text-xs sm:text-sm font-bold mt-0.5">
-                    Evenings & Weekends
-                  </p>
-                </div>
-                <div className="text-xl sm:text-2xl font-black">
-                  From £250
-                </div>
-              </div>
-
-              <div className="bg-white/10 border border-white/20 rounded-2xl p-8 flex justify-between items-center">
-                <div>
-                  <h3 className="text-white font-black uppercase text-base sm:text-xl tracking-tight">
-                    Additional Time
-                  </h3>
-                  <p className="text-slate-400 font-bold italic text-xs sm:text-sm mt-0.5">
-                    Charged per hour thereafter
-                  </p>
-                </div>
-                <div className="text-xl sm:text-2xl font-black text-[#F9D759]">
-                  £80 – £110/hr
-                </div>
-              </div>
-              <p className="text-[10px] text-slate-400 text-center uppercase tracking-widest font-black pt-2">
-                Materials & Specialist Access Equipment charged as required
+              <p className="text-[10px] text-slate-400 text-center uppercase tracking-widest font-black pt-4">
+                Repair works, materials & specialist access equipment quoted upfront prior to starting
               </p>
             </div>
           </div>

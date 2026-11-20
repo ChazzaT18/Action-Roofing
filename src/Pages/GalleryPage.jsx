@@ -44,9 +44,9 @@ const GalleryPage = ({ setCurrentPage }) => {
         "/images/grey-tiled-roof-7.jpg",
         "/images/grey-tiled-roof-8.jpg"
       ],
-      title: "Modern Interlocking Tiling",
+      title: "Modern Tiling",
       location: "Hove",
-      desc: "Complete overhaul using high-performance interlocking grey concrete tiles, meticulously aligned for maximum coastal weather defense with ridge lines securely bedded in traditional black pug mortar.",
+      desc: "Complete overhaul using high-performance grey concrete tiles, meticulously aligned for maximum coastal weather defense with ridge lines securely bedded in traditional black pug mortar.",
       specs: ["Grey Concrete Tiles", "Black Pug Mortar Bedding", "Coastal Weather Seals"]
     },
     {
